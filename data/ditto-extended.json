@@ -1,0 +1,1741 @@
+{
+  "id": "ditto-extended",
+  "name": "Ditto — Extended (cameos, Topps, vending, languages)",
+  "pokemon": "Ditto",
+  "pokedex": 132,
+  "sources": [
+    "https://bulbapedia.bulbagarden.net/wiki/Ditto_(TCG)",
+    "https://bulbapedia.bulbagarden.net/wiki/Vending_Machine_cards",
+    "https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_Trading_Card_Game_expansions_in_other_languages",
+    "https://bulbapedia.bulbagarden.net/wiki/Legends_Awakened_(TCG)",
+    "https://bulbapedia.bulbagarden.net/wiki/Triumphant",
+    "https://bulbapedia.bulbagarden.net/wiki/Boundaries_Crossed",
+    "https://bulbapedia.bulbagarden.net/wiki/POP_Series_3_(TCG)",
+    "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_GO_(TCG)",
+    "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Card_151",
+    "https://pokecameos.com/pokemon/ditto",
+    "https://www.psacard.com/psasetregistry/tcg/famous-figures/pokemon-ditto-master-set/composition/22170",
+    "https://dittodan.neocities.org/carddass",
+    "https://www.getmint.app/cards/ditto-xy-black-star-promos-XY40/",
+    "https://assetra.co/sets/pokemon-xy-black-star-promos",
+    "https://assetra.co/sets/pokemon-pop-series-3",
+    "https://dexhako.com/en/sets/es/swsh10.5/",
+    "https://api.pokemontcg.io/v2/cards",
+    "https://images.pokemontcg.io/",
+    "https://www.cardaly.fr/en/cote/pokemon/ditto-3-62--base3-3",
+    "https://www.cardaly.fr/en/cote/pokemon/ditto-18-62--base3-18"
+  ],
+  "cards": [
+    {
+      "num": "3/62",
+      "name": "Ditto",
+      "set": "Fossil",
+      "language": "Dutch",
+      "category": "language-variant",
+      "variant": "Holo",
+      "image": "https://images.pokemontcg.io/base3/3.png",
+      "notes": "Holo rare. Italian confirmed via Cardmarket listings."
+    },
+    {
+      "num": "18/62",
+      "name": "Ditto",
+      "set": "Fossil",
+      "language": "Dutch",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/base3/18.png",
+      "notes": "Non-holo. Italian confirmed via Cardmarket listings."
+    },
+    {
+      "num": "3/62",
+      "name": "Ditto",
+      "set": "Fossil",
+      "language": "German",
+      "category": "language-variant",
+      "variant": "Holo",
+      "image": "https://images.pokemontcg.io/base3/3.png",
+      "notes": "Holo rare. Italian confirmed via Cardmarket listings."
+    },
+    {
+      "num": "18/62",
+      "name": "Ditto",
+      "set": "Fossil",
+      "language": "German",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/base3/18.png",
+      "notes": "Non-holo. Italian confirmed via Cardmarket listings."
+    },
+    {
+      "num": "3/62",
+      "name": "Ditto",
+      "set": "Fossil",
+      "language": "French",
+      "category": "language-variant",
+      "variant": "Holo",
+      "image": "https://images.pokemontcg.io/base3/3.png",
+      "notes": "Holo rare. Italian confirmed via Cardmarket listings."
+    },
+    {
+      "num": "18/62",
+      "name": "Ditto",
+      "set": "Fossil",
+      "language": "French",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/base3/18.png",
+      "notes": "Non-holo. Italian confirmed via Cardmarket listings."
+    },
+    {
+      "num": "3/62",
+      "name": "Ditto",
+      "set": "Fossil",
+      "language": "Italian",
+      "category": "language-variant",
+      "variant": "Holo",
+      "image": "https://images.pokemontcg.io/base3/3.png",
+      "notes": "Holo rare. Italian confirmed via Cardmarket listings."
+    },
+    {
+      "num": "18/62",
+      "name": "Ditto",
+      "set": "Fossil",
+      "language": "Italian",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/base3/18.png",
+      "notes": "Non-holo. Italian confirmed via Cardmarket listings."
+    },
+    {
+      "num": "3/62",
+      "name": "Ditto",
+      "set": "Fossil",
+      "language": "Spanish",
+      "category": "language-variant",
+      "variant": "Holo",
+      "image": "https://images.pokemontcg.io/base3/3.png",
+      "notes": "Holo rare. Italian confirmed via Cardmarket listings."
+    },
+    {
+      "num": "18/62",
+      "name": "Ditto",
+      "set": "Fossil",
+      "language": "Spanish",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/base3/18.png",
+      "notes": "Non-holo. Italian confirmed via Cardmarket listings."
+    },
+    {
+      "num": "3/62",
+      "name": "Ditto",
+      "set": "Fossil",
+      "language": "Portuguese",
+      "category": "language-variant",
+      "variant": "Holo",
+      "image": "https://images.pokemontcg.io/base3/3.png",
+      "notes": "Holo rare. Italian confirmed via Cardmarket listings."
+    },
+    {
+      "num": "18/62",
+      "name": "Ditto",
+      "set": "Fossil",
+      "language": "Portuguese",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/base3/18.png",
+      "notes": "Non-holo. Italian confirmed via Cardmarket listings."
+    },
+    {
+      "num": "51/144",
+      "name": "Ditto",
+      "set": "Skyridge",
+      "language": "German",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/ecard3/51.png",
+      "notes": "No French/Spanish/Portuguese print (Bulbapedia Skyridge set page)."
+    },
+    {
+      "num": "51/144",
+      "name": "Ditto",
+      "set": "Skyridge",
+      "language": "Italian",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/ecard3/51.png",
+      "notes": "No French/Spanish/Portuguese print (Bulbapedia Skyridge set page)."
+    },
+    {
+      "num": "4/112",
+      "name": "Ditto",
+      "set": "EX FireRed & LeafGreen",
+      "language": "French",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/ex7/4.png",
+      "notes": "No Spanish/Portuguese print (Bulbapedia set page)."
+    },
+    {
+      "num": "4/112",
+      "name": "Ditto",
+      "set": "EX FireRed & LeafGreen",
+      "language": "German",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/ex7/4.png",
+      "notes": "No Spanish/Portuguese print (Bulbapedia set page)."
+    },
+    {
+      "num": "4/112",
+      "name": "Ditto",
+      "set": "EX FireRed & LeafGreen",
+      "language": "Italian",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/ex7/4.png",
+      "notes": "No Spanish/Portuguese print (Bulbapedia set page)."
+    },
+    {
+      "num": "35/113",
+      "name": "Ditto",
+      "set": "EX Delta Species",
+      "language": "French",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/ex11/35.png",
+      "notes": "No Spanish/Portuguese print (Bulbapedia set page)."
+    },
+    {
+      "num": "35/113",
+      "name": "Ditto",
+      "set": "EX Delta Species",
+      "language": "German",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/ex11/35.png",
+      "notes": "No Spanish/Portuguese print (Bulbapedia set page)."
+    },
+    {
+      "num": "35/113",
+      "name": "Ditto",
+      "set": "EX Delta Species",
+      "language": "Italian",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/ex11/35.png",
+      "notes": "No Spanish/Portuguese print (Bulbapedia set page)."
+    },
+    {
+      "num": "36/113",
+      "name": "Ditto",
+      "set": "EX Delta Species",
+      "language": "French",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/ex11/36.png",
+      "notes": "No Spanish/Portuguese print (Bulbapedia set page)."
+    },
+    {
+      "num": "36/113",
+      "name": "Ditto",
+      "set": "EX Delta Species",
+      "language": "German",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/ex11/36.png",
+      "notes": "No Spanish/Portuguese print (Bulbapedia set page)."
+    },
+    {
+      "num": "36/113",
+      "name": "Ditto",
+      "set": "EX Delta Species",
+      "language": "Italian",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/ex11/36.png",
+      "notes": "No Spanish/Portuguese print (Bulbapedia set page)."
+    },
+    {
+      "num": "37/113",
+      "name": "Ditto",
+      "set": "EX Delta Species",
+      "language": "French",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/ex11/37.png",
+      "notes": "No Spanish/Portuguese print (Bulbapedia set page)."
+    },
+    {
+      "num": "37/113",
+      "name": "Ditto",
+      "set": "EX Delta Species",
+      "language": "German",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/ex11/37.png",
+      "notes": "No Spanish/Portuguese print (Bulbapedia set page)."
+    },
+    {
+      "num": "37/113",
+      "name": "Ditto",
+      "set": "EX Delta Species",
+      "language": "Italian",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/ex11/37.png",
+      "notes": "No Spanish/Portuguese print (Bulbapedia set page)."
+    },
+    {
+      "num": "38/113",
+      "name": "Ditto",
+      "set": "EX Delta Species",
+      "language": "French",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/ex11/38.png",
+      "notes": "No Spanish/Portuguese print (Bulbapedia set page)."
+    },
+    {
+      "num": "38/113",
+      "name": "Ditto",
+      "set": "EX Delta Species",
+      "language": "German",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/ex11/38.png",
+      "notes": "No Spanish/Portuguese print (Bulbapedia set page)."
+    },
+    {
+      "num": "38/113",
+      "name": "Ditto",
+      "set": "EX Delta Species",
+      "language": "Italian",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/ex11/38.png",
+      "notes": "No Spanish/Portuguese print (Bulbapedia set page)."
+    },
+    {
+      "num": "39/113",
+      "name": "Ditto",
+      "set": "EX Delta Species",
+      "language": "French",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/ex11/39.png",
+      "notes": "No Spanish/Portuguese print (Bulbapedia set page)."
+    },
+    {
+      "num": "39/113",
+      "name": "Ditto",
+      "set": "EX Delta Species",
+      "language": "German",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/ex11/39.png",
+      "notes": "No Spanish/Portuguese print (Bulbapedia set page)."
+    },
+    {
+      "num": "39/113",
+      "name": "Ditto",
+      "set": "EX Delta Species",
+      "language": "Italian",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/ex11/39.png",
+      "notes": "No Spanish/Portuguese print (Bulbapedia set page)."
+    },
+    {
+      "num": "40/113",
+      "name": "Ditto",
+      "set": "EX Delta Species",
+      "language": "French",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/ex11/40.png",
+      "notes": "No Spanish/Portuguese print (Bulbapedia set page)."
+    },
+    {
+      "num": "40/113",
+      "name": "Ditto",
+      "set": "EX Delta Species",
+      "language": "German",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/ex11/40.png",
+      "notes": "No Spanish/Portuguese print (Bulbapedia set page)."
+    },
+    {
+      "num": "40/113",
+      "name": "Ditto",
+      "set": "EX Delta Species",
+      "language": "Italian",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/ex11/40.png",
+      "notes": "No Spanish/Portuguese print (Bulbapedia set page)."
+    },
+    {
+      "num": "61/113",
+      "name": "Ditto",
+      "set": "EX Delta Species",
+      "language": "French",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/ex11/61.png",
+      "notes": "No Spanish/Portuguese print (Bulbapedia set page). Artwork shows Ditto as Charmander; Origins 2007 event-stamped version is in the standard list."
+    },
+    {
+      "num": "61/113",
+      "name": "Ditto",
+      "set": "EX Delta Species",
+      "language": "German",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/ex11/61.png",
+      "notes": "No Spanish/Portuguese print (Bulbapedia set page). Artwork shows Ditto as Charmander; Origins 2007 event-stamped version is in the standard list."
+    },
+    {
+      "num": "61/113",
+      "name": "Ditto",
+      "set": "EX Delta Species",
+      "language": "Italian",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/ex11/61.png",
+      "notes": "No Spanish/Portuguese print (Bulbapedia set page). Artwork shows Ditto as Charmander; Origins 2007 event-stamped version is in the standard list."
+    },
+    {
+      "num": "62/113",
+      "name": "Ditto",
+      "set": "EX Delta Species",
+      "language": "French",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/ex11/62.png",
+      "notes": "No Spanish/Portuguese print (Bulbapedia set page). Transformed form in the artwork unverified — needs checking."
+    },
+    {
+      "num": "62/113",
+      "name": "Ditto",
+      "set": "EX Delta Species",
+      "language": "German",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/ex11/62.png",
+      "notes": "No Spanish/Portuguese print (Bulbapedia set page). Transformed form in the artwork unverified — needs checking."
+    },
+    {
+      "num": "62/113",
+      "name": "Ditto",
+      "set": "EX Delta Species",
+      "language": "Italian",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/ex11/62.png",
+      "notes": "No Spanish/Portuguese print (Bulbapedia set page). Transformed form in the artwork unverified — needs checking."
+    },
+    {
+      "num": "63/113",
+      "name": "Ditto",
+      "set": "EX Delta Species",
+      "language": "French",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/ex11/63.png",
+      "notes": "No Spanish/Portuguese print (Bulbapedia set page). Artwork shows Ditto as Pikachu; Comic Con event-stamped version is in the standard list."
+    },
+    {
+      "num": "63/113",
+      "name": "Ditto",
+      "set": "EX Delta Species",
+      "language": "German",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/ex11/63.png",
+      "notes": "No Spanish/Portuguese print (Bulbapedia set page). Artwork shows Ditto as Pikachu; Comic Con event-stamped version is in the standard list."
+    },
+    {
+      "num": "63/113",
+      "name": "Ditto",
+      "set": "EX Delta Species",
+      "language": "Italian",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/ex11/63.png",
+      "notes": "No Spanish/Portuguese print (Bulbapedia set page). Artwork shows Ditto as Pikachu; Comic Con event-stamped version is in the standard list."
+    },
+    {
+      "num": "64/113",
+      "name": "Ditto",
+      "set": "EX Delta Species",
+      "language": "French",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/ex11/64.png",
+      "notes": "No Spanish/Portuguese print (Bulbapedia set page). Games Expo 2007 event-stamped version is in the standard list."
+    },
+    {
+      "num": "64/113",
+      "name": "Ditto",
+      "set": "EX Delta Species",
+      "language": "German",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/ex11/64.png",
+      "notes": "No Spanish/Portuguese print (Bulbapedia set page). Games Expo 2007 event-stamped version is in the standard list."
+    },
+    {
+      "num": "64/113",
+      "name": "Ditto",
+      "set": "EX Delta Species",
+      "language": "Italian",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/ex11/64.png",
+      "notes": "No Spanish/Portuguese print (Bulbapedia set page). Games Expo 2007 event-stamped version is in the standard list."
+    },
+    {
+      "num": "27/146",
+      "name": "Ditto",
+      "set": "Legends Awakened",
+      "language": "German",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/dp6/27.png",
+      "notes": "Number confirmed 27/146 via Pokemon TCG API (not 131/146). No Portuguese print."
+    },
+    {
+      "num": "27/146",
+      "name": "Ditto",
+      "set": "Legends Awakened",
+      "language": "French",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/dp6/27.png",
+      "notes": "Number confirmed 27/146 via Pokemon TCG API (not 131/146). No Portuguese print."
+    },
+    {
+      "num": "27/146",
+      "name": "Ditto",
+      "set": "Legends Awakened",
+      "language": "Italian",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/dp6/27.png",
+      "notes": "Number confirmed 27/146 via Pokemon TCG API (not 131/146). No Portuguese print."
+    },
+    {
+      "num": "27/146",
+      "name": "Ditto",
+      "set": "Legends Awakened",
+      "language": "Spanish",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/dp6/27.png",
+      "notes": "Number confirmed 27/146 via Pokemon TCG API (not 131/146). No Portuguese print."
+    },
+    {
+      "num": "17/102",
+      "name": "Ditto",
+      "set": "Triumphant",
+      "language": "German",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/hgss4/17.png",
+      "notes": "Number confirmed 17/102 by reading the card image (not 40/102; 40/102 is Machoke). No Spanish/Portuguese print."
+    },
+    {
+      "num": "17/102",
+      "name": "Ditto",
+      "set": "Triumphant",
+      "language": "French",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/hgss4/17.png",
+      "notes": "Number confirmed 17/102 by reading the card image (not 40/102; 40/102 is Machoke). No Spanish/Portuguese print."
+    },
+    {
+      "num": "17/102",
+      "name": "Ditto",
+      "set": "Triumphant",
+      "language": "Italian",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/hgss4/17.png",
+      "notes": "Number confirmed 17/102 by reading the card image (not 40/102; 40/102 is Machoke). No Spanish/Portuguese print."
+    },
+    {
+      "num": "108/149",
+      "name": "Ditto",
+      "set": "Boundaries Crossed",
+      "language": "French",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/bw7/108.png",
+      "notes": ""
+    },
+    {
+      "num": "108/149",
+      "name": "Ditto",
+      "set": "Boundaries Crossed",
+      "language": "German",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/bw7/108.png",
+      "notes": ""
+    },
+    {
+      "num": "108/149",
+      "name": "Ditto",
+      "set": "Boundaries Crossed",
+      "language": "Italian",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/bw7/108.png",
+      "notes": ""
+    },
+    {
+      "num": "108/149",
+      "name": "Ditto",
+      "set": "Boundaries Crossed",
+      "language": "Spanish",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/bw7/108.png",
+      "notes": ""
+    },
+    {
+      "num": "108/149",
+      "name": "Ditto",
+      "set": "Boundaries Crossed",
+      "language": "Portuguese",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/bw7/108.png",
+      "notes": ""
+    },
+    {
+      "num": "042/059",
+      "name": "Ditto",
+      "set": "Boundaries Crossed",
+      "language": "Korean",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": null,
+      "notes": "Korean Freeze Bolt/Cold Flare mirrors Japanese numbering; Japanese Cold Flare Ditto is 042/059 (standard list). Korean print not directly sighted — verify before counting as owned."
+    },
+    {
+      "num": "12/17",
+      "name": "Ditto [Mr. Mime]",
+      "set": "POP Series 3",
+      "language": "French",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/pop3/12.png",
+      "notes": "POP Series 3 released in EN/DE/FR/IT/ES/PT (Bulbapedia)."
+    },
+    {
+      "num": "12/17",
+      "name": "Ditto [Mr. Mime]",
+      "set": "POP Series 3",
+      "language": "German",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/pop3/12.png",
+      "notes": "POP Series 3 released in EN/DE/FR/IT/ES/PT (Bulbapedia)."
+    },
+    {
+      "num": "12/17",
+      "name": "Ditto [Mr. Mime]",
+      "set": "POP Series 3",
+      "language": "Italian",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/pop3/12.png",
+      "notes": "POP Series 3 released in EN/DE/FR/IT/ES/PT (Bulbapedia)."
+    },
+    {
+      "num": "12/17",
+      "name": "Ditto [Mr. Mime]",
+      "set": "POP Series 3",
+      "language": "Spanish",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/pop3/12.png",
+      "notes": "POP Series 3 released in EN/DE/FR/IT/ES/PT (Bulbapedia)."
+    },
+    {
+      "num": "12/17",
+      "name": "Ditto [Mr. Mime]",
+      "set": "POP Series 3",
+      "language": "Portuguese",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/pop3/12.png",
+      "notes": "POP Series 3 released in EN/DE/FR/IT/ES/PT (Bulbapedia)."
+    },
+    {
+      "num": "XY40",
+      "name": "Ditto",
+      "set": "XY Black Star Promos",
+      "language": "French",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/xyp/XY40.png",
+      "notes": "French name Metamorph. Spanish/Russian printings per Assetra/PSA filing of XY Black Star Promos."
+    },
+    {
+      "num": "XY40",
+      "name": "Ditto",
+      "set": "XY Black Star Promos",
+      "language": "German",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/xyp/XY40.png",
+      "notes": "French name Metamorph. Spanish/Russian printings per Assetra/PSA filing of XY Black Star Promos."
+    },
+    {
+      "num": "XY40",
+      "name": "Ditto",
+      "set": "XY Black Star Promos",
+      "language": "Italian",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/xyp/XY40.png",
+      "notes": "French name Metamorph. Spanish/Russian printings per Assetra/PSA filing of XY Black Star Promos."
+    },
+    {
+      "num": "XY40",
+      "name": "Ditto",
+      "set": "XY Black Star Promos",
+      "language": "Spanish",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/xyp/XY40.png",
+      "notes": "French name Metamorph. Spanish/Russian printings per Assetra/PSA filing of XY Black Star Promos."
+    },
+    {
+      "num": "XY40",
+      "name": "Ditto",
+      "set": "XY Black Star Promos",
+      "language": "Portuguese",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/xyp/XY40.png",
+      "notes": "French name Metamorph. Spanish/Russian printings per Assetra/PSA filing of XY Black Star Promos."
+    },
+    {
+      "num": "XY40",
+      "name": "Ditto",
+      "set": "XY Black Star Promos",
+      "language": "Russian",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/xyp/XY40.png",
+      "notes": "French name Metamorph. Spanish/Russian printings per Assetra/PSA filing of XY Black Star Promos."
+    },
+    {
+      "num": "154/214",
+      "name": "Ditto ◇",
+      "set": "Lost Thunder",
+      "language": "French",
+      "category": "language-variant",
+      "variant": "Prism Star",
+      "image": "https://images.pokemontcg.io/sm8/154.png",
+      "notes": ""
+    },
+    {
+      "num": "154/214",
+      "name": "Ditto ◇",
+      "set": "Lost Thunder",
+      "language": "German",
+      "category": "language-variant",
+      "variant": "Prism Star",
+      "image": "https://images.pokemontcg.io/sm8/154.png",
+      "notes": ""
+    },
+    {
+      "num": "154/214",
+      "name": "Ditto ◇",
+      "set": "Lost Thunder",
+      "language": "Italian",
+      "category": "language-variant",
+      "variant": "Prism Star",
+      "image": "https://images.pokemontcg.io/sm8/154.png",
+      "notes": ""
+    },
+    {
+      "num": "154/214",
+      "name": "Ditto ◇",
+      "set": "Lost Thunder",
+      "language": "Spanish",
+      "category": "language-variant",
+      "variant": "Prism Star",
+      "image": "https://images.pokemontcg.io/sm8/154.png",
+      "notes": ""
+    },
+    {
+      "num": "154/214",
+      "name": "Ditto ◇",
+      "set": "Lost Thunder",
+      "language": "Portuguese",
+      "category": "language-variant",
+      "variant": "Prism Star",
+      "image": "https://images.pokemontcg.io/sm8/154.png",
+      "notes": ""
+    },
+    {
+      "num": "17/18",
+      "name": "Ditto",
+      "set": "Detective Pikachu",
+      "language": "French",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/det1/17.png",
+      "notes": "Number confirmed 17/18 via Pokemon TCG API (not 5/18)."
+    },
+    {
+      "num": "17/18",
+      "name": "Ditto",
+      "set": "Detective Pikachu",
+      "language": "German",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/det1/17.png",
+      "notes": "Number confirmed 17/18 via Pokemon TCG API (not 5/18)."
+    },
+    {
+      "num": "17/18",
+      "name": "Ditto",
+      "set": "Detective Pikachu",
+      "language": "Italian",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/det1/17.png",
+      "notes": "Number confirmed 17/18 via Pokemon TCG API (not 5/18)."
+    },
+    {
+      "num": "17/18",
+      "name": "Ditto",
+      "set": "Detective Pikachu",
+      "language": "Spanish",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/det1/17.png",
+      "notes": "Number confirmed 17/18 via Pokemon TCG API (not 5/18)."
+    },
+    {
+      "num": "17/18",
+      "name": "Ditto",
+      "set": "Detective Pikachu",
+      "language": "Portuguese",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/det1/17.png",
+      "notes": "Number confirmed 17/18 via Pokemon TCG API (not 5/18)."
+    },
+    {
+      "num": "053/078",
+      "name": "Ditto",
+      "set": "Pokémon GO",
+      "language": "French",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/pgo/53.png",
+      "notes": "French/German/Italian per Bulbapedia set page; Spanish per DexHako. Portuguese not directly verified — see file notes."
+    },
+    {
+      "num": "053/078",
+      "name": "Ditto",
+      "set": "Pokémon GO",
+      "language": "German",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/pgo/53.png",
+      "notes": "French/German/Italian per Bulbapedia set page; Spanish per DexHako. Portuguese not directly verified — see file notes."
+    },
+    {
+      "num": "053/078",
+      "name": "Ditto",
+      "set": "Pokémon GO",
+      "language": "Italian",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/pgo/53.png",
+      "notes": "French/German/Italian per Bulbapedia set page; Spanish per DexHako. Portuguese not directly verified — see file notes."
+    },
+    {
+      "num": "053/078",
+      "name": "Ditto",
+      "set": "Pokémon GO",
+      "language": "Spanish",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/pgo/53.png",
+      "notes": "French/German/Italian per Bulbapedia set page; Spanish per DexHako. Portuguese not directly verified — see file notes."
+    },
+    {
+      "num": "107/159",
+      "name": "Ditto",
+      "set": "Crown Zenith",
+      "language": "French",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/swsh12pt5/107.png",
+      "notes": ""
+    },
+    {
+      "num": "107/159",
+      "name": "Ditto",
+      "set": "Crown Zenith",
+      "language": "German",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/swsh12pt5/107.png",
+      "notes": ""
+    },
+    {
+      "num": "107/159",
+      "name": "Ditto",
+      "set": "Crown Zenith",
+      "language": "Italian",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/swsh12pt5/107.png",
+      "notes": ""
+    },
+    {
+      "num": "107/159",
+      "name": "Ditto",
+      "set": "Crown Zenith",
+      "language": "Spanish",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/swsh12pt5/107.png",
+      "notes": ""
+    },
+    {
+      "num": "107/159",
+      "name": "Ditto",
+      "set": "Crown Zenith",
+      "language": "Portuguese",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/swsh12pt5/107.png",
+      "notes": ""
+    },
+    {
+      "num": "GG22/GG70",
+      "name": "Ditto",
+      "set": "Crown Zenith: Galarian Gallery",
+      "language": "French",
+      "category": "language-variant",
+      "variant": "Galarian Gallery",
+      "image": "https://images.pokemontcg.io/swsh12pt5gg/GG22.png",
+      "notes": ""
+    },
+    {
+      "num": "GG22/GG70",
+      "name": "Ditto",
+      "set": "Crown Zenith: Galarian Gallery",
+      "language": "German",
+      "category": "language-variant",
+      "variant": "Galarian Gallery",
+      "image": "https://images.pokemontcg.io/swsh12pt5gg/GG22.png",
+      "notes": ""
+    },
+    {
+      "num": "GG22/GG70",
+      "name": "Ditto",
+      "set": "Crown Zenith: Galarian Gallery",
+      "language": "Italian",
+      "category": "language-variant",
+      "variant": "Galarian Gallery",
+      "image": "https://images.pokemontcg.io/swsh12pt5gg/GG22.png",
+      "notes": ""
+    },
+    {
+      "num": "GG22/GG70",
+      "name": "Ditto",
+      "set": "Crown Zenith: Galarian Gallery",
+      "language": "Spanish",
+      "category": "language-variant",
+      "variant": "Galarian Gallery",
+      "image": "https://images.pokemontcg.io/swsh12pt5gg/GG22.png",
+      "notes": ""
+    },
+    {
+      "num": "GG22/GG70",
+      "name": "Ditto",
+      "set": "Crown Zenith: Galarian Gallery",
+      "language": "Portuguese",
+      "category": "language-variant",
+      "variant": "Galarian Gallery",
+      "image": "https://images.pokemontcg.io/swsh12pt5gg/GG22.png",
+      "notes": ""
+    },
+    {
+      "num": "050/072",
+      "name": "Ditto V",
+      "set": "Shining Fates",
+      "language": "French",
+      "category": "language-variant",
+      "variant": "V",
+      "image": "https://images.pokemontcg.io/swsh45/50.png",
+      "notes": ""
+    },
+    {
+      "num": "050/072",
+      "name": "Ditto V",
+      "set": "Shining Fates",
+      "language": "German",
+      "category": "language-variant",
+      "variant": "V",
+      "image": "https://images.pokemontcg.io/swsh45/50.png",
+      "notes": ""
+    },
+    {
+      "num": "050/072",
+      "name": "Ditto V",
+      "set": "Shining Fates",
+      "language": "Italian",
+      "category": "language-variant",
+      "variant": "V",
+      "image": "https://images.pokemontcg.io/swsh45/50.png",
+      "notes": ""
+    },
+    {
+      "num": "050/072",
+      "name": "Ditto V",
+      "set": "Shining Fates",
+      "language": "Spanish",
+      "category": "language-variant",
+      "variant": "V",
+      "image": "https://images.pokemontcg.io/swsh45/50.png",
+      "notes": ""
+    },
+    {
+      "num": "050/072",
+      "name": "Ditto V",
+      "set": "Shining Fates",
+      "language": "Portuguese",
+      "category": "language-variant",
+      "variant": "V",
+      "image": "https://images.pokemontcg.io/swsh45/50.png",
+      "notes": ""
+    },
+    {
+      "num": "051/072",
+      "name": "Ditto VMAX",
+      "set": "Shining Fates",
+      "language": "French",
+      "category": "language-variant",
+      "variant": "VMAX",
+      "image": "https://images.pokemontcg.io/swsh45/51.png",
+      "notes": ""
+    },
+    {
+      "num": "051/072",
+      "name": "Ditto VMAX",
+      "set": "Shining Fates",
+      "language": "German",
+      "category": "language-variant",
+      "variant": "VMAX",
+      "image": "https://images.pokemontcg.io/swsh45/51.png",
+      "notes": ""
+    },
+    {
+      "num": "051/072",
+      "name": "Ditto VMAX",
+      "set": "Shining Fates",
+      "language": "Italian",
+      "category": "language-variant",
+      "variant": "VMAX",
+      "image": "https://images.pokemontcg.io/swsh45/51.png",
+      "notes": ""
+    },
+    {
+      "num": "051/072",
+      "name": "Ditto VMAX",
+      "set": "Shining Fates",
+      "language": "Spanish",
+      "category": "language-variant",
+      "variant": "VMAX",
+      "image": "https://images.pokemontcg.io/swsh45/51.png",
+      "notes": ""
+    },
+    {
+      "num": "051/072",
+      "name": "Ditto VMAX",
+      "set": "Shining Fates",
+      "language": "Portuguese",
+      "category": "language-variant",
+      "variant": "VMAX",
+      "image": "https://images.pokemontcg.io/swsh45/51.png",
+      "notes": ""
+    },
+    {
+      "num": "SV118",
+      "name": "Ditto V",
+      "set": "Shining Fates: Shiny Vault",
+      "language": "French",
+      "category": "language-variant",
+      "variant": "V",
+      "image": "https://images.pokemontcg.io/swsh45sv/SV118.png",
+      "notes": ""
+    },
+    {
+      "num": "SV118",
+      "name": "Ditto V",
+      "set": "Shining Fates: Shiny Vault",
+      "language": "German",
+      "category": "language-variant",
+      "variant": "V",
+      "image": "https://images.pokemontcg.io/swsh45sv/SV118.png",
+      "notes": ""
+    },
+    {
+      "num": "SV118",
+      "name": "Ditto V",
+      "set": "Shining Fates: Shiny Vault",
+      "language": "Italian",
+      "category": "language-variant",
+      "variant": "V",
+      "image": "https://images.pokemontcg.io/swsh45sv/SV118.png",
+      "notes": ""
+    },
+    {
+      "num": "SV118",
+      "name": "Ditto V",
+      "set": "Shining Fates: Shiny Vault",
+      "language": "Spanish",
+      "category": "language-variant",
+      "variant": "V",
+      "image": "https://images.pokemontcg.io/swsh45sv/SV118.png",
+      "notes": ""
+    },
+    {
+      "num": "SV118",
+      "name": "Ditto V",
+      "set": "Shining Fates: Shiny Vault",
+      "language": "Portuguese",
+      "category": "language-variant",
+      "variant": "V",
+      "image": "https://images.pokemontcg.io/swsh45sv/SV118.png",
+      "notes": ""
+    },
+    {
+      "num": "SV119",
+      "name": "Ditto VMAX",
+      "set": "Shining Fates: Shiny Vault",
+      "language": "French",
+      "category": "language-variant",
+      "variant": "VMAX",
+      "image": "https://images.pokemontcg.io/swsh45sv/SV119.png",
+      "notes": ""
+    },
+    {
+      "num": "SV119",
+      "name": "Ditto VMAX",
+      "set": "Shining Fates: Shiny Vault",
+      "language": "German",
+      "category": "language-variant",
+      "variant": "VMAX",
+      "image": "https://images.pokemontcg.io/swsh45sv/SV119.png",
+      "notes": ""
+    },
+    {
+      "num": "SV119",
+      "name": "Ditto VMAX",
+      "set": "Shining Fates: Shiny Vault",
+      "language": "Italian",
+      "category": "language-variant",
+      "variant": "VMAX",
+      "image": "https://images.pokemontcg.io/swsh45sv/SV119.png",
+      "notes": ""
+    },
+    {
+      "num": "SV119",
+      "name": "Ditto VMAX",
+      "set": "Shining Fates: Shiny Vault",
+      "language": "Spanish",
+      "category": "language-variant",
+      "variant": "VMAX",
+      "image": "https://images.pokemontcg.io/swsh45sv/SV119.png",
+      "notes": ""
+    },
+    {
+      "num": "SV119",
+      "name": "Ditto VMAX",
+      "set": "Shining Fates: Shiny Vault",
+      "language": "Portuguese",
+      "category": "language-variant",
+      "variant": "VMAX",
+      "image": "https://images.pokemontcg.io/swsh45sv/SV119.png",
+      "notes": ""
+    },
+    {
+      "num": "132/165",
+      "name": "Ditto",
+      "set": "151",
+      "language": "French",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/sv3pt5/132.png",
+      "notes": ""
+    },
+    {
+      "num": "132/165",
+      "name": "Ditto",
+      "set": "151",
+      "language": "German",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/sv3pt5/132.png",
+      "notes": ""
+    },
+    {
+      "num": "132/165",
+      "name": "Ditto",
+      "set": "151",
+      "language": "Italian",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/sv3pt5/132.png",
+      "notes": ""
+    },
+    {
+      "num": "132/165",
+      "name": "Ditto",
+      "set": "151",
+      "language": "Spanish",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/sv3pt5/132.png",
+      "notes": ""
+    },
+    {
+      "num": "132/165",
+      "name": "Ditto",
+      "set": "151",
+      "language": "Portuguese",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/sv3pt5/132.png",
+      "notes": ""
+    },
+    {
+      "num": "201/091",
+      "name": "Ditto",
+      "set": "Paldean Fates",
+      "language": "French",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/sv4pt5/201.png",
+      "notes": ""
+    },
+    {
+      "num": "201/091",
+      "name": "Ditto",
+      "set": "Paldean Fates",
+      "language": "German",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/sv4pt5/201.png",
+      "notes": ""
+    },
+    {
+      "num": "201/091",
+      "name": "Ditto",
+      "set": "Paldean Fates",
+      "language": "Italian",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/sv4pt5/201.png",
+      "notes": ""
+    },
+    {
+      "num": "201/091",
+      "name": "Ditto",
+      "set": "Paldean Fates",
+      "language": "Spanish",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/sv4pt5/201.png",
+      "notes": ""
+    },
+    {
+      "num": "201/091",
+      "name": "Ditto",
+      "set": "Paldean Fates",
+      "language": "Portuguese",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/sv4pt5/201.png",
+      "notes": ""
+    },
+    {
+      "num": "106",
+      "name": "Ditto",
+      "set": "Mega Evolution Black Star Promos",
+      "language": "French",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": null,
+      "notes": "All six languages confirmed via dexli. Image not yet verified — null."
+    },
+    {
+      "num": "106",
+      "name": "Ditto",
+      "set": "Mega Evolution Black Star Promos",
+      "language": "German",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": null,
+      "notes": "All six languages confirmed via dexli. Image not yet verified — null."
+    },
+    {
+      "num": "106",
+      "name": "Ditto",
+      "set": "Mega Evolution Black Star Promos",
+      "language": "Italian",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": null,
+      "notes": "All six languages confirmed via dexli. Image not yet verified — null."
+    },
+    {
+      "num": "106",
+      "name": "Ditto",
+      "set": "Mega Evolution Black Star Promos",
+      "language": "Spanish",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": null,
+      "notes": "All six languages confirmed via dexli. Image not yet verified — null."
+    },
+    {
+      "num": "106",
+      "name": "Ditto",
+      "set": "Mega Evolution Black Star Promos",
+      "language": "Portuguese",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": null,
+      "notes": "All six languages confirmed via dexli. Image not yet verified — null."
+    },
+    {
+      "num": "115/128",
+      "name": "Ditto",
+      "set": "30th Celebration",
+      "language": "French",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": null,
+      "notes": "Image not yet on images.pokemontcg.io (checked Nov 26, 2026) — null."
+    },
+    {
+      "num": "115/128",
+      "name": "Ditto",
+      "set": "30th Celebration",
+      "language": "German",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": null,
+      "notes": "Image not yet on images.pokemontcg.io (checked Nov 26, 2026) — null."
+    },
+    {
+      "num": "115/128",
+      "name": "Ditto",
+      "set": "30th Celebration",
+      "language": "Italian",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": null,
+      "notes": "Image not yet on images.pokemontcg.io (checked Nov 26, 2026) — null."
+    },
+    {
+      "num": "115/128",
+      "name": "Ditto",
+      "set": "30th Celebration",
+      "language": "Spanish",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": null,
+      "notes": "Image not yet on images.pokemontcg.io (checked Nov 26, 2026) — null."
+    },
+    {
+      "num": "115/128",
+      "name": "Ditto",
+      "set": "30th Celebration",
+      "language": "Portuguese",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": null,
+      "notes": "Image not yet on images.pokemontcg.io (checked Nov 26, 2026) — null."
+    },
+    {
+      "num": "173/SV-P",
+      "name": "Ditto",
+      "set": "SV-P Promotional cards",
+      "language": "Korean",
+      "category": "language-variant",
+      "variant": "Standard",
+      "image": null,
+      "notes": "Korean SV-P Ditto 173/SV-P per Bulbapedia Ditto (TCG) page. Image not verified — null."
+    },
+    {
+      "num": "28",
+      "name": "Pikachu",
+      "set": "30th Celebration",
+      "language": "English",
+      "category": "cameo",
+      "variant": "Standard",
+      "image": null,
+      "notes": "Ditto appears in the artwork (pokecameos.com). Image not yet on images.pokemontcg.io (checked Nov 26, 2026) — null."
+    },
+    {
+      "num": "149",
+      "name": "Pikachu ex",
+      "set": "30th Celebration",
+      "language": "English",
+      "category": "cameo",
+      "variant": "Standard",
+      "image": null,
+      "notes": "Ditto appears in the artwork (pokecameos.com). Image not yet on images.pokemontcg.io (checked Nov 26, 2026) — null."
+    },
+    {
+      "num": "19",
+      "name": "Influencer's Introduction",
+      "set": "Start Deck 100 CoroCiao Version",
+      "language": "Japanese",
+      "category": "cameo",
+      "variant": "Standard",
+      "image": null,
+      "notes": "Ditto as a blanket in the artwork (pokecameos.com). Japanese-only release; image not verified — null."
+    },
+    {
+      "num": "187",
+      "name": "Chansey",
+      "set": "Twilight Masquerade",
+      "language": "English",
+      "category": "cameo",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/sv6/187.png",
+      "notes": "Ditto appears in the artwork (pokecameos.com)."
+    },
+    {
+      "num": "151",
+      "name": "Hassel",
+      "set": "Twilight Masquerade",
+      "language": "English",
+      "category": "cameo",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/sv6/151.png",
+      "notes": "Ditto appears in the artwork (pokecameos.com)."
+    },
+    {
+      "num": "206",
+      "name": "Morpeko",
+      "set": "Paradox Rift",
+      "language": "English",
+      "category": "cameo",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/sv4/206.png",
+      "notes": "Ditto in the sweets in the artwork (pokecameos.com)."
+    },
+    {
+      "num": "214",
+      "name": "Greavard",
+      "set": "Scarlet & Violet",
+      "language": "English",
+      "category": "cameo",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/sv1/214.png",
+      "notes": "Ditto plushie in the artwork (pokecameos.com)."
+    },
+    {
+      "num": "13",
+      "name": "Shelmet",
+      "set": "Fusion Strike",
+      "language": "English",
+      "category": "cameo",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/swsh8/13.png",
+      "notes": "Pixelated Ditto in the upper-left background among geometric shapes (pokecameos.com)."
+    },
+    {
+      "num": "180",
+      "name": "Espeon V",
+      "set": "Evolving Skies",
+      "language": "English",
+      "category": "cameo",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/swsh7/180.png",
+      "notes": "Ditto in a drawing in the artwork (pokecameos.com). Most valuable Ditto cameo (~$207.82 TCGplayer, per pokecameos.com)."
+    },
+    {
+      "num": "96",
+      "name": "Thought Wave Machine",
+      "set": "Neo Destiny",
+      "language": "English",
+      "category": "cameo",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/neo4/96.png",
+      "notes": "Ditto appears in the artwork (pokecameos.com)."
+    },
+    {
+      "num": "115",
+      "name": "Koga's Ninja Trick",
+      "set": "Gym Challenge",
+      "language": "English",
+      "category": "cameo",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/gym2/115.png",
+      "notes": "Ditto appears in the artwork (pokecameos.com); Golbat also in the art. Earliest Ditto cameo (2000)."
+    },
+    {
+      "num": "67",
+      "name": "Machoke",
+      "set": "Expansion Sheet 3",
+      "language": "Japanese",
+      "category": "cameo",
+      "variant": "Standard",
+      "image": null,
+      "notes": "Ditto behind Machoke's left shoulder / resting in its arms (Tomokazu Komiya art, Japanese Vending Series 3). Some debate whether the shape is Snorlax or Ditto (pokecameos.com). Image not verified — null."
+    },
+    {
+      "num": "152b",
+      "name": "Pokémon Communication",
+      "set": "Team Up",
+      "language": "English",
+      "category": "cameo",
+      "variant": "Standard",
+      "image": "https://images.pokemontcg.io/sm9/152.png",
+      "notes": "Ditto silhouette in the artwork (pokecameos.com). Alternate-art print (152b)."
+    },
+    {
+      "num": "132",
+      "name": "Ditto",
+      "set": "Topps Chrome Series 2",
+      "language": "English",
+      "category": "topps",
+      "variant": "Standard",
+      "image": null,
+      "notes": "Topps Chrome Series 2 Ditto #132, 2000. Sources: Bulbapedia, PSA, PriceCharting. Image not verified — null."
+    },
+    {
+      "num": "132",
+      "name": "Ditto",
+      "set": "Topps Chrome Series 2",
+      "language": "English",
+      "category": "topps",
+      "variant": "Spectra",
+      "image": null,
+      "notes": "Topps Chrome Series 2 Ditto #132, 2000. Sources: Bulbapedia, PSA, PriceCharting. Image not verified — null."
+    },
+    {
+      "num": "132",
+      "name": "Ditto",
+      "set": "Topps Chrome Series 2",
+      "language": "English",
+      "category": "topps",
+      "variant": "Sparkle",
+      "image": null,
+      "notes": "Topps Chrome Series 2 Ditto #132, 2000. Sources: Bulbapedia, PSA, PriceCharting. Image not verified — null."
+    },
+    {
+      "num": "132",
+      "name": "Ditto",
+      "set": "Topps Chrome Series 2",
+      "language": "English",
+      "category": "topps",
+      "variant": "Tekno",
+      "image": null,
+      "notes": "Topps Chrome Series 2 Ditto #132, 2000. Sources: Bulbapedia, PSA, PriceCharting. Image not verified — null."
+    },
+    {
+      "num": "132",
+      "name": "Ditto",
+      "set": "Topps TV Animation Series 3",
+      "language": "English",
+      "category": "topps",
+      "variant": "Standard",
+      "image": null,
+      "notes": "Topps TV Animation Series 3 Ditto #132, 2000. Sources: PSA, Elite Fourum Topps guide, cart-a-vision. Image not verified — null."
+    },
+    {
+      "num": "132",
+      "name": "Ditto",
+      "set": "Topps TV Animation Series 3",
+      "language": "English",
+      "category": "topps",
+      "variant": "Foil",
+      "image": null,
+      "notes": "Silver foil version. Sources: PSA, Elite Fourum Topps guide, cart-a-vision. Image not verified — null."
+    },
+    {
+      "num": "132",
+      "name": "Ditto",
+      "set": "Topps TV Animation Series 3",
+      "language": "English",
+      "category": "topps",
+      "variant": "Rainbow Foil",
+      "image": null,
+      "notes": "Rainbow foil version. Sources: PSA, Elite Fourum Topps guide, cart-a-vision. Image not verified — null."
+    },
+    {
+      "num": "5",
+      "name": "Ditto and Pikachu",
+      "set": "Topps TV Animation Series 2 Animation Stick-Ons",
+      "language": "English",
+      "category": "topps",
+      "variant": "Standard",
+      "image": null,
+      "notes": "Sticker, 1 of 10. Sources: Bulbapedia Series 2 page, tradercracks, PSA. Image not verified — null."
+    },
+    {
+      "num": "32",
+      "name": "Ditto",
+      "set": "Vending Machine Series 2 (Red)",
+      "language": "Japanese",
+      "category": "vending",
+      "variant": "Standard",
+      "image": null,
+      "notes": "Uncommon, on Sheet 3 (Rock Tunnel area). Japanese-only glossy stock. Numbering conflict: PokeCottage standard list uses 32 (pooka.app #32/36); other databases list 132/36 (Pokedex-based). Ditto appears ONLY in Series 2; Series 1 and 3 have no Ditto (Bulbapedia Vending Machine cards page). Image not verified — null."
+    },
+    {
+      "num": "132",
+      "name": "Ditto",
+      "set": "Topsun (1995)",
+      "language": "Japanese",
+      "category": "other",
+      "variant": "Blue Back",
+      "image": null,
+      "notes": "1995 Topsun Ditto Blue Back #132 (Japanese). PSA Ditto Master Set checklist."
+    },
+    {
+      "num": "132",
+      "name": "Ditto",
+      "set": "Topsun (1995)",
+      "language": "Japanese",
+      "category": "other",
+      "variant": "Green Back",
+      "image": null,
+      "notes": "1995 Topsun Ditto Green Back #132 (Japanese). PSA Ditto Master Set checklist."
+    },
+    {
+      "num": "132",
+      "name": "Ditto",
+      "set": "Bandai Carddass Vending (1996)",
+      "language": "Japanese",
+      "category": "other",
+      "variant": "Standard",
+      "image": null,
+      "notes": "1996 Bandai Carddass Vending Ditto #132 (Japanese). PSA checklist."
+    },
+    {
+      "num": "132",
+      "name": "Ditto",
+      "set": "Pocket Monsters Carddass (1997)",
+      "language": "Japanese",
+      "category": "other",
+      "variant": "Standard",
+      "image": null,
+      "notes": "Parts 1 and 2 each have red and green versions of all 151 (Sugimori watercolor art); Ditto appears in both parts. Parts 3/4 have new Bandai-illustrator art (Ditto mid-transform) and Ditto cameos on other Pokemon's cards. Source: dittodan.neocities.org/carddass + PSA checklist."
+    },
+    {
+      "num": "—",
+      "name": "Ditto",
+      "set": "Meiji Promo (1997)",
+      "language": "Japanese",
+      "category": "other",
+      "variant": "Foil",
+      "image": null,
+      "notes": "1997 Meiji Promo Ditto Foil (Japanese). PSA checklist."
+    },
+    {
+      "num": "67",
+      "name": "Ditto",
+      "set": "Action Flipz Series One (1999)",
+      "language": "English",
+      "category": "other",
+      "variant": "Standard",
+      "image": null,
+      "notes": "1999 Action Flipz Series One Ditto #67. PSA checklist."
+    },
+    {
+      "num": "SP5",
+      "name": "Ditto",
+      "set": "Action Flipz Stickers (1999)",
+      "language": "English",
+      "category": "other",
+      "variant": "Standard",
+      "image": null,
+      "notes": "1999 Action Flipz Stickers Ditto SP5. PSA checklist."
+    },
+    {
+      "num": "132",
+      "name": "Ditto",
+      "set": "Burger King (1999)",
+      "language": "English",
+      "category": "other",
+      "variant": "Perforated",
+      "image": null,
+      "notes": "1999 Burger King Ditto Perforated #132. PSA checklist."
+    },
+    {
+      "num": "132",
+      "name": "Ditto",
+      "set": "Pokémon Stickers Series 1 (1999)",
+      "language": "English",
+      "category": "other",
+      "variant": "Standard",
+      "image": null,
+      "notes": "1999 Pokemon Stickers Series 1 Ditto #132. PSA checklist."
+    },
+    {
+      "num": "132",
+      "name": "Ditto",
+      "set": "My151 Campaign Stickers (2018)",
+      "language": "Japanese",
+      "category": "other",
+      "variant": "Standard",
+      "image": null,
+      "notes": "2018 Japanese My151 Campaign Stickers Ditto #132. PSA checklist."
+    },
+    {
+      "num": "006/078",
+      "name": "Spinarak",
+      "set": "Pokémon GO",
+      "language": "English",
+      "category": "other",
+      "variant": "Reverse Holo peel",
+      "image": "https://images.pokemontcg.io/pgo/6.png",
+      "notes": "Reverse holo with a Ditto icon in the bottom-left corner; the top layer peels off like a sticker to reveal holo Ditto 053/078. Bulbapedia Pokemon GO page, Additional cards. Japanese s10b peel versions are in the standard list."
+    },
+    {
+      "num": "013/078",
+      "name": "Numel",
+      "set": "Pokémon GO",
+      "language": "English",
+      "category": "other",
+      "variant": "Reverse Holo peel",
+      "image": "https://images.pokemontcg.io/pgo/13.png",
+      "notes": "Reverse holo with a Ditto icon in the bottom-left corner; the top layer peels off like a sticker to reveal holo Ditto 053/078. Bulbapedia Pokemon GO page, Additional cards. Japanese s10b peel versions are in the standard list."
+    },
+    {
+      "num": "059/078",
+      "name": "Bidoof",
+      "set": "Pokémon GO",
+      "language": "English",
+      "category": "other",
+      "variant": "Reverse Holo peel",
+      "image": "https://images.pokemontcg.io/pgo/59.png",
+      "notes": "Reverse holo with a Ditto icon in the bottom-left corner; the top layer peels off like a sticker to reveal holo Ditto 053/078. Bulbapedia Pokemon GO page, Additional cards. Japanese s10b peel versions are in the standard list."
+    }
+  ],
+  "notes": "SCOPE: everything beyond the PokeCottage standard Ditto master set (ditto-pokecottage.json: English/Japanese/Simplified-Chinese standard printings). Do not merge the two lists without de-duplicating: the standard list already holds the English/Japanese/Simplified-Chinese version of every card named here, including the Vending Series 2 Ditto (num 32), the Meiji PCG-P 108 Ditto, the Origins 2007 / Games Expo 2007 event-stamped EX Delta Species Dittos, and the 2009 World Championships Deck Ditto — none of those are repeated here. LANGUAGE-VARIANT IMAGES: the image on a language-variant row is the English printing's image (same artwork in every language); per-language images were not separately verified. CORRECTED NUMBERS (verified Nov 26, 2026): Legends Awakened Ditto is 27/146 (not 131/146; 131/146 is Cynthia's Feelings, confirmed via Pokemon TCG API); Triumphant Ditto is 17/102 (not 40/102; 40/102 is Machoke, confirmed by reading the card image); Detective Pikachu Ditto is 17/18 (not 5/18, confirmed via Pokemon TCG API). UNVERIFIED — NEEDS CHECKING: Portuguese Pokemon GO Ditto 053/078 (Bulbapedia language list was truncated at Italian; French/German/Italian/Spanish confirmed); Korean Boundaries Crossed Ditto number (row uses Japanese Cold Flare number 042/059 by inference); EX Delta Species Ditto 62/113 and 64/113 transformed forms in the artwork; Korean/Traditional-Chinese/Indonesian/Thai prints exist at set level for the Sword & Shield / Scarlet & Violet-era Ditto cards (Crown Zenith, 151, Pokemon GO, Shining Fates, Lost Thunder, Detective Pikachu, Paldean Fates, 30th Celebration) but per-card numbers were not verified, so no rows were added for them; Korean prints of other Japanese-only Ditto sets (e.g. Clash at the Summit, Temple of Anger, Tag All Stars) likewise unverified. REEL-CLAIMED CAMEOS NOT VERIFIED (checked visually against hires card images Nov 26, 2026; NOT included): Imposter Professor Oak (Base Set 73/102 — no Ditto visible; the purple shape is a shadow); Bebe's Search (Mysterious Treasures 109/123 — the reel's '109/130' is PlusPower; the real art shows Glameow and a mug too small to identify); Department Store Girl (Arceus 85/99 — shows Pachirisu, no Ditto); Ortega (Obsidian Flames 190/197 — no Ditto visible); Minccino (no official printing identified — only a fan-made custom card found). OTHER UNVERIFIED: Topps Series 2 tin topper 'Ditto (Pikachu)' jumbo chrome card (mentioned ambiguously on Bulbapedia); Kingler (1997 Pocket Monsters Carddass) Ditto cameo (named in a Jun 2026 carousel; which Carddass part unverified); no Ditto card found in Topps Series 1, Topps 3D, Topps Johto, or Topps Movie checklists consulted (not exhaustively verified). ITALIAN EARLY SETS: Bulbapedia's expansions-in-other-languages table leaves Italian blank for Fossil and Skyridge, but the set pages and marketplace listings confirm Italian prints exist (Cardmarket Italian Ditto 3/62 and 18/62; graded Italian Skyridge Crystal Ho-Oh) — Italian rows kept. 30TH CELEBRATION IMAGES: no 30th Celebration card images were on images.pokemontcg.io as of Nov 26, 2026 (me55/28, me55/115, me55/149 all 404) — image null. TOPPS / VENDING / OTHER rows have no verified image URLs — image null."
+}

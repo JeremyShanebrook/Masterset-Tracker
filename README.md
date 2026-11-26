@@ -1,0 +1,62 @@
+# Masterset Tracker
+
+Android app for tracking Pokémon TCG masterset progress — interactive
+checklists in binder placement order, with card pictures.
+
+## Sets covered
+
+| Binder | Master | Grand Master |
+| --- | --- | --- |
+| Perfect Order (ME03) | 203 | 263 |
+| Chaos Rising (ME04) | 198 | 234 |
+| Pitch Black (ME05) | 194 | 222 |
+| 30th Celebration (30C) | 199 | 292 |
+| Delta Reign (ME06) | 228 | 250 |
+| Ditto — Every Card (#132) | 95 | 297 |
+
+Master = numbered set cards + reverse holos. Grand Master adds promos and
+special variants. The Ditto binder covers the PokeCottage Ditto list
+(English / Japanese / Simplified Chinese) plus cameo cards, Topps cards,
+Japanese vending prints, and other-language printings.
+
+## Features
+
+- Binder-order checklists — regular card, then its reverse holo, then
+  secret rares, promos and variants last
+- Per-binder page-size picker: 4, 9, 12 or 16 pockets per page
+- Master / Grand Master toggle per binder
+- Card thumbnail per row; tap to enlarge, tap to check off
+- Progress saved on the phone (localStorage); search + "missing only" filter
+- In-app updates: checks GitHub releases on launch and offers to download
+  and install a newer version
+
+## Data
+
+Checklists come from [PokeCottage](https://pokecottage.com) interactive
+checklists, cross-checked against the Pokémon TCG API / TCGdex. Card images
+load from the internet (scrydex / images.pokemontcg.io mirrors); a few
+cards have no verified image yet and show a placeholder.
+
+Source data lives in `data/*.json` (one file per binder). The web app is
+generated from `app-template.html` by `build.py`, which embeds the data
+into `android/app/src/main/assets/index.html`.
+
+## Build
+
+```sh
+python3 build.py
+cd android
+# with ANDROID_HOME set and JDK 17:
+gradle clean assembleDebug --offline
+```
+
+The app is a WebView shell (single `index.html` + bundled data). Debug
+builds are signed with the developer's debug keystore so new versions
+install over old ones.
+
+## Updates
+
+New versions ship as GitHub releases. The app checks
+`api.github.com/repos/JeremyShanebrook/Masterset-Tracker/releases/latest`
+on launch; when a newer tag exists it offers to download and install the
+APK from that release.

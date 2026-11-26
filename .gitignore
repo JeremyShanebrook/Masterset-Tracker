@@ -1,0 +1,9 @@
+# build outputs
+android/build/
+android/.gradle/
+builds/
+# local machine config
+android/local.properties
+# agent working files
+scratch/
+icon-preview-512.png

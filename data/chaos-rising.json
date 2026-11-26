@@ -1,0 +1,2354 @@
+{
+  "id": "chaos-rising",
+  "name": "Chaos Rising",
+  "series": "Mega Evolution",
+  "releaseDate": "2026-05-22",
+  "setCode": "ME04",
+  "tcgApiSetId": "me4",
+  "masterTotal": 198,
+  "grandMasterTotal": 234,
+  "source": "https://pokecottagecdn.com/mastersets/downloads/PokeCottage-CHAOS-RISING-Interactive-Checklist.pdf",
+  "cards": [
+    {
+      "num": "001",
+      "name": "Weedle",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-1/small"
+    },
+    {
+      "num": "001",
+      "name": "Weedle",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-1/small"
+    },
+    {
+      "num": "002",
+      "name": "Kakuna",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-2/small"
+    },
+    {
+      "num": "002",
+      "name": "Kakuna",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-2/small"
+    },
+    {
+      "num": "003",
+      "name": "Beedrill ex",
+      "rarity": "Double Rare",
+      "section": "Main Set",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-3/small"
+    },
+    {
+      "num": "004",
+      "name": "Carnivine",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-4/small"
+    },
+    {
+      "num": "004",
+      "name": "Carnivine",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-4/small"
+    },
+    {
+      "num": "005",
+      "name": "Chespin",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-5/small"
+    },
+    {
+      "num": "005",
+      "name": "Chespin",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-5/small"
+    },
+    {
+      "num": "006",
+      "name": "Quilladin",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-6/small"
+    },
+    {
+      "num": "006",
+      "name": "Quilladin",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-6/small"
+    },
+    {
+      "num": "007",
+      "name": "Chesnaught",
+      "rarity": "Rare",
+      "section": "Main Set",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-7/small"
+    },
+    {
+      "num": "007",
+      "name": "Chesnaught",
+      "rarity": "Rare",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-7/small"
+    },
+    {
+      "num": "008",
+      "name": "Vulpix",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-8/small"
+    },
+    {
+      "num": "008",
+      "name": "Vulpix",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-8/small"
+    },
+    {
+      "num": "009",
+      "name": "Ninetales",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-9/small"
+    },
+    {
+      "num": "009",
+      "name": "Ninetales",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-9/small"
+    },
+    {
+      "num": "010",
+      "name": "Ho-Oh",
+      "rarity": "Rare",
+      "section": "Main Set",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-10/small"
+    },
+    {
+      "num": "010",
+      "name": "Ho-Oh",
+      "rarity": "Rare",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-10/small"
+    },
+    {
+      "num": "011",
+      "name": "Fennekin",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-11/small"
+    },
+    {
+      "num": "011",
+      "name": "Fennekin",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-11/small"
+    },
+    {
+      "num": "012",
+      "name": "Braixen",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-12/small"
+    },
+    {
+      "num": "012",
+      "name": "Braixen",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-12/small"
+    },
+    {
+      "num": "013",
+      "name": "Delphox",
+      "rarity": "Rare",
+      "section": "Main Set",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-13/small"
+    },
+    {
+      "num": "013",
+      "name": "Delphox",
+      "rarity": "Rare",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-13/small"
+    },
+    {
+      "num": "014",
+      "name": "Litleo",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-14/small"
+    },
+    {
+      "num": "014",
+      "name": "Litleo",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-14/small"
+    },
+    {
+      "num": "015",
+      "name": "Mega Pyroar ex",
+      "rarity": "Double Rare",
+      "section": "Main Set",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-15/small"
+    },
+    {
+      "num": "016",
+      "name": "Remoraid",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-16/small"
+    },
+    {
+      "num": "016",
+      "name": "Remoraid",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-16/small"
+    },
+    {
+      "num": "017",
+      "name": "Octillery",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-17/small"
+    },
+    {
+      "num": "017",
+      "name": "Octillery",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-17/small"
+    },
+    {
+      "num": "018",
+      "name": "Delibird",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-18/small"
+    },
+    {
+      "num": "018",
+      "name": "Delibird",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-18/small"
+    },
+    {
+      "num": "019",
+      "name": "Keldeo",
+      "rarity": "Rare",
+      "section": "Main Set",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-19/small"
+    },
+    {
+      "num": "019",
+      "name": "Keldeo",
+      "rarity": "Rare",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-19/small"
+    },
+    {
+      "num": "020",
+      "name": "Froakie",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-20/small"
+    },
+    {
+      "num": "020",
+      "name": "Froakie",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-20/small"
+    },
+    {
+      "num": "021",
+      "name": "Frogadier",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-21/small"
+    },
+    {
+      "num": "021",
+      "name": "Frogadier",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-21/small"
+    },
+    {
+      "num": "022",
+      "name": "Mega Greninja ex",
+      "rarity": "Double Rare",
+      "section": "Main Set",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-22/small"
+    },
+    {
+      "num": "023",
+      "name": "Bergmite",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-23/small"
+    },
+    {
+      "num": "023",
+      "name": "Bergmite",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-23/small"
+    },
+    {
+      "num": "024",
+      "name": "Avalugg",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-24/small"
+    },
+    {
+      "num": "024",
+      "name": "Avalugg",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-24/small"
+    },
+    {
+      "num": "025",
+      "name": "Wimpod",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-25/small"
+    },
+    {
+      "num": "025",
+      "name": "Wimpod",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-25/small"
+    },
+    {
+      "num": "026",
+      "name": "Golisopod",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-26/small"
+    },
+    {
+      "num": "026",
+      "name": "Golisopod",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-26/small"
+    },
+    {
+      "num": "027",
+      "name": "Mareep",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-27/small"
+    },
+    {
+      "num": "027",
+      "name": "Mareep",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-27/small"
+    },
+    {
+      "num": "028",
+      "name": "Flaaffy",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-28/small"
+    },
+    {
+      "num": "028",
+      "name": "Flaaffy",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-28/small"
+    },
+    {
+      "num": "029",
+      "name": "Ampharos",
+      "rarity": "Rare",
+      "section": "Main Set",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-29/small"
+    },
+    {
+      "num": "029",
+      "name": "Ampharos",
+      "rarity": "Rare",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-29/small"
+    },
+    {
+      "num": "030",
+      "name": "Emolga",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-30/small"
+    },
+    {
+      "num": "030",
+      "name": "Emolga",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-30/small"
+    },
+    {
+      "num": "031",
+      "name": "Deoxys",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-31/small"
+    },
+    {
+      "num": "031",
+      "name": "Deoxys",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-31/small"
+    },
+    {
+      "num": "032",
+      "name": "Deoxys",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-32/small"
+    },
+    {
+      "num": "032",
+      "name": "Deoxys",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-32/small"
+    },
+    {
+      "num": "033",
+      "name": "Deoxys",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-33/small"
+    },
+    {
+      "num": "033",
+      "name": "Deoxys",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-33/small"
+    },
+    {
+      "num": "034",
+      "name": "Deoxys",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-34/small"
+    },
+    {
+      "num": "034",
+      "name": "Deoxys",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-34/small"
+    },
+    {
+      "num": "035",
+      "name": "Mega Floette ex",
+      "rarity": "Double Rare",
+      "section": "Main Set",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-35/small"
+    },
+    {
+      "num": "036",
+      "name": "Espurr",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-36/small"
+    },
+    {
+      "num": "036",
+      "name": "Espurr",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-36/small"
+    },
+    {
+      "num": "037",
+      "name": "Meowstic",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-37/small"
+    },
+    {
+      "num": "037",
+      "name": "Meowstic",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-37/small"
+    },
+    {
+      "num": "038",
+      "name": "Phantump",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-38/small"
+    },
+    {
+      "num": "038",
+      "name": "Phantump",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-38/small"
+    },
+    {
+      "num": "039",
+      "name": "Trevenant",
+      "rarity": "Rare",
+      "section": "Main Set",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-39/small"
+    },
+    {
+      "num": "039",
+      "name": "Trevenant",
+      "rarity": "Rare",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-39/small"
+    },
+    {
+      "num": "040",
+      "name": "Pumpkaboo",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-40/small"
+    },
+    {
+      "num": "040",
+      "name": "Pumpkaboo",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-40/small"
+    },
+    {
+      "num": "041",
+      "name": "Gourgeist ex",
+      "rarity": "Double Rare",
+      "section": "Main Set",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-41/small"
+    },
+    {
+      "num": "042",
+      "name": "Xerneas",
+      "rarity": "Rare",
+      "section": "Main Set",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-42/small"
+    },
+    {
+      "num": "042",
+      "name": "Xerneas",
+      "rarity": "Rare",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-42/small"
+    },
+    {
+      "num": "043",
+      "name": "Sudowoodo",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-43/small"
+    },
+    {
+      "num": "043",
+      "name": "Sudowoodo",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-43/small"
+    },
+    {
+      "num": "044",
+      "name": "Phanpy",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-44/small"
+    },
+    {
+      "num": "044",
+      "name": "Phanpy",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-44/small"
+    },
+    {
+      "num": "045",
+      "name": "Donphan",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-45/small"
+    },
+    {
+      "num": "045",
+      "name": "Donphan",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-45/small"
+    },
+    {
+      "num": "046",
+      "name": "Baltoy",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-46/small"
+    },
+    {
+      "num": "046",
+      "name": "Baltoy",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-46/small"
+    },
+    {
+      "num": "047",
+      "name": "Claydol",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-47/small"
+    },
+    {
+      "num": "047",
+      "name": "Claydol",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-47/small"
+    },
+    {
+      "num": "048",
+      "name": "Mega Gallade ex",
+      "rarity": "Double Rare",
+      "section": "Main Set",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-48/small"
+    },
+    {
+      "num": "049",
+      "name": "Zubat",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-49/small"
+    },
+    {
+      "num": "049",
+      "name": "Zubat",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-49/small"
+    },
+    {
+      "num": "050",
+      "name": "Golbat",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-50/small"
+    },
+    {
+      "num": "050",
+      "name": "Golbat",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-50/small"
+    },
+    {
+      "num": "051",
+      "name": "Crobat",
+      "rarity": "Rare",
+      "section": "Main Set",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-51/small"
+    },
+    {
+      "num": "051",
+      "name": "Crobat",
+      "rarity": "Rare",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-51/small"
+    },
+    {
+      "num": "052",
+      "name": "Qwilfish",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-52/small"
+    },
+    {
+      "num": "052",
+      "name": "Qwilfish",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-52/small"
+    },
+    {
+      "num": "053",
+      "name": "Stunky",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-53/small"
+    },
+    {
+      "num": "053",
+      "name": "Stunky",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-53/small"
+    },
+    {
+      "num": "054",
+      "name": "Skuntank",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-54/small"
+    },
+    {
+      "num": "054",
+      "name": "Skuntank",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-54/small"
+    },
+    {
+      "num": "055",
+      "name": "Krookodile ex",
+      "rarity": "Double Rare",
+      "section": "Main Set",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-55/small"
+    },
+    {
+      "num": "056",
+      "name": "Trubbish",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-56/small"
+    },
+    {
+      "num": "056",
+      "name": "Trubbish",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-56/small"
+    },
+    {
+      "num": "057",
+      "name": "Garbodor",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-57/small"
+    },
+    {
+      "num": "057",
+      "name": "Garbodor",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-57/small"
+    },
+    {
+      "num": "058",
+      "name": "Skrelp",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-58/small"
+    },
+    {
+      "num": "058",
+      "name": "Skrelp",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-58/small"
+    },
+    {
+      "num": "059",
+      "name": "Beldum",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-59/small"
+    },
+    {
+      "num": "059",
+      "name": "Beldum",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-59/small"
+    },
+    {
+      "num": "060",
+      "name": "Metang",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-60/small"
+    },
+    {
+      "num": "060",
+      "name": "Metang",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-60/small"
+    },
+    {
+      "num": "061",
+      "name": "Metagross",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-61/small"
+    },
+    {
+      "num": "061",
+      "name": "Metagross",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-61/small"
+    },
+    {
+      "num": "062",
+      "name": "Ferroseed",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-62/small"
+    },
+    {
+      "num": "062",
+      "name": "Ferroseed",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-62/small"
+    },
+    {
+      "num": "063",
+      "name": "Ferrothorn",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-63/small"
+    },
+    {
+      "num": "063",
+      "name": "Ferrothorn",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-63/small"
+    },
+    {
+      "num": "064",
+      "name": "Cobalion ex",
+      "rarity": "Double Rare",
+      "section": "Main Set",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-64/small"
+    },
+    {
+      "num": "065",
+      "name": "Mega Dragalge ex",
+      "rarity": "Double Rare",
+      "section": "Main Set",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-65/small"
+    },
+    {
+      "num": "066",
+      "name": "Goomy",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-66/small"
+    },
+    {
+      "num": "066",
+      "name": "Goomy",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-66/small"
+    },
+    {
+      "num": "067",
+      "name": "Sliggoo",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-67/small"
+    },
+    {
+      "num": "067",
+      "name": "Sliggoo",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-67/small"
+    },
+    {
+      "num": "068",
+      "name": "Goodra",
+      "rarity": "Rare",
+      "section": "Main Set",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-68/small"
+    },
+    {
+      "num": "068",
+      "name": "Goodra",
+      "rarity": "Rare",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-68/small"
+    },
+    {
+      "num": "069",
+      "name": "Tauros",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-69/small"
+    },
+    {
+      "num": "069",
+      "name": "Tauros",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-69/small"
+    },
+    {
+      "num": "070",
+      "name": "Patrat",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-70/small"
+    },
+    {
+      "num": "070",
+      "name": "Patrat",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-70/small"
+    },
+    {
+      "num": "071",
+      "name": "Watchog",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-71/small"
+    },
+    {
+      "num": "071",
+      "name": "Watchog",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-71/small"
+    },
+    {
+      "num": "072",
+      "name": "Minccino",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-72/small"
+    },
+    {
+      "num": "072",
+      "name": "Minccino",
+      "rarity": "Common",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-72/small"
+    },
+    {
+      "num": "073",
+      "name": "Cinccino ex",
+      "rarity": "Double Rare",
+      "section": "Main Set",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-73/small"
+    },
+    {
+      "num": "074",
+      "name": "Adversity Policy",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-74/small"
+    },
+    {
+      "num": "074",
+      "name": "Adversity Policy",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-74/small"
+    },
+    {
+      "num": "075",
+      "name": "Ange Floette",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-75/small"
+    },
+    {
+      "num": "075",
+      "name": "Ange Floette",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-75/small"
+    },
+    {
+      "num": "076",
+      "name": "AZ's Tranquility",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-76/small"
+    },
+    {
+      "num": "076",
+      "name": "AZ's Tranquility",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-76/small"
+    },
+    {
+      "num": "077",
+      "name": "Emma",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-77/small"
+    },
+    {
+      "num": "077",
+      "name": "Emma",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-77/small"
+    },
+    {
+      "num": "078",
+      "name": "Great Haul Net",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-78/small"
+    },
+    {
+      "num": "078",
+      "name": "Great Haul Net",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-78/small"
+    },
+    {
+      "num": "079",
+      "name": "Philippe",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-79/small"
+    },
+    {
+      "num": "079",
+      "name": "Philippe",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-79/small"
+    },
+    {
+      "num": "080",
+      "name": "Prism Tower",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-80/small"
+    },
+    {
+      "num": "080",
+      "name": "Prism Tower",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-80/small"
+    },
+    {
+      "num": "081",
+      "name": "Roxie's Performance",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-81/small"
+    },
+    {
+      "num": "081",
+      "name": "Roxie's Performance",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-81/small"
+    },
+    {
+      "num": "082",
+      "name": "Special Red Card",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-82/small"
+    },
+    {
+      "num": "082",
+      "name": "Special Red Card",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-82/small"
+    },
+    {
+      "num": "083",
+      "name": "Transformation Tome",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Regular",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-83/small"
+    },
+    {
+      "num": "083",
+      "name": "Transformation Tome",
+      "rarity": "Uncommon",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-83/small"
+    },
+    {
+      "num": "084",
+      "name": "Bubbly Water Energy",
+      "rarity": "Rare",
+      "section": "Main Set",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-84/small"
+    },
+    {
+      "num": "084",
+      "name": "Bubbly Water Energy",
+      "rarity": "Rare",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-84/small"
+    },
+    {
+      "num": "085",
+      "name": "Magnetic Metal Energy",
+      "rarity": "Rare",
+      "section": "Main Set",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-85/small"
+    },
+    {
+      "num": "085",
+      "name": "Magnetic Metal Energy",
+      "rarity": "Rare",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-85/small"
+    },
+    {
+      "num": "086",
+      "name": "Nitro Fire Energy",
+      "rarity": "Rare",
+      "section": "Main Set",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-86/small"
+    },
+    {
+      "num": "086",
+      "name": "Nitro Fire Energy",
+      "rarity": "Rare",
+      "section": "Main Set",
+      "variant": "Reverse Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-86/small"
+    },
+    {
+      "num": "087",
+      "name": "Chespin",
+      "rarity": "Illustration Rare",
+      "section": "Illustration Rare",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-87/small"
+    },
+    {
+      "num": "088",
+      "name": "Froakie",
+      "rarity": "Illustration Rare",
+      "section": "Illustration Rare",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-88/small"
+    },
+    {
+      "num": "089",
+      "name": "Frogadier",
+      "rarity": "Illustration Rare",
+      "section": "Illustration Rare",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-89/small"
+    },
+    {
+      "num": "090",
+      "name": "Ampharos",
+      "rarity": "Illustration Rare",
+      "section": "Illustration Rare",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-90/small"
+    },
+    {
+      "num": "091",
+      "name": "Xerneas",
+      "rarity": "Illustration Rare",
+      "section": "Illustration Rare",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-91/small"
+    },
+    {
+      "num": "092",
+      "name": "Claydol",
+      "rarity": "Illustration Rare",
+      "section": "Illustration Rare",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-92/small"
+    },
+    {
+      "num": "093",
+      "name": "Crobat",
+      "rarity": "Illustration Rare",
+      "section": "Illustration Rare",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-93/small"
+    },
+    {
+      "num": "094",
+      "name": "Metang",
+      "rarity": "Illustration Rare",
+      "section": "Illustration Rare",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-94/small"
+    },
+    {
+      "num": "095",
+      "name": "Sliggoo",
+      "rarity": "Illustration Rare",
+      "section": "Illustration Rare",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-95/small"
+    },
+    {
+      "num": "096",
+      "name": "Tauros",
+      "rarity": "Illustration Rare",
+      "section": "Illustration Rare",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-96/small"
+    },
+    {
+      "num": "097",
+      "name": "Watchog",
+      "rarity": "Illustration Rare",
+      "section": "Illustration Rare",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-97/small"
+    },
+    {
+      "num": "098",
+      "name": "Beedrill ex",
+      "rarity": "Ultra Rare",
+      "section": "Ultra Rare",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-98/small"
+    },
+    {
+      "num": "099",
+      "name": "Mega Pyroar ex",
+      "rarity": "Ultra Rare",
+      "section": "Ultra Rare",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-99/small"
+    },
+    {
+      "num": "100",
+      "name": "Mega Greninja ex",
+      "rarity": "Ultra Rare",
+      "section": "Ultra Rare",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-100/small"
+    },
+    {
+      "num": "101",
+      "name": "Mega Floette ex",
+      "rarity": "Ultra Rare",
+      "section": "Ultra Rare",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-101/small"
+    },
+    {
+      "num": "102",
+      "name": "Gourgeist ex",
+      "rarity": "Ultra Rare",
+      "section": "Ultra Rare",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-102/small"
+    },
+    {
+      "num": "103",
+      "name": "Cobalion ex",
+      "rarity": "Ultra Rare",
+      "section": "Ultra Rare",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-103/small"
+    },
+    {
+      "num": "104",
+      "name": "Mega Dragalge ex",
+      "rarity": "Ultra Rare",
+      "section": "Ultra Rare",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-104/small"
+    },
+    {
+      "num": "105",
+      "name": "Cinccino ex",
+      "rarity": "Ultra Rare",
+      "section": "Ultra Rare",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-105/small"
+    },
+    {
+      "num": "106",
+      "name": "AZ's Tranquility",
+      "rarity": "Ultra Rare",
+      "section": "Ultra Rare",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-106/small"
+    },
+    {
+      "num": "107",
+      "name": "Emma",
+      "rarity": "Ultra Rare",
+      "section": "Ultra Rare",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-107/small"
+    },
+    {
+      "num": "108",
+      "name": "Energy Retrieval",
+      "rarity": "Ultra Rare",
+      "section": "Ultra Rare",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-108/small"
+    },
+    {
+      "num": "109",
+      "name": "Jumbo Ice Cream",
+      "rarity": "Ultra Rare",
+      "section": "Ultra Rare",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-109/small"
+    },
+    {
+      "num": "110",
+      "name": "Philippe",
+      "rarity": "Ultra Rare",
+      "section": "Ultra Rare",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-110/small"
+    },
+    {
+      "num": "111",
+      "name": "Prism Tower",
+      "rarity": "Ultra Rare",
+      "section": "Ultra Rare",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-111/small"
+    },
+    {
+      "num": "112",
+      "name": "Roxie's Performance",
+      "rarity": "Ultra Rare",
+      "section": "Ultra Rare",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-112/small"
+    },
+    {
+      "num": "113",
+      "name": "Special Red Card",
+      "rarity": "Ultra Rare",
+      "section": "Ultra Rare",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-113/small"
+    },
+    {
+      "num": "114",
+      "name": "Surfing Beach",
+      "rarity": "Ultra Rare",
+      "section": "Ultra Rare",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-114/small"
+    },
+    {
+      "num": "115",
+      "name": "Tool Scrapper",
+      "rarity": "Ultra Rare",
+      "section": "Ultra Rare",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-115/small"
+    },
+    {
+      "num": "116",
+      "name": "Mega Greninja ex",
+      "rarity": "Special Illustration Rare",
+      "section": "Special Illustration Rare",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-116/small"
+    },
+    {
+      "num": "117",
+      "name": "Mega Floette ex",
+      "rarity": "Special Illustration Rare",
+      "section": "Special Illustration Rare",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-117/small"
+    },
+    {
+      "num": "118",
+      "name": "Mega Dragalge ex",
+      "rarity": "Special Illustration Rare",
+      "section": "Special Illustration Rare",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-118/small"
+    },
+    {
+      "num": "119",
+      "name": "Cinccino ex",
+      "rarity": "Special Illustration Rare",
+      "section": "Special Illustration Rare",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-119/small"
+    },
+    {
+      "num": "120",
+      "name": "AZ's Tranquility",
+      "rarity": "Special Illustration Rare",
+      "section": "Special Illustration Rare",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-120/small"
+    },
+    {
+      "num": "121",
+      "name": "Roxie's Performance",
+      "rarity": "Special Illustration Rare",
+      "section": "Special Illustration Rare",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-121/small"
+    },
+    {
+      "num": "122",
+      "name": "Mega Greninja ex",
+      "rarity": "Mega Hyper Rare",
+      "section": "Mega Hyper Rare",
+      "variant": "Holo",
+      "inMaster": true,
+      "inGrandMaster": true,
+      "image": "https://images.scrydex.com/pokemon/me4-122/small"
+    },
+    {
+      "num": "MEP 074",
+      "name": "Delphox",
+      "rarity": "Promo",
+      "section": "Promos",
+      "variant": "Build & Battle Exclusive",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": null
+    },
+    {
+      "num": "MEP 077",
+      "name": "Goodra",
+      "rarity": "Promo",
+      "section": "Promos",
+      "variant": "Prerelease STAFF Stamp",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": null
+    },
+    {
+      "num": "MEP 074",
+      "name": "Delphox",
+      "rarity": "Promo",
+      "section": "Promos",
+      "variant": "Prerelease STAFF Stamp",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": null
+    },
+    {
+      "num": "MEP 078",
+      "name": "Toxel",
+      "rarity": "Promo",
+      "section": "Promos",
+      "variant": "Checklane Blister",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": null
+    },
+    {
+      "num": "MEP 075",
+      "name": "Ampharos",
+      "rarity": "Promo",
+      "section": "Promos",
+      "variant": "Build & Battle Exclusive",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": null
+    },
+    {
+      "num": "MEP 079",
+      "name": "Charmeleon",
+      "rarity": "Promo",
+      "section": "Promos",
+      "variant": "3 Pack Blister",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": null
+    },
+    {
+      "num": "MEP 075",
+      "name": "Ampharos",
+      "rarity": "Promo",
+      "section": "Promos",
+      "variant": "Prerelease STAFF Stamp",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": null
+    },
+    {
+      "num": "MEP 080",
+      "name": "Fennekin",
+      "rarity": "Promo",
+      "section": "Promos",
+      "variant": "Elite Trainer Box Promo",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": null
+    },
+    {
+      "num": "MEP 076",
+      "name": "Crobat",
+      "rarity": "Promo",
+      "section": "Promos",
+      "variant": "Build & Battle Exclusive",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": null
+    },
+    {
+      "num": "MEP 080",
+      "name": "Fennekin",
+      "rarity": "Promo",
+      "section": "Promos",
+      "variant": "Pokemon Center ETB Promo",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": null
+    },
+    {
+      "num": "MEP 076",
+      "name": "Crobat",
+      "rarity": "Promo",
+      "section": "Promos",
+      "variant": "Prerelease STAFF Stamp",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": null
+    },
+    {
+      "num": "MEP 081",
+      "name": "Mega Greninja ex",
+      "rarity": "Promo",
+      "section": "Promos",
+      "variant": "Mega Greninja ex Promo",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": null
+    },
+    {
+      "num": "MEP 077",
+      "name": "Goodra",
+      "rarity": "Promo",
+      "section": "Promos",
+      "variant": "Build & Battle Exclusive",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": null
+    },
+    {
+      "num": "010/086",
+      "name": "Ho-Oh",
+      "rarity": "Rare",
+      "section": "Variants",
+      "variant": "EB Games Stamp (Cosmos Holo)",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": null
+    },
+    {
+      "num": "029/086",
+      "name": "Ampharos",
+      "rarity": "Rare",
+      "section": "Variants",
+      "variant": "Cosmos Holo (Delta Reign Premium Checklane Blister)",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": null
+    },
+    {
+      "num": "010/086",
+      "name": "Ho-Oh",
+      "rarity": "Rare",
+      "section": "Variants",
+      "variant": "GameStop Stamp (Cosmos Holo)",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": null
+    },
+    {
+      "num": "030/086",
+      "name": "Emolga",
+      "rarity": "Common",
+      "section": "Variants",
+      "variant": "30th Celebration Stamp (Espeon & Umbreon ex Battle Decks)",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": null
+    },
+    {
+      "num": "011/086",
+      "name": "Fennekin",
+      "rarity": "Common",
+      "section": "Variants",
+      "variant": "30th Celebration Stamp (Espeon & Umbreon ex Battle Decks)",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": null
+    },
+    {
+      "num": "042/086",
+      "name": "Xerneas",
+      "rarity": "Rare",
+      "section": "Variants",
+      "variant": "Cosmos Holo (Delta Reign Premium Checklane Blister)",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": null
+    },
+    {
+      "num": "012/086",
+      "name": "Braixen",
+      "rarity": "Common",
+      "section": "Variants",
+      "variant": "30th Celebration Stamp (Espeon & Umbreon ex Battle Decks)",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": null
+    },
+    {
+      "num": "049/086",
+      "name": "Zubat",
+      "rarity": "Common",
+      "section": "Variants",
+      "variant": "Pokéween 2026 Stamp (Holo)",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": null
+    },
+    {
+      "num": "013/086",
+      "name": "Delphox",
+      "rarity": "Rare",
+      "section": "Variants",
+      "variant": "Chaos Rising Stamp (Cosmos Holo)",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": null
+    },
+    {
+      "num": "050/086",
+      "name": "Golbat",
+      "rarity": "Common",
+      "section": "Variants",
+      "variant": "Pokéween 2026 Stamp (Holo)",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": null
+    },
+    {
+      "num": "013/086",
+      "name": "Delphox",
+      "rarity": "Rare",
+      "section": "Variants",
+      "variant": "Non-Holo (Chaos Rising Build & Battle Box)",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": null
+    },
+    {
+      "num": "051/086",
+      "name": "Crobat",
+      "rarity": "Rare",
+      "section": "Variants",
+      "variant": "Non-Holo (Chaos Rising Build & Battle Box)",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": null
+    },
+    {
+      "num": "013/086",
+      "name": "Delphox",
+      "rarity": "Rare",
+      "section": "Variants",
+      "variant": "30th Celebration Stamp (Espeon & Umbreon ex Battle Decks)",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": null
+    },
+    {
+      "num": "051/086",
+      "name": "Crobat",
+      "rarity": "Rare",
+      "section": "Variants",
+      "variant": "Pokéween 2026 Stamp (Holo)",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": null
+    },
+    {
+      "num": "013/086",
+      "name": "Delphox",
+      "rarity": "Rare",
+      "section": "Variants",
+      "variant": "Cosmos Holo (Delta Reign Premium Checklane Blister)",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": null
+    },
+    {
+      "num": "068/086",
+      "name": "Goodra",
+      "rarity": "Rare",
+      "section": "Variants",
+      "variant": "Non-Holo (Chaos Rising Build & Battle Box)",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": null
+    },
+    {
+      "num": "019/086",
+      "name": "Keldeo",
+      "rarity": "Rare",
+      "section": "Variants",
+      "variant": "Chaos Rising Stamp (Cosmos Holo)",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": null
+    },
+    {
+      "num": "076/086",
+      "name": "AZ's Tranquility",
+      "rarity": "Uncommon",
+      "section": "Variants",
+      "variant": "2027 Regional Championships Promo",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": null
+    },
+    {
+      "num": "019/086",
+      "name": "Keldeo",
+      "rarity": "Rare",
+      "section": "Variants",
+      "variant": "Cosmos Holo (Delta Reign Premium Checklane Blister)",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": null
+    },
+    {
+      "num": "076/086",
+      "name": "AZ's Tranquility",
+      "rarity": "Uncommon",
+      "section": "Variants",
+      "variant": "2027 Regional Championships Staff Promo",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": null
+    },
+    {
+      "num": "022/086",
+      "name": "Mega Greninja ex",
+      "rarity": "Double Rare",
+      "section": "Variants",
+      "variant": "Premier Ball League",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": null
+    },
+    {
+      "num": "085/086",
+      "name": "Magnetic Metal Energy",
+      "rarity": "Rare",
+      "section": "Variants",
+      "variant": "Non-Holo (Pitch Black Build & Battle Box)",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": null
+    },
+    {
+      "num": "029/086",
+      "name": "Ampharos",
+      "rarity": "Rare",
+      "section": "Variants",
+      "variant": "Non-Holo (Chaos Rising Build & Battle Box)",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": null
+    }
+  ],
+  "notes": "Master total 198 as printed in the PokeCottage PDF header ('198 cards (plus promos and variants)'). Grand master total 234 is derived, not printed: master 198 + 13 promos + 23 variants listed in the PDF's Grand Master Set section. Reverse Holo entries exist only for main-set Common/Uncommon/Rare cards (Double Rare ex and secret rares have no reverse holo); the count matches the printed master total exactly. Card images use the Pokemon TCG API's own image host (images.scrydex.com, pattern /pokemon/<setid>-<number>/small, spot-checked HTTP 200). The legacy images.pokemontcg.io/<setid>/<number>.png pattern returns HTTP 404 for these 2026 sets, so it was not used. Promo rarity is recorded as 'Promo' (PokeCottage lists no rarity for promos). Variant entries use the printed number form 'NNN/PPP' and carry the base card's rarity. Promo/variant images are null (no verified URL)."
+}
