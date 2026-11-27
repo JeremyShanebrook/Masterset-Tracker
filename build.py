@@ -30,6 +30,8 @@ def compact_card(c, is_ditto):
     }
     if c.get('language'):
         out['lang'] = c['language']
+    if c.get('pb'):
+        out['pb'] = 1
     if c.get('group'):
         out['grp'] = c['group']
     if c.get('set'):

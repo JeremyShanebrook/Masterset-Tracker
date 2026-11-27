@@ -294,11 +294,12 @@ const preloadedImgs = new Set();
 function preloadSpreadImages(b) {
   const st = bstate(b.id);
   const rows = visibleRows(b);
-  const totalPages = Math.max(1, Math.ceil(rows.length / st.pageSize));
+  const pages = splitPages(rows, st.pageSize);
+  const totalPages = Math.max(1, pages.length);
   const totalSpreads = Math.max(1, Math.ceil(totalPages / 2));
   [st.spread - 1, st.spread + 1].forEach(s => {
     if (s < 0 || s >= totalSpreads) return;
-    rows.slice(s * 2 * st.pageSize, (s * 2 + 2) * st.pageSize).forEach(r => {
+    (pages[s * 2] || []).concat(pages[s * 2 + 1] || []).forEach(r => {
       const u = r.c.img;
       if (u && !preloadedImgs.has(u)) { preloadedImgs.add(u); const im = new Image(); im.src = u; }
     });
@@ -397,6 +398,29 @@ function visibleRows(b) {
 }
 function modeRows(b) {
   return b.cards.filter(c => bstate(b.id).mode === 'master' ? c.m : c.g);
+}
+// Split the visible rows into pages of pageSize. A row flagged pb starts a
+// new page (unless the current page is already empty), so a section can be
+// forced to start at the top of a page — the page is padded with invisible
+// pockets, leaving blank spots rather than packing the next section in.
+// Works at any page size; without pb flags this is just ceil(n / pageSize).
+function splitPages(rows, pageSize) {
+  const pages = [[]];
+  rows.forEach(r => {
+    if (r.c.pb && pages[pages.length - 1].length > 0) pages.push([]);
+    pages[pages.length - 1].push(r);
+    if (pages[pages.length - 1].length >= pageSize) pages.push([]);
+  });
+  if (pages.length > 1 && pages[pages.length - 1].length === 0) pages.pop();
+  return pages;
+}
+// Which page (0-based) holds the row with this id, honouring pb breaks.
+function pageIndexOf(rows, pageSize, rowId) {
+  const pages = splitPages(rows, pageSize);
+  for (let p = 0; p < pages.length; p++) {
+    if (pages[p].some(r => r.id === rowId)) return p;
+  }
+  return 0;
 }
 function progress(b) {
   const rows = modeRows(b);
@@ -530,24 +554,23 @@ function onSearch(b, q) {
     return;
   }
   if (nm) { nm.classList.add('hidden'); nm.textContent = ''; }
-  st.spread = Math.floor(Math.floor(found / st.pageSize) / 2);
+  st.spread = Math.floor(pageIndexOf(rows, st.pageSize, rows[found].id) / 2);
   st.highlight = rows[found].id;
   renderPages(b);
   const tok = ++highlightToken;
   setTimeout(() => { if (tok === highlightToken) { st.highlight = null; } }, 2600);
 }
 
-// One binder page (a chunk of rows) as a .binderpage div. pageIdx is
-// 0-based; past the last page it returns a blank paper page.
-function pageHTML(b, pageIdx, rows, cols, got) {
+// One binder page as a .binderpage div. pages is the splitPages() output;
+// pageIdx is 0-based; past the last page it returns a blank paper page.
+function pageHTML(b, pageIdx, pages, cols, got) {
   const st = bstate(b.id);
-  const totalPages = Math.max(1, Math.ceil(rows.length / st.pageSize));
+  const totalPages = Math.max(1, pages.length);
   const side = (pageIdx % 2 === 0) ? 'sp-left' : 'sp-right';
   if (pageIdx >= totalPages) {
     return '<div class="binderpage ' + side + ' blank"><div class="page-h">Page ' + (pageIdx + 1) + ' of ' + totalPages + '</div><div class="grid c' + cols + '"></div></div>';
   }
-  const start = pageIdx * st.pageSize;
-  const chunk = rows.slice(start, start + st.pageSize);
+  const chunk = pages[pageIdx];
   let h = '<div class="binderpage ' + side + '"><div class="page-h">Page ' + (pageIdx + 1) + ' of ' + totalPages + '</div><div class="grid c' + cols + '">';
   chunk.forEach(r => {
     const c = r.c;
@@ -595,7 +618,8 @@ function renderPages(b) {
   const st = bstate(b.id);
   const got = checkedSet(b.id);
   const rows = visibleRows(b);
-  const totalPages = Math.max(1, Math.ceil(rows.length / st.pageSize));
+  const pages = splitPages(rows, st.pageSize);
+  const totalPages = Math.max(1, pages.length);
   const totalSpreads = Math.max(1, Math.ceil(totalPages / 2));
   if (st.spread >= totalSpreads) st.spread = totalSpreads - 1;
   if (st.spread < 0) st.spread = 0;
@@ -610,16 +634,16 @@ function renderPages(b) {
       + '<button id="selAll">Select all</button>'
       + '<button id="selAdd"' + (n ? '' : ' disabled') + '>Add to collection</button>'
       + '<button id="selRemove"' + (n ? '' : ' disabled') + '>Remove from collection</button>'
-      + '<button id="selDone" class="ghost">Done</button></div>';
+      + '<button id="selCancel" class="ghost">Cancel</button></div>';
   }
   // two-page spread, open at the binding
   const leftIdx = st.spread * 2, rightIdx = leftIdx + 1;
   const lo = leftIdx + 1, hi = Math.min(rightIdx + 1, totalPages);
   const range = lo === hi ? ('Page ' + lo) : ('Pages ' + lo + '–' + hi);
   h += '<div class="pagewrap"><div class="spread" id="spreadEl">'
-    + pageHTML(b, leftIdx, rows, cols, got)
+    + pageHTML(b, leftIdx, pages, cols, got)
     + '<div class="spine"><i></i><i></i><i></i></div>'
-    + pageHTML(b, rightIdx, rows, cols, got)
+    + pageHTML(b, rightIdx, pages, cols, got)
     + '</div>'
     + '<div class="page-foot">' + range + ' of ' + totalPages + '</div></div>';
   h += '<div class="pagenav"><button id="prevPg"' + (st.spread === 0 ? ' disabled' : '') + '>&larr; Prev</button>'
@@ -635,13 +659,15 @@ function renderPages(b) {
     });
     document.getElementById('selAdd').addEventListener('click', () => {
       sel.ids.forEach(id => setChecked(b.id, id, true));
+      exitSelMode(); // adding is done — leave multi-select
       render();
     });
     document.getElementById('selRemove').addEventListener('click', () => {
       sel.ids.forEach(id => setChecked(b.id, id, false));
+      exitSelMode(); // removing is done — leave multi-select
       render();
     });
-    document.getElementById('selDone').addEventListener('click', () => { exitSelMode(); renderPages(b); });
+    document.getElementById('selCancel').addEventListener('click', () => { exitSelMode(); renderPages(b); });
   }
 
   // page navigation + swipe to turn the page
@@ -705,7 +731,7 @@ function turnPage(b, dir) {
   if (turning) return;
   const st = bstate(b.id);
   const rows = visibleRows(b);
-  const totalPages = Math.max(1, Math.ceil(rows.length / st.pageSize));
+  const totalPages = Math.max(1, splitPages(rows, st.pageSize).length);
   const totalSpreads = Math.max(1, Math.ceil(totalPages / 2));
   const next = st.spread + dir;
   if (next < 0 || next >= totalSpreads) return;
@@ -892,7 +918,7 @@ function jumpToCard(b, rowId, animate) {
   store.set('mst:hide:' + b.id, false);
   const rows = visibleRows(b);
   const pos = rows.findIndex(r => r.id === rowId);
-  if (pos >= 0) st.spread = Math.floor(Math.floor(pos / st.pageSize) / 2);
+  if (pos >= 0) st.spread = Math.floor(pageIndexOf(rows, st.pageSize, rowId) / 2);
   st.highlight = rowId;
   setSlideId(animate ? rowId : null);
   exitSelMode();

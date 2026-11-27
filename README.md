@@ -37,6 +37,11 @@ non-TCG Ditto items from the Elite Fourum Dittologist thread.
 - In the card details, swipe left or right to move to the next or previous
   card in the binder
 - Missing cards are darkened; a card you add slides in lit up
+- 30th Celebration: the three First Partner sets each get their own page
+  (each generation's starters share a row, so the nine cards complete one
+  picture), and the Classic Collection and Promos each start on a fresh page
+- Multi-select: Add to collection / Remove from collection also close
+  multi-select; the Done button is now Cancel
 - Big progress bar per binder ("N% complete"), Rare Candy style
 - Graded cards: pick the company (PSA / CGC / BGS / SGC) and grade — the
   pocket shows a slab matching the company and grade
