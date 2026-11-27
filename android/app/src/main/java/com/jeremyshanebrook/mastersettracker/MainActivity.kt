@@ -59,7 +59,8 @@ class MainActivity : ComponentActivity() {
         "images.scrydex.com", "images.pokemontcg.io", "www.pokemon.com",
         "assets.tcgdex.net", "efour.b-cdn.net", "images.dexli.st",
         "archives.bulbagarden.net", "images.poplextcg.com",
-        "images.cardboardtens.com"
+        "images.cardboardtens.com", "cdn.pktcg.app", "api.rip.fun",
+        "ogcards.com"
     )
     private val imageCacheMaxBytes = 250L * 1024 * 1024
 

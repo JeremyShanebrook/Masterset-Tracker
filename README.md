@@ -49,9 +49,11 @@ non-TCG Ditto items from the Elite Fourum Dittologist thread.
 Checklists come from [PokeCottage](https://pokecottage.com) interactive
 checklists, cross-checked against the Pokémon TCG API / TCGdex. Card images
 load from the internet (scrydex / images.pokemontcg.io mirrors, plus the
-Elite Fourum Dittologist thread and dexli.st for Korean cards); pictures are
-cached on the phone after the first view, so turning pages is instant. A few
-cards have no verified image yet and show a placeholder.
+Elite Fourum Dittologist thread, dexli.st for Korean cards, Poplex for old
+Japanese, PK.TCG for Simplified Chinese, and Cardboard Tens for the 30th
+Celebration Classic Collection); pictures are cached on the phone after the
+first view, so turning pages is instant. 24 Ditto cards have no verified
+image yet and show a placeholder.
 
 Source data lives in `data/*.json` (one file per binder). The web app is
 generated from `app-template.html` by `build.py`, which embeds the data
