@@ -35,11 +35,13 @@ non-TCG Ditto items from the Elite Fourum Dittologist thread.
   card in the binder; closing the details lands the binder on the page of
   the card you were last viewing, not the page you opened it from
 - Missing cards are darkened; a card you add slides in lit up
-- A card whose picture does not show its variation (stamp, code, holo
-  pattern) is marked with an asterisk at the start of its description and
-  the note "Correct card image not found" — 38 Ditto rows are flagged this
-  way; 3 variation images were corrected (151 Play! Pokémon Cosmos Holo,
-  151 World Championships Deck 2025, Legends Awakened WC Deck 2009)
+- A card whose picture does not show its variation is marked with an
+  asterisk at the start of its description and the note "Correct card
+  image not found" — 7 Ditto rows are flagged this way (151 Master Ball /
+  Poké Ball holos, Fossil + Koga's Ditto 1st Ed., Flight of Legends
+  Unlimited). The Delta Species variation rows are NOT flagged: the image
+  shows the right card number and art, only the finish / stamp / printed
+  code is not captured
 - 30th Celebration: the three First Partner sets each get their own page
   (each generation's starters share a row, so the nine cards complete one
   picture), and the Classic Collection and Promos each start on a fresh page
