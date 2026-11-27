@@ -60,7 +60,7 @@ class MainActivity : ComponentActivity() {
         "assets.tcgdex.net", "efour.b-cdn.net", "images.dexli.st",
         "archives.bulbagarden.net", "images.poplextcg.com",
         "images.cardboardtens.com", "cdn.pktcg.app", "api.rip.fun",
-        "ogcards.com"
+        "ogcards.com", "cdn.pokegoto.com", "tcgplayer-cdn.tcgplayer.com"
     )
     private val imageCacheMaxBytes = 250L * 1024 * 1024
 

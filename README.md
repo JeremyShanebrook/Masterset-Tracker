@@ -10,9 +10,9 @@ checklists in binder placement order, with card pictures.
 | Perfect Order (ME03) | 124 | 263 |
 | Chaos Rising (ME04) | 122 | 234 |
 | Pitch Black (ME05) | 120 | 222 |
-| 30th Celebration (30C) | 199 | 292 |
+| 30th Celebration (30C) | 199 | 283 |
 | Delta Reign (ME06) | 141 | 250 |
-| Ditto — Every Card (#132) | 85 | 200 |
+| Ditto — Every Card (#132) | 86 | 200 |
 
 Master = one of each card number, including secret rares. Grand Master adds
 the holo and reverse-holo versions, promos and special variants. The Ditto binder covers the PokeCottage Ditto list
@@ -24,19 +24,21 @@ non-TCG Ditto items from the Elite Fourum Dittologist thread.
 
 - Binder-order checklists — regular card, then its reverse holo, then
   secret rares, promos and variants last
-- Two-page spread: pages sit either side of the centre binding, and a page
-  turns over the binding like a real binder — the next page is already
-  underneath and is revealed as the leaf lifts. The leaf pivots on the spine
-  centre, so it lands exactly on the page underneath with no shift. No
-  headers or divider rows: every page is a clean grid of cards, and every
-  spread is the same height, so flipping never shifts the pages or leaves
-  empty slots
+- One page at a time, full width — the cards are big enough to tell apart
+  from the picture alone. No headers or divider rows: every page is a
+  clean grid of cards, and every page is the same height, so turning never
+  shifts the layout or leaves empty slots
 - Per-binder page-size picker: 4, 9, 12 or 16 pockets per page
 - Master / Grand Master toggle per binder
 - Card thumbnail per row; tap for the card info, long-press to multi-select
 - In the card details, swipe left or right to move to the next or previous
   card in the binder
 - Missing cards are darkened; a card you add slides in lit up
+- A card whose picture does not show its variation (stamp, code, holo
+  pattern) is marked with an asterisk at the start of its description and
+  the note "Correct card image not found" — 38 Ditto rows are flagged this
+  way; 3 variation images were corrected (151 Play! Pokémon Cosmos Holo,
+  151 World Championships Deck 2025, Legends Awakened WC Deck 2009)
 - 30th Celebration: the three First Partner sets each get their own page
   (each generation's starters share a row, so the nine cards complete one
   picture), and the Classic Collection and Promos each start on a fresh page
@@ -60,7 +62,9 @@ Elite Fourum Dittologist thread, dexli.st for Korean cards, Poplex for old
 Japanese, PK.TCG for Simplified Chinese, and Cardboard Tens for the 30th
 Celebration Classic Collection); pictures are cached on the phone after the
 first view, so turning pages is instant. 26 Ditto cards have no verified
-image yet and show a placeholder.
+image yet and show a placeholder; another 38 show a picture of the base
+card instead of their variation and are flagged with an asterisk in the
+card details.
 
 Source data lives in `data/*.json` (one file per binder). The web app is
 generated from `app-template.html` by `build.py`, which embeds the data

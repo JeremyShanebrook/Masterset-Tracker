@@ -6,7 +6,7 @@
   "setCode": "30TH",
   "tcgApiSetId": "me55",
   "masterTotal": 199,
-  "grandMasterTotal": 292,
+  "grandMasterTotal": 283,
   "source": "https://pokecottagecdn.com/mastersets/downloads/PokeCottage-30TH-CELEBRATION-Interactive-Checklist.pdf",
   "cards": [
     {
@@ -2554,16 +2554,6 @@
       "image": "https://images.scrydex.com/pokemon/me2pt5-184/small"
     },
     {
-      "num": "063/128",
-      "name": "Mewtwo",
-      "rarity": null,
-      "section": "Variants",
-      "variant": "What's Your Favorite?",
-      "inMaster": false,
-      "inGrandMaster": true,
-      "image": "https://images.scrydex.com/pokemon/me55-63/small"
-    },
-    {
       "num": "196/217",
       "name": "Night Stretcher",
       "rarity": null,
@@ -2572,16 +2562,6 @@
       "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me2pt5-196/small"
-    },
-    {
-      "num": "116/128",
-      "name": "Eevee",
-      "rarity": null,
-      "section": "Variants",
-      "variant": "Cosmos Holo",
-      "inMaster": false,
-      "inGrandMaster": true,
-      "image": "https://images.scrydex.com/pokemon/me55-116/small"
     },
     {
       "num": "183/217",
@@ -2764,16 +2744,6 @@
       "image": "https://images.scrydex.com/pokemon/me4-30/small"
     },
     {
-      "num": "057/128",
-      "name": "Zeraora",
-      "rarity": null,
-      "section": "Variants",
-      "variant": "Reverse Holo",
-      "inMaster": false,
-      "inGrandMaster": true,
-      "image": "https://images.scrydex.com/pokemon/me55-57/small"
-    },
-    {
       "num": "087/094",
       "name": "Dawn",
       "rarity": null,
@@ -2782,16 +2752,6 @@
       "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me2-87/small"
-    },
-    {
-      "num": "114/128",
-      "name": "Kangaskhan",
-      "rarity": null,
-      "section": "Variants",
-      "variant": "Reverse Holo",
-      "inMaster": false,
-      "inGrandMaster": true,
-      "image": "https://images.scrydex.com/pokemon/me55-114/small"
     },
     {
       "num": "045/094",
@@ -2804,16 +2764,6 @@
       "image": "https://images.scrydex.com/pokemon/me2-45/small"
     },
     {
-      "num": "117/128",
-      "name": "Eevee",
-      "rarity": null,
-      "section": "Variants",
-      "variant": "Reverse Holo",
-      "inMaster": false,
-      "inGrandMaster": true,
-      "image": "https://images.scrydex.com/pokemon/me55-117/small"
-    },
-    {
       "num": "068/094",
       "name": "Toxtricity",
       "rarity": null,
@@ -2822,16 +2772,6 @@
       "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me2-68/small"
-    },
-    {
-      "num": "118/128",
-      "name": "Eevee",
-      "rarity": null,
-      "section": "Variants",
-      "variant": "Reverse Holo",
-      "inMaster": false,
-      "inGrandMaster": true,
-      "image": "https://images.scrydex.com/pokemon/me55-118/small"
     },
     {
       "num": "067/094",
@@ -2844,16 +2784,6 @@
       "image": "https://images.scrydex.com/pokemon/me2-67/small"
     },
     {
-      "num": "126/128",
-      "name": "Poké Pad",
-      "rarity": null,
-      "section": "Variants",
-      "variant": "Reverse Holo",
-      "inMaster": false,
-      "inGrandMaster": true,
-      "image": "https://images.scrydex.com/pokemon/me55-126/small"
-    },
-    {
       "num": "014/094",
       "name": "Moltres",
       "rarity": null,
@@ -2864,16 +2794,6 @@
       "image": "https://images.scrydex.com/pokemon/me2-14/small"
     },
     {
-      "num": "127/128",
-      "name": "Switch",
-      "rarity": null,
-      "section": "Variants",
-      "variant": "Reverse Holo",
-      "inMaster": false,
-      "inGrandMaster": true,
-      "image": "https://images.scrydex.com/pokemon/me55-127/small"
-    },
-    {
       "num": "084/088",
       "name": "Rosa's Encouragement",
       "rarity": null,
@@ -2882,16 +2802,6 @@
       "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me3-84/small"
-    },
-    {
-      "num": "128/128",
-      "name": "Ultra Ball",
-      "rarity": null,
-      "section": "Variants",
-      "variant": "Reverse Holo",
-      "inMaster": false,
-      "inGrandMaster": true,
-      "image": "https://images.scrydex.com/pokemon/me55-128/small"
     },
     {
       "num": "MEE 002",

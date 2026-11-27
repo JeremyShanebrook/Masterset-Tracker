@@ -74,30 +74,8 @@ a { color: #7cc4ff; }
 .pages { padding: 6px 6px 20px; }
 .pagewrap { perspective: 1200px; }
 .binderpage { background: #f6f2e9; border-radius: 10px; padding: 6px; position: relative; box-shadow: 0 4px 18px rgba(0,0,0,.45); }
-/* two-page spread: pages sit either side of the centre binding */
-.spread { display: flex; position: relative; perspective: 1600px; align-items: stretch; }
-.spread .binderpage { flex: 1 1 0; min-width: 0; }
-.spread .binderpage.sp-left { border-radius: 10px 3px 3px 10px; }
-.spread .binderpage.sp-right { border-radius: 3px 10px 10px 3px; }
-.spine { flex: none; width: 14px; background: #0b1f33; border-radius: 2px; display: flex; flex-direction: column; justify-content: space-evenly; align-items: center; box-shadow: inset 0 0 8px rgba(0,0,0,.65); padding: 12px 0; }
-.spine i { width: 11px; height: 11px; border-radius: 50%; background: #d8d2c4; box-shadow: inset 0 1px 3px rgba(0,0,0,.7); }
-/* flipping leaf: the page turning over the binding. Its front is the page
-   being turned; its back is the next page on the other side. The next page
-   is already rendered underneath and is revealed as the leaf lifts.
-   The leaf is built by cloning the rendered pages (not rebuilt from HTML),
-   so the card images on it cannot change mid-flip. The leaf's pivot MUST be
-   the spine centre (50% of the spread), not the page edge: the spine is 14px
-   wide, so a forward leaf (left edge at 50%+7px) pivots 7px left of its edge
-   and a backward leaf (right edge at 50%-7px) pivots 7px right of its edge.
-   Pivoting on the page edge lands the leaf a full spine width (14px)
-   off-centre, which reads as a visible shift when the leaf is removed and
-   the true page underneath is revealed. */
-.leaf { position: absolute; top: 0; bottom: 0; width: calc(50% - 7px); transform-style: preserve-3d; z-index: 5; transition: transform .55s ease-in-out; }
-.leaf.fwd { left: calc(50% + 7px); transform-origin: -7px center; }
-.leaf.bwd { left: 0; transform-origin: calc(100% + 7px) center; }
-.leaf-face { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
-.leaf-face.back { transform: rotateY(180deg); }
-.leaf-face .binderpage { height: 100%; box-sizing: border-box; }
+/* single page, full width */
+.singlepage { position: relative; }
 .page-h { font-size: 14px; color: #8a7f6a; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin: 2px 0 6px; }
 .page-foot { text-align: center; font-size: 13px; color: #9a8f7a; margin-top: 8px; }
 .divider { grid-column: 1 / -1; font-size: 14px; font-weight: 700; color: #1d4ed8; letter-spacing: .5px; padding: 10px 2px 2px; border-bottom: 1px solid #d8d2c4; margin-bottom: 2px; }
@@ -202,7 +180,7 @@ const store = {
 };
 
 let view = { name: 'home' };
-let binderState = {}; // id -> {mode, pageSize, hide, query, spread, highlight}
+let binderState = {}; // id -> {mode, pageSize, hide, query, page, highlight}
 let modalOpen = false;
 let modalBinder = null; // binder the detail modal is showing (for swipe nav)
 let modalRowId = null; // row id the detail modal is showing
@@ -246,7 +224,7 @@ function bstate(id) {
       pageSize: store.get('mst:psize:' + id, 9),
       hide: store.get('mst:hide:' + id, false),
       query: '',
-      spread: 0,
+      page: 0,
       highlight: null
     };
   }
@@ -288,7 +266,7 @@ function slabClass(g) {
   }
   return 'slab-' + g.co.toLowerCase();
 }
-// Warm the image cache for the spreads either side of the one showing, so
+// Warm the image cache for the pages either side of the one showing, so
 // turning the page finds the pictures already loaded instead of fetching them.
 const preloadedImgs = new Set();
 function preloadSpreadImages(b) {
@@ -296,10 +274,9 @@ function preloadSpreadImages(b) {
   const rows = visibleRows(b);
   const pages = splitPages(rows, st.pageSize);
   const totalPages = Math.max(1, pages.length);
-  const totalSpreads = Math.max(1, Math.ceil(totalPages / 2));
-  [st.spread - 1, st.spread + 1].forEach(s => {
-    if (s < 0 || s >= totalSpreads) return;
-    (pages[s * 2] || []).concat(pages[s * 2 + 1] || []).forEach(r => {
+  [st.page - 1, st.page + 1].forEach(p => {
+    if (p < 0 || p >= totalPages) return;
+    (pages[p] || []).forEach(r => {
       const u = r.c.img;
       if (u && !preloadedImgs.has(u)) { preloadedImgs.add(u); const im = new Image(); im.src = u; }
     });
@@ -502,13 +479,13 @@ function renderBinder(app, b) {
   app.querySelectorAll('[data-ps]').forEach(btn => btn.addEventListener('click', () => {
     st.pageSize = parseInt(btn.getAttribute('data-ps'), 10);
     store.set('mst:psize:' + b.id, st.pageSize);
-    st.spread = 0;
+    st.page = 0;
     render();
   }));
   document.getElementById('hideChk').addEventListener('change', (e) => {
     st.hide = e.target.checked;
     store.set('mst:hide:' + b.id, st.hide);
-    st.spread = 0;
+    st.page = 0;
     render();
   });
   document.getElementById('q').addEventListener('input', (e) => { onSearch(b, e.target.value); });
@@ -522,7 +499,7 @@ function setMode(b, mode) {
   const st = bstate(b.id);
   st.mode = mode;
   store.set('mst:mode:' + b.id, mode);
-  st.spread = 0;
+  st.page = 0;
   st.highlight = null;
   render();
 }
@@ -554,7 +531,7 @@ function onSearch(b, q) {
     return;
   }
   if (nm) { nm.classList.add('hidden'); nm.textContent = ''; }
-  st.spread = Math.floor(pageIndexOf(rows, st.pageSize, rows[found].id) / 2);
+  st.page = pageIndexOf(rows, st.pageSize, rows[found].id);
   st.highlight = rows[found].id;
   renderPages(b);
   const tok = ++highlightToken;
@@ -566,12 +543,11 @@ function onSearch(b, q) {
 function pageHTML(b, pageIdx, pages, cols, got) {
   const st = bstate(b.id);
   const totalPages = Math.max(1, pages.length);
-  const side = (pageIdx % 2 === 0) ? 'sp-left' : 'sp-right';
   if (pageIdx >= totalPages) {
-    return '<div class="binderpage ' + side + ' blank"><div class="page-h">Page ' + (pageIdx + 1) + ' of ' + totalPages + '</div><div class="grid c' + cols + '"></div></div>';
+    return '<div class="binderpage blank"><div class="page-h">Page ' + (pageIdx + 1) + ' of ' + totalPages + '</div><div class="grid c' + cols + '"></div></div>';
   }
   const chunk = pages[pageIdx];
-  let h = '<div class="binderpage ' + side + '"><div class="page-h">Page ' + (pageIdx + 1) + ' of ' + totalPages + '</div><div class="grid c' + cols + '">';
+  let h = '<div class="binderpage"><div class="page-h">Page ' + (pageIdx + 1) + ' of ' + totalPages + '</div><div class="grid c' + cols + '">';
   chunk.forEach(r => {
     const c = r.c;
     const isGot = got.has(r.id);
@@ -600,8 +576,8 @@ function pageHTML(b, pageIdx, pages, cols, got) {
       + '</div>';
   });
   // Pad a partial page with invisible pockets so every page has exactly
-  // pageSize cells and every spread is the same height — otherwise the
-  // spread shrinks after a flip and the pages visibly shift.
+  // pageSize cells and every page is the same height — otherwise the
+  // page shrinks after a turn and the layout visibly shifts.
   if (chunk.length > 0) {
     for (let i = chunk.length; i < st.pageSize; i++) {
       h += '<div class="pocket pad"><div class="thumb"></div></div>';
@@ -620,9 +596,8 @@ function renderPages(b) {
   const rows = visibleRows(b);
   const pages = splitPages(rows, st.pageSize);
   const totalPages = Math.max(1, pages.length);
-  const totalSpreads = Math.max(1, Math.ceil(totalPages / 2));
-  if (st.spread >= totalSpreads) st.spread = totalSpreads - 1;
-  if (st.spread < 0) st.spread = 0;
+  if (st.page >= totalPages) st.page = totalPages - 1;
+  if (st.page < 0) st.page = 0;
   const cols = st.pageSize === 4 ? 2 : st.pageSize === 16 ? 4 : 3;
   const pagesEl = document.getElementById('pages');
   if (!pagesEl) return;
@@ -636,19 +611,16 @@ function renderPages(b) {
       + '<button id="selRemove"' + (n ? '' : ' disabled') + '>Remove from collection</button>'
       + '<button id="selCancel" class="ghost">Cancel</button></div>';
   }
-  // two-page spread, open at the binding
-  const leftIdx = st.spread * 2, rightIdx = leftIdx + 1;
-  const lo = leftIdx + 1, hi = Math.min(rightIdx + 1, totalPages);
-  const range = lo === hi ? ('Page ' + lo) : ('Pages ' + lo + '–' + hi);
-  h += '<div class="pagewrap"><div class="spread" id="spreadEl">'
-    + pageHTML(b, leftIdx, pages, cols, got)
-    + '<div class="spine"><i></i><i></i><i></i></div>'
-    + pageHTML(b, rightIdx, pages, cols, got)
+  // One page at a time, full width — the cards are big enough to tell apart
+  // from the picture alone (the two-page spread made them too small).
+  const range = 'Page ' + (st.page + 1) + ' of ' + totalPages;
+  h += '<div class="pagewrap"><div class="singlepage" id="pageEl">'
+    + pageHTML(b, st.page, pages, cols, got)
     + '</div>'
-    + '<div class="page-foot">' + range + ' of ' + totalPages + '</div></div>';
-  h += '<div class="pagenav"><button id="prevPg"' + (st.spread === 0 ? ' disabled' : '') + '>&larr; Prev</button>'
-    + '<span>' + range + ' of ' + totalPages + '</span>'
-    + '<button id="nextPg"' + (st.spread >= totalSpreads - 1 ? ' disabled' : '') + '>Next &rarr;</button></div>';
+    + '<div class="page-foot">' + range + '</div></div>';
+  h += '<div class="pagenav"><button id="prevPg"' + (st.page === 0 ? ' disabled' : '') + '>&larr; Prev</button>'
+    + '<span>' + range + '</span>'
+    + '<button id="nextPg"' + (st.page >= totalPages - 1 ? ' disabled' : '') + '>Next &rarr;</button></div>';
   pagesEl.innerHTML = h;
 
   // selection bar actions
@@ -722,61 +694,20 @@ function renderPages(b) {
       openModal(b, pk.querySelector('.thumb'));
     });
   });
-  // Warm the cache for the spreads either side, so the next turn is instant.
+  // Warm the cache for the pages either side, so the next turn is instant.
   preloadSpreadImages(b);
 }
 
-let turning = false;
 function turnPage(b, dir) {
-  if (turning) return;
   const st = bstate(b.id);
   const rows = visibleRows(b);
   const totalPages = Math.max(1, splitPages(rows, st.pageSize).length);
-  const totalSpreads = Math.max(1, Math.ceil(totalPages / 2));
-  const next = st.spread + dir;
-  if (next < 0 || next >= totalSpreads) return;
-  turning = true;
-  // Clone the rendered turning page BEFORE re-rendering, so the leaf shows
-  // the page exactly as it was — its pictures are already loaded and cannot
-  // change mid-flip. Rebuilding it from HTML would make fresh <img> tags
-  // that re-fetch and pop in during the turn, and the leaf would land
-  // shifted. The next spread is rendered underneath and is revealed as
-  // the leaf lifts; it does not move itself.
-  const oldSpread = document.getElementById('spreadEl');
-  const oldH = oldSpread ? oldSpread.offsetHeight : 0;
-  const oldPageEl = oldSpread ? oldSpread.querySelector(dir > 0 ? '.binderpage.sp-right' : '.binderpage.sp-left') : null;
-  const oldPageClone = oldPageEl ? oldPageEl.cloneNode(true) : null;
-  st.spread = next;
+  const next = st.page + dir;
+  if (next < 0 || next >= totalPages) return;
+  st.page = next;
   renderPages(b);
-  const spread = document.getElementById('spreadEl');
-  if (!spread) { turning = false; return; }
-  // Keep the spread at least as tall as the one being turned, so the leaf
-  // (the old page) is never clipped by a shorter next spread.
-  if (oldH > 0) spread.style.minHeight = oldH + 'px';
-  // The leaf's back is the next page on the other side — clone the freshly
-  // rendered page so it matches the static page underneath exactly.
-  const newPageEl = spread.querySelector(dir > 0 ? '.binderpage.sp-left' : '.binderpage.sp-right');
-  const newPageClone = newPageEl ? newPageEl.cloneNode(true) : null;
-  const leaf = document.createElement('div');
-  leaf.className = 'leaf ' + (dir > 0 ? 'fwd' : 'bwd');
-  const front = document.createElement('div');
-  front.className = 'leaf-face front';
-  if (oldPageClone) front.appendChild(oldPageClone);
-  const back = document.createElement('div');
-  back.className = 'leaf-face back';
-  if (newPageClone) back.appendChild(newPageClone);
-  leaf.appendChild(front);
-  leaf.appendChild(back);
-  spread.appendChild(leaf);
-  void leaf.offsetWidth; // force reflow so the transition runs
-  leaf.style.transform = dir > 0 ? 'rotateY(-180deg)' : 'rotateY(180deg)';
-  setTimeout(() => {
-    leaf.remove();
-    // Let the spread settle to its natural height (the min-height was only
-    // to keep the leaf from clipping); the CSS transition smooths the settle.
-    spread.style.minHeight = '';
-    turning = false;
-  }, 620);
+  // Warm the cache for the pages either side, so the next turn is instant.
+  preloadSpreadImages(b);
 }
 
 function openModal(b, th) {
@@ -809,10 +740,15 @@ function renderModalCard(b, row) {
       : '<img src="' + esc(full) + '" onerror="this.style.display=\'none\'">')
     : '<div class="mname">No image yet</div>';
   const gradeDetail = g ? ' &middot; Graded ' + esc(g.co) + ' ' + esc(g.gr) : '';
+  // The picture does not show this card's variation (stamp / code / holo
+  // pattern) and no correct image could be found — flag the description
+  // with an asterisk and a note, so it is not mistaken for the right card.
+  const imgNotePrefix = c.ni ? '* ' : '';
+  const imgNoteLine = c.ni ? '<br>Correct card image not found' : '';
   const coOpts = ['Not graded', 'PSA', 'CGC', 'BGS', 'SGC'].map(co => '<option value="' + co + '"' + ((g ? g.co : 'Not graded') === co ? ' selected' : '') + '>' + co + '</option>').join('');
   m.innerHTML = imgHtml
     + '<div class="mname">' + esc(name) + '</div>'
-    + '<div class="mdetail">#' + esc(num) + ' &middot; ' + esc(meta) + gradeDetail + (extra ? '<br>' + esc(extra) : '') + '</div>'
+    + '<div class="mdetail">' + imgNotePrefix + '#' + esc(num) + ' &middot; ' + esc(meta) + gradeDetail + (extra ? '<br>' + esc(extra) : '') + imgNoteLine + '</div>'
     + '<div class="gradebox"><label>Grading — company and grade</label>'
     + '<select id="gradeCo">' + coOpts + '</select>'
     + '<select id="gradeVal"></select></div>'
@@ -918,7 +854,7 @@ function jumpToCard(b, rowId, animate) {
   store.set('mst:hide:' + b.id, false);
   const rows = visibleRows(b);
   const pos = rows.findIndex(r => r.id === rowId);
-  if (pos >= 0) st.spread = Math.floor(pageIndexOf(rows, st.pageSize, rowId) / 2);
+  if (pos >= 0) st.page = pageIndexOf(rows, st.pageSize, rowId);
   st.highlight = rowId;
   setSlideId(animate ? rowId : null);
   exitSelMode();

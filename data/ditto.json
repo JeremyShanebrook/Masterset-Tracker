@@ -5,7 +5,7 @@
   "releaseDate": null,
   "setCode": null,
   "tcgApiSetId": null,
-  "masterTotal": 85,
+  "masterTotal": 86,
   "grandMasterTotal": 200,
   "source": "PokeCottage Ditto master set + extended research (Bulbapedia / TCGplayer / PriceCharting)",
   "cards": [
@@ -35,7 +35,8 @@
       "image": "https://images.pokemontcg.io/base3/3.png",
       "group": "English",
       "origin": "pokecottage",
-      "div": "Fossil"
+      "div": "Fossil",
+      "imgNote": true
     },
     {
       "num": "3/62",
@@ -105,7 +106,8 @@
       "image": "https://images.pokemontcg.io/gym2/10.png",
       "group": "English",
       "origin": "pokecottage",
-      "div": "Gym Challenge"
+      "div": "Gym Challenge",
+      "imgNote": true
     },
     {
       "num": "10/132",
@@ -203,7 +205,8 @@
       "image": "https://images.poplextcg.com/c3/ja/pkm-ja-88-72/front/medium/t1/c001fb2643b9a4c8a6173056649b2ffde42e156eca7a598f53e2da2d2dddd262.webp",
       "group": "Japanese",
       "origin": "pokecottage",
-      "div": "EX FireRed & LeafGreen"
+      "div": "EX FireRed & LeafGreen",
+      "imgNote": true
     },
     {
       "num": "072/082",
@@ -245,7 +248,8 @@
       "image": "https://images.pokemontcg.io/ex11/35.png",
       "group": "English",
       "origin": "pokecottage",
-      "div": "EX Delta Species"
+      "div": "EX Delta Species",
+      "imgNote": true
     },
     {
       "num": "35/113",
@@ -273,7 +277,8 @@
       "image": "https://images.pokemontcg.io/ex11/35.png",
       "group": "English",
       "origin": "research",
-      "div": "EX Delta Species"
+      "div": "EX Delta Species",
+      "imgNote": true
     },
     {
       "num": "36/113",
@@ -287,7 +292,8 @@
       "image": "https://images.pokemontcg.io/ex11/36.png",
       "group": "English",
       "origin": "pokecottage",
-      "div": "EX Delta Species"
+      "div": "EX Delta Species",
+      "imgNote": true
     },
     {
       "num": "36/113",
@@ -315,7 +321,8 @@
       "image": "https://images.pokemontcg.io/ex11/36.png",
       "group": "English",
       "origin": "research",
-      "div": "EX Delta Species"
+      "div": "EX Delta Species",
+      "imgNote": true
     },
     {
       "num": "37/113",
@@ -329,7 +336,8 @@
       "image": "https://images.pokemontcg.io/ex11/37.png",
       "group": "English",
       "origin": "pokecottage",
-      "div": "EX Delta Species"
+      "div": "EX Delta Species",
+      "imgNote": true
     },
     {
       "num": "37/113",
@@ -357,7 +365,8 @@
       "image": "https://images.pokemontcg.io/ex11/37.png",
       "group": "English",
       "origin": "research",
-      "div": "EX Delta Species"
+      "div": "EX Delta Species",
+      "imgNote": true
     },
     {
       "num": "38/113",
@@ -371,7 +380,8 @@
       "image": "https://images.pokemontcg.io/ex11/38.png",
       "group": "English",
       "origin": "pokecottage",
-      "div": "EX Delta Species"
+      "div": "EX Delta Species",
+      "imgNote": true
     },
     {
       "num": "38/113",
@@ -399,7 +409,8 @@
       "image": "https://images.pokemontcg.io/ex11/38.png",
       "group": "English",
       "origin": "research",
-      "div": "EX Delta Species"
+      "div": "EX Delta Species",
+      "imgNote": true
     },
     {
       "num": "39/113",
@@ -413,7 +424,8 @@
       "image": "https://images.pokemontcg.io/ex11/39.png",
       "group": "English",
       "origin": "pokecottage",
-      "div": "EX Delta Species"
+      "div": "EX Delta Species",
+      "imgNote": true
     },
     {
       "num": "39/113",
@@ -441,7 +453,8 @@
       "image": "https://images.pokemontcg.io/ex11/39.png",
       "group": "English",
       "origin": "research",
-      "div": "EX Delta Species"
+      "div": "EX Delta Species",
+      "imgNote": true
     },
     {
       "num": "40/113",
@@ -455,7 +468,8 @@
       "image": "https://images.pokemontcg.io/ex11/40.png",
       "group": "English",
       "origin": "pokecottage",
-      "div": "EX Delta Species"
+      "div": "EX Delta Species",
+      "imgNote": true
     },
     {
       "num": "40/113",
@@ -483,7 +497,8 @@
       "image": "https://images.pokemontcg.io/ex11/40.png",
       "group": "English",
       "origin": "research",
-      "div": "EX Delta Species"
+      "div": "EX Delta Species",
+      "imgNote": true
     },
     {
       "num": "61/113",
@@ -497,7 +512,8 @@
       "image": "https://images.pokemontcg.io/ex11/61.png",
       "group": "English",
       "origin": "pokecottage",
-      "div": "EX Delta Species"
+      "div": "EX Delta Species",
+      "imgNote": true
     },
     {
       "num": "61/113",
@@ -525,7 +541,8 @@
       "image": "https://images.pokemontcg.io/ex11/61.png",
       "group": "English",
       "origin": "pokecottage",
-      "div": "EX Delta Species"
+      "div": "EX Delta Species",
+      "imgNote": true
     },
     {
       "num": "61/113",
@@ -539,7 +556,8 @@
       "image": "https://images.pokemontcg.io/ex11/61.png",
       "group": "English",
       "origin": "research",
-      "div": "EX Delta Species"
+      "div": "EX Delta Species",
+      "imgNote": true
     },
     {
       "num": "61/113",
@@ -553,7 +571,8 @@
       "image": "https://images.pokemontcg.io/ex11/61.png",
       "group": "English",
       "origin": "pokecottage",
-      "div": "EX Delta Species"
+      "div": "EX Delta Species",
+      "imgNote": true
     },
     {
       "num": "61/113",
@@ -567,7 +586,8 @@
       "image": "https://images.pokemontcg.io/ex11/61.png",
       "group": "English",
       "origin": "pokecottage",
-      "div": "EX Delta Species"
+      "div": "EX Delta Species",
+      "imgNote": true
     },
     {
       "num": "62/113",
@@ -581,7 +601,8 @@
       "image": "https://images.pokemontcg.io/ex11/62.png",
       "group": "English",
       "origin": "pokecottage",
-      "div": "EX Delta Species"
+      "div": "EX Delta Species",
+      "imgNote": true
     },
     {
       "num": "62/113",
@@ -609,7 +630,8 @@
       "image": "https://images.pokemontcg.io/ex11/62.png",
       "group": "English",
       "origin": "pokecottage",
-      "div": "EX Delta Species"
+      "div": "EX Delta Species",
+      "imgNote": true
     },
     {
       "num": "62/113",
@@ -623,7 +645,8 @@
       "image": "https://images.pokemontcg.io/ex11/62.png",
       "group": "English",
       "origin": "research",
-      "div": "EX Delta Species"
+      "div": "EX Delta Species",
+      "imgNote": true
     },
     {
       "num": "62/113",
@@ -637,7 +660,8 @@
       "image": "https://images.pokemontcg.io/ex11/62.png",
       "group": "English",
       "origin": "pokecottage",
-      "div": "EX Delta Species"
+      "div": "EX Delta Species",
+      "imgNote": true
     },
     {
       "num": "63/113",
@@ -651,7 +675,8 @@
       "image": "https://images.pokemontcg.io/ex11/63.png",
       "group": "English",
       "origin": "pokecottage",
-      "div": "EX Delta Species"
+      "div": "EX Delta Species",
+      "imgNote": true
     },
     {
       "num": "63/113",
@@ -665,7 +690,8 @@
       "image": "https://images.pokemontcg.io/ex11/63.png",
       "group": "English",
       "origin": "pokecottage",
-      "div": "EX Delta Species"
+      "div": "EX Delta Species",
+      "imgNote": true
     },
     {
       "num": "63/113",
@@ -679,7 +705,8 @@
       "image": "https://images.pokemontcg.io/ex11/63.png",
       "group": "English",
       "origin": "pokecottage",
-      "div": "EX Delta Species"
+      "div": "EX Delta Species",
+      "imgNote": true
     },
     {
       "num": "63/113",
@@ -693,7 +720,8 @@
       "image": "https://images.pokemontcg.io/ex11/63.png",
       "group": "English",
       "origin": "pokecottage",
-      "div": "EX Delta Species"
+      "div": "EX Delta Species",
+      "imgNote": true
     },
     {
       "num": "63/113",
@@ -721,7 +749,8 @@
       "image": "https://images.pokemontcg.io/ex11/63.png",
       "group": "English",
       "origin": "research",
-      "div": "EX Delta Species"
+      "div": "EX Delta Species",
+      "imgNote": true
     },
     {
       "num": "64/113",
@@ -735,7 +764,8 @@
       "image": "https://images.pokemontcg.io/ex11/64.png",
       "group": "English",
       "origin": "pokecottage",
-      "div": "EX Delta Species"
+      "div": "EX Delta Species",
+      "imgNote": true
     },
     {
       "num": "64/113",
@@ -749,7 +779,8 @@
       "image": "https://images.pokemontcg.io/ex11/64.png",
       "group": "English",
       "origin": "pokecottage",
-      "div": "EX Delta Species"
+      "div": "EX Delta Species",
+      "imgNote": true
     },
     {
       "num": "64/113",
@@ -763,7 +794,8 @@
       "image": "https://images.pokemontcg.io/ex11/64.png",
       "group": "English",
       "origin": "pokecottage",
-      "div": "EX Delta Species"
+      "div": "EX Delta Species",
+      "imgNote": true
     },
     {
       "num": "64/113",
@@ -777,7 +809,8 @@
       "image": "https://images.pokemontcg.io/ex11/64.png",
       "group": "English",
       "origin": "pokecottage",
-      "div": "EX Delta Species"
+      "div": "EX Delta Species",
+      "imgNote": true
     },
     {
       "num": "64/113",
@@ -805,7 +838,8 @@
       "image": "https://images.pokemontcg.io/ex11/64.png",
       "group": "English",
       "origin": "research",
-      "div": "EX Delta Species"
+      "div": "EX Delta Species",
+      "imgNote": true
     },
     {
       "num": "002/015",
@@ -998,7 +1032,7 @@
       "variant": "World Championships Deck 2009: Crowde...",
       "inMaster": false,
       "inGrandMaster": true,
-      "image": "https://images.pokemontcg.io/dp6/27.png",
+      "image": "https://tcgplayer-cdn.tcgplayer.com/product/479896_200w.jpg",
       "group": "English",
       "origin": "pokecottage",
       "div": "Legends Awakened"
@@ -1620,7 +1654,7 @@
       "variant": "Play! Pokémon (Cosmos Holo)",
       "inMaster": false,
       "inGrandMaster": true,
-      "image": "https://images.pokemontcg.io/sv3pt5/132.png",
+      "image": "https://api.rip.fun/storage/v1/object/public/web-images/cards/sv3pt5/sv3pt5-132vpp.small.webp",
       "group": "English",
       "origin": "pokecottage",
       "div": "151"
@@ -1634,7 +1668,7 @@
       "variant": "World Championships Deck 2025: JP Raging Bolt by Yuya O...",
       "inMaster": false,
       "inGrandMaster": true,
-      "image": "https://images.pokemontcg.io/sv3pt5/132.png",
+      "image": "https://cdn.pokegoto.com/storage/v1/object/public/catalog-card-art/pokemon-world-championships-2025/ditto-yuya-okita/1600.webp",
       "group": "English",
       "origin": "pokecottage",
       "div": "151"
@@ -1697,7 +1731,8 @@
       "group": "Japanese",
       "origin": "pokecottage",
       "notes": "Image added from TCGdex (ja SV2a-132), verified Nov 26, 2026.",
-      "div": "151"
+      "div": "151",
+      "imgNote": true
     },
     {
       "num": "132/165",
@@ -1712,7 +1747,8 @@
       "group": "Japanese",
       "origin": "pokecottage",
       "notes": "Image added from TCGdex (ja SV2a-132), verified Nov 26, 2026.",
-      "div": "151"
+      "div": "151",
+      "imgNote": true
     },
     {
       "num": "132/165",
@@ -1754,7 +1790,8 @@
       "image": "https://cdn.pktcg.app/cards/ch/scarlet_and_violet_era/collect_151/132.webp",
       "group": "Simplified Chinese",
       "origin": "pokecottage",
-      "div": "151"
+      "div": "151",
+      "imgNote": true
     },
     {
       "num": "132/165",
@@ -1768,7 +1805,8 @@
       "image": "https://cdn.pktcg.app/cards/ch/scarlet_and_violet_era/collect_151/132.webp",
       "group": "Simplified Chinese",
       "origin": "pokecottage",
-      "div": "151"
+      "div": "151",
+      "imgNote": true
     },
     {
       "num": "168/165",
@@ -1821,10 +1859,9 @@
       "category": "language-variant",
       "variant": "Standard",
       "image": "https://efour.b-cdn.net/uploads/default/original/3X/c/0/c076de59f0399771c62bdc50c664ab78926b6cea.jpeg",
-      "notes": "Korean SV-P Ditto 173/SV-P per Bulbapedia Ditto (TCG) page. Image not verified — null.",
       "group": "Other Languages",
       "origin": "extended",
-      "inMaster": false,
+      "inMaster": true,
       "inGrandMaster": true,
       "section": "Other Languages",
       "div": "Scarlet & Violet Promos"
