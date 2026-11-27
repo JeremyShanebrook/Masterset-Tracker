@@ -12,11 +12,11 @@ checklists in binder placement order, with card pictures.
 | Pitch Black (ME05) | 120 | 222 |
 | 30th Celebration (30C) | 199 | 292 |
 | Delta Reign (ME06) | 141 | 250 |
-| Ditto — Every Card (#132) | 84 | 302 |
+| Ditto — Every Card (#132) | 85 | 317 |
 
 Master = one of each card number, including secret rares. Grand Master adds
 the holo and reverse-holo versions, promos and special variants. The Ditto binder covers the PokeCottage Ditto list
-(English / Japanese / Simplified Chinese) plus cameo cards, Topps cards,
+(English / Japanese / Simplified Chinese / Korean) plus cameo cards, Topps cards,
 Japanese vending prints, and other-language printings.
 
 ## Features
@@ -29,6 +29,10 @@ Japanese vending prints, and other-language printings.
 - Per-binder page-size picker: 4, 9, 12 or 16 pockets per page
 - Master / Grand Master toggle per binder
 - Card thumbnail per row; tap for the card info, long-press to multi-select
+- Missing cards are darkened; a card you add slides in lit up
+- Big progress bar per binder ("N% complete"), Rare Candy style
+- Graded cards: pick the company (PSA / CGC / BGS / SGC) and grade — the
+  pocket shows a slab matching the company and grade
 - Scan a card: in-app camera with a card outline — the reader only looks
   at what's inside the frame
 - Progress saved on the phone (localStorage); search + "missing only" filter
@@ -39,7 +43,9 @@ Japanese vending prints, and other-language printings.
 
 Checklists come from [PokeCottage](https://pokecottage.com) interactive
 checklists, cross-checked against the Pokémon TCG API / TCGdex. Card images
-load from the internet (scrydex / images.pokemontcg.io mirrors); a few
+load from the internet (scrydex / images.pokemontcg.io mirrors, plus the
+Elite Fourum Dittologist thread and dexli.st for Korean cards); pictures are
+cached on the phone after the first view, so turning pages is instant. A few
 cards have no verified image yet and show a placeholder.
 
 Source data lives in `data/*.json` (one file per binder). The web app is

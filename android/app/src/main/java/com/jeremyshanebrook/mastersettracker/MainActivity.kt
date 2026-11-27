@@ -15,8 +15,10 @@ import android.webkit.PermissionRequest
 import android.webkit.ValueCallback
 import android.webkit.WebChromeClient
 import android.webkit.WebResourceRequest
+import android.webkit.WebResourceResponse
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import java.security.MessageDigest
 import androidx.activity.ComponentActivity
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.result.contract.ActivityResultContracts
@@ -48,6 +50,87 @@ class MainActivity : ComponentActivity() {
 
     private var fileChooserCallback: ValueCallback<Array<Uri>>? = null
     private var cameraPhotoUri: Uri? = null
+
+    // Disk cache for card pictures. The binder re-creates its image tags on
+    // every page turn, so without this each turn re-fetches the pictures
+    // from the internet. First view downloads once; after that the picture
+    // comes off the disk, so turning pages is instant.
+    private val imageCacheHosts = setOf(
+        "images.scrydex.com", "images.pokemontcg.io", "www.pokemon.com",
+        "assets.tcgdex.net", "efour.b-cdn.net", "images.dexli.st"
+    )
+    private val imageCacheMaxBytes = 250L * 1024 * 1024
+
+    private fun imageCacheFile(url: String): File {
+        val hash = MessageDigest.getInstance("SHA-256").digest(url.toByteArray(Charsets.UTF_8))
+            .joinToString("") { "%02x".format(it) }
+        return File(File(cacheDir, "image-cache").apply { mkdirs() }, hash)
+    }
+
+    private fun mimeFor(url: String, contentType: String?): String {
+        if (!contentType.isNullOrBlank()) return contentType.split(";")[0].trim()
+        val base = url.substringBefore("?")
+        return when {
+            base.endsWith(".png", ignoreCase = true) -> "image/png"
+            base.endsWith(".jpg", ignoreCase = true) || base.endsWith(".jpeg", ignoreCase = true) -> "image/jpeg"
+            base.endsWith(".webp", ignoreCase = true) -> "image/webp"
+            base.endsWith(".gif", ignoreCase = true) -> "image/gif"
+            else -> "image/png"
+        }
+    }
+
+    private fun pruneImageCache() {
+        try {
+            val dir = File(cacheDir, "image-cache")
+            val files = (dir.listFiles() ?: return).filter { !it.name.endsWith(".mime") && !it.name.endsWith(".tmp") }
+            var total = files.sumOf { it.length() }
+            if (total <= imageCacheMaxBytes) return
+            files.sortedBy { it.lastModified() }.forEach { f ->
+                if (total <= imageCacheMaxBytes) return@forEach
+                total -= f.length()
+                File(dir, f.name + ".mime").delete()
+                f.delete()
+            }
+        } catch (_: Exception) {
+        }
+    }
+
+    // Serve a card picture from the disk cache, downloading it once on a miss.
+    // Returns null on any failure so the WebView falls back to its own fetch.
+    private fun cachedImageResponse(url: String): WebResourceResponse? {
+        return try {
+            val file = imageCacheFile(url)
+            if (file.exists() && file.length() > 0) {
+                val mimeFile = File(file.parentFile, file.name + ".mime")
+                val mime = if (mimeFile.exists()) mimeFile.readText().trim().ifEmpty { null } else null
+                return WebResourceResponse(mimeFor(url, mime), "UTF-8", file.inputStream())
+            }
+            val conn = URL(url).openConnection() as HttpURLConnection
+            conn.connectTimeout = 10000
+            conn.readTimeout = 15000
+            conn.setRequestProperty("User-Agent", "Masterset-Tracker")
+            if (conn.responseCode !in 200..299) {
+                conn.disconnect()
+                return null
+            }
+            val contentType = conn.contentType
+            val tmp = File(file.parentFile, file.name + ".tmp-" + System.nanoTime())
+            conn.inputStream.use { input -> tmp.outputStream().use { output -> input.copyTo(output) } }
+            conn.disconnect()
+            if (tmp.length() > 0) {
+                tmp.renameTo(file)
+                if (!contentType.isNullOrBlank()) {
+                    File(file.parentFile, file.name + ".mime").writeText(contentType.split(";")[0].trim())
+                }
+                pruneImageCache()
+                return WebResourceResponse(mimeFor(url, contentType), "UTF-8", file.inputStream())
+            }
+            tmp.delete()
+            null
+        } catch (_: Exception) {
+            null
+        }
+    }
 
     // The in-app scan camera (getUserMedia) asks the WebView for the camera.
     // If the app doesn't hold the runtime permission yet, ask for it first
@@ -156,6 +239,14 @@ class MainActivity : ComponentActivity() {
             webViewClient = object : WebViewClient() {
                 override fun shouldOverrideUrlLoading(view: WebView, request: WebResourceRequest): Boolean {
                     return request.url.scheme != "file" && request.url.scheme != "about"
+                }
+                // Card pictures come from the disk cache (see cachedImageResponse)
+                // so page turns don't re-fetch them from the internet.
+                override fun shouldInterceptRequest(view: WebView, request: WebResourceRequest): WebResourceResponse? {
+                    if (request.url.host in imageCacheHosts) {
+                        cachedImageResponse(request.url.toString())?.let { return it }
+                    }
+                    return super.shouldInterceptRequest(view, request)
                 }
                 override fun onPageFinished(view: WebView, url: String) {
                     super.onPageFinished(view, url)

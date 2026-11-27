@@ -13,9 +13,9 @@ a { color: #7cc4ff; }
 
 /* header */
 .topbar { position: sticky; top: 0; z-index: 20; background: #0b1f33; padding: 14px 14px 10px; border-bottom: 1px solid #1d3a57; }
-.topbar h1 { font-size: 22px; letter-spacing: .5px; }
+.topbar h1 { font-size: 24px; letter-spacing: .5px; }
 .topbar h1 span { color: #e3350d; }
-.topbar .sub { font-size: 12px; color: #9db4c8; margin-top: 2px; }
+.topbar .sub { font-size: 13px; color: #9db4c8; margin-top: 2px; }
 .backbtn { background: #1d3a57; color: #fff; border: none; border-radius: 8px; padding: 8px 12px; font-size: 14px; margin-bottom: 8px; }
 .backbtn:active { background: #2a4d70; }
 
@@ -47,12 +47,12 @@ a { color: #7cc4ff; }
 /* binder controls */
 .controls { padding: 12px 14px 4px; }
 .seg { display: flex; background: #0a1826; border-radius: 10px; padding: 3px; }
-.seg button { flex: 1; border: none; background: transparent; color: #9db4c8; font-size: 14px; font-weight: 600; padding: 9px 0; border-radius: 8px; }
+.seg button { flex: 1; border: none; background: transparent; color: #9db4c8; font-size: 15px; font-weight: 600; padding: 9px 0; border-radius: 8px; }
 .seg button.on { background: #e3350d; color: #fff; }
 .ctl-row { display: flex; gap: 8px; margin-top: 10px; align-items: center; flex-wrap: wrap; }
-.ctl-label { font-size: 12px; color: #9db4c8; }
+.ctl-label { font-size: 13px; color: #9db4c8; }
 .psize { display: flex; gap: 6px; }
-.psize button { border: 1px solid #1d3a57; background: #132a44; color: #c9d8e6; border-radius: 8px; padding: 7px 11px; font-size: 13px; font-weight: 600; }
+.psize button { border: 1px solid #1d3a57; background: #132a44; color: #c9d8e6; border-radius: 8px; padding: 7px 11px; font-size: 14px; font-weight: 600; }
 .psize button.on { background: #e3350d; border-color: #e3350d; color: #fff; }
 .toggle { margin-left: auto; display: flex; align-items: center; gap: 6px; font-size: 13px; color: #c9d8e6; }
 .toggle input { width: 18px; height: 18px; accent-color: #e3350d; }
@@ -60,7 +60,7 @@ a { color: #7cc4ff; }
 .search::placeholder { color: #6b8296; }
 .nomatch { font-size: 12px; color: #f59e0b; margin-top: 6px; }
 .prog { padding: 10px 14px 0; }
-.prog .nums { font-size: 14px; font-weight: 700; }
+.prog .nums { font-size: 16px; font-weight: 700; }
 .prog .nums span { color: #9db4c8; font-weight: 400; }
 .reset { float: right; background: none; border: none; color: #6b8296; font-size: 12px; text-decoration: underline; padding: 2px 0; }
 
@@ -71,43 +71,57 @@ a { color: #7cc4ff; }
 .selbar button.ghost { background: rgba(255,255,255,.2); color: #fff; }
 
 /* binder pages — one page at a time, looks like a real binder page */
-.pages { padding: 6px 10px 20px; }
+.pages { padding: 6px 6px 20px; }
 .pagewrap { perspective: 1200px; }
-.binderpage { background: #f6f2e9; border-radius: 10px; padding: 8px; position: relative; box-shadow: 0 4px 18px rgba(0,0,0,.45); }
+.binderpage { background: #f6f2e9; border-radius: 10px; padding: 6px; position: relative; box-shadow: 0 4px 18px rgba(0,0,0,.45); }
 /* two-page spread: pages sit either side of the centre binding */
-.spread { display: flex; position: relative; perspective: 1600px; align-items: stretch; }
+.spread { display: flex; position: relative; perspective: 1600px; align-items: stretch; transition: min-height .3s ease; }
 .spread .binderpage { flex: 1 1 0; min-width: 0; }
 .spread .binderpage.sp-left { border-radius: 10px 3px 3px 10px; }
 .spread .binderpage.sp-right { border-radius: 3px 10px 10px 3px; }
-.spine { flex: none; width: 18px; background: #0b1f33; border-radius: 2px; display: flex; flex-direction: column; justify-content: space-evenly; align-items: center; box-shadow: inset 0 0 8px rgba(0,0,0,.65); padding: 12px 0; }
+.spine { flex: none; width: 14px; background: #0b1f33; border-radius: 2px; display: flex; flex-direction: column; justify-content: space-evenly; align-items: center; box-shadow: inset 0 0 8px rgba(0,0,0,.65); padding: 12px 0; }
 .spine i { width: 11px; height: 11px; border-radius: 50%; background: #d8d2c4; box-shadow: inset 0 1px 3px rgba(0,0,0,.7); }
 /* flipping leaf: the page turning over the binding. Its front is the page
    being turned; its back is the next page on the other side. The next page
-   is already rendered underneath and is revealed as the leaf lifts. */
-.leaf { position: absolute; top: 0; bottom: 0; width: calc(50% - 9px); transform-style: preserve-3d; z-index: 5; transition: transform .55s ease-in-out; }
-.leaf.fwd { left: calc(50% + 9px); transform-origin: left center; }
+   is already rendered underneath and is revealed as the leaf lifts.
+   The leaf is built by cloning the rendered pages (not rebuilt from HTML),
+   so the card images on it cannot change mid-flip. Leaf width/offset must
+   stay exactly half the spine width (7px) or it lands off-centre. */
+.leaf { position: absolute; top: 0; bottom: 0; width: calc(50% - 7px); transform-style: preserve-3d; z-index: 5; transition: transform .55s ease-in-out; }
+.leaf.fwd { left: calc(50% + 7px); transform-origin: left center; }
 .leaf.bwd { left: 0; transform-origin: right center; }
 .leaf-face { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
 .leaf-face.back { transform: rotateY(180deg); }
 .leaf-face .binderpage { height: 100%; box-sizing: border-box; }
-.page-h { font-size: 12px; color: #8a7f6a; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin: 2px 0 6px; }
-.page-foot { text-align: center; font-size: 11px; color: #9a8f7a; margin-top: 8px; }
-.divider { grid-column: 1 / -1; font-size: 12px; font-weight: 700; color: #1d4ed8; letter-spacing: .5px; padding: 10px 2px 2px; border-bottom: 1px solid #d8d2c4; margin-bottom: 2px; }
-.grid { display: grid; gap: 6px; }
+.page-h { font-size: 14px; color: #8a7f6a; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin: 2px 0 6px; }
+.page-foot { text-align: center; font-size: 13px; color: #9a8f7a; margin-top: 8px; }
+.divider { grid-column: 1 / -1; font-size: 14px; font-weight: 700; color: #1d4ed8; letter-spacing: .5px; padding: 10px 2px 2px; border-bottom: 1px solid #d8d2c4; margin-bottom: 2px; }
+.grid { display: grid; gap: 5px; }
 .grid.c2 { grid-template-columns: repeat(2, 1fr); }
 .grid.c3 { grid-template-columns: repeat(3, 1fr); }
 .grid.c4 { grid-template-columns: repeat(4, 1fr); }
 .pocket { background: #fff; border: 2px solid #d8d2c4; border-radius: 8px; overflow: hidden; position: relative; }
-.pocket.got { border-color: #22c55e; }
-.pocket.got .thumb { opacity: .55; }
-.pocket .check { position: absolute; top: 6px; right: 6px; width: 24px; height: 24px; border-radius: 50%; background: rgba(10,24,38,.85); border: 2px solid #5b7a96; color: transparent; font-size: 15px; line-height: 20px; text-align: center; z-index: 2; font-weight: 700; }
-.pocket.got .check { background: #22c55e; border-color: #22c55e; color: #fff; }
+/* Missing cards are darkened; cards in the collection are lit up at full
+   brightness. No check dot — the darkening is the indicator. */
+.pocket:not(.got) .thumb { filter: brightness(.42) saturate(.55); }
 .pocket .selbox { position: absolute; top: 6px; left: 6px; width: 24px; height: 24px; border-radius: 50%; background: rgba(255,255,255,.9); border: 2px solid #e3350d; color: transparent; font-size: 15px; line-height: 20px; text-align: center; z-index: 2; font-weight: 700; }
 .pocket.sel { border-color: #e3350d; box-shadow: 0 0 0 2px rgba(227,53,13,.35); }
 .pocket.sel .selbox { background: #e3350d; border-color: #e3350d; color: #fff; }
 .thumb { aspect-ratio: 63 / 88; background: #ece7db; display: flex; align-items: center; justify-content: center; overflow: hidden; }
 .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.thumb .noimg { font-size: 11px; color: #8a7f6a; text-align: center; padding: 6px; line-height: 1.4; }
+.thumb .noimg { font-size: 13px; color: #8a7f6a; text-align: center; padding: 6px; line-height: 1.4; }
+/* graded slab: the card shown inside its grading slab, label on top in the
+   company's colours. A graded card is in the collection, so it is lit up. */
+.slab { border: 2px solid #b9b9b9; border-radius: 8px; overflow: hidden; background: #dfe3e6; box-shadow: 0 2px 6px rgba(0,0,0,.25); }
+.slab-label { display: flex; align-items: center; gap: 6px; padding: 3px 6px; font-size: 11px; font-weight: 800; color: #fff; letter-spacing: .4px; }
+.slab-label .slab-gr { margin-left: auto; font-size: 14px; }
+.slab-psa .slab-label { background: #c8102e; }
+.slab-cgc .slab-label { background: #1e5aa8; }
+.slab-bgs-gold .slab-label { background: #b8860b; color: #fff; }
+.slab-bgs-silver .slab-label { background: #9aa0a6; color: #1f2937; }
+.slab-bgs-black .slab-label { background: #111; color: #ffd700; }
+.slab-sgc .slab-label { background: #111; color: #fff; }
+.slab .thumb { border-radius: 0; }
 .pinfo { padding: 6px 7px 8px; }
 .pinfo .num { font-size: 11px; color: #1d4ed8; font-weight: 700; }
 .pinfo .nm { font-size: 12.5px; font-weight: 600; line-height: 1.25; margin-top: 1px; min-height: 2.5em; color: #1f2937; }
@@ -115,10 +129,15 @@ a { color: #7cc4ff; }
 .pinfo .grp { display: inline-block; background: #dbeafe; border-radius: 4px; padding: 1px 5px; font-size: 10px; color: #1e40af; margin-top: 4px; }
 .empty { text-align: center; color: #6b7280; padding: 30px 10px; font-size: 14px; line-height: 1.6; }
 .pagenav { display: flex; align-items: center; gap: 10px; margin-top: 14px; }
-.pagenav button { flex: 1; border: 1px solid #1d3a57; background: #132a44; color: #fff; border-radius: 10px; padding: 11px; font-size: 15px; font-weight: 700; }
+.pagenav button { flex: 1; border: 1px solid #1d3a57; background: #132a44; color: #fff; border-radius: 10px; padding: 12px; font-size: 17px; font-weight: 700; }
 .pagenav button:disabled { opacity: .35; }
-.pagenav span { font-size: 13px; color: #9db4c8; white-space: nowrap; }
-@keyframes slideIn { 0% { transform: translateY(-110%) scale(.9); opacity: 0; } 60% { transform: translateY(4%) scale(1.02); opacity: 1; } 100% { transform: translateY(0) scale(1); } }
+.pagenav span { font-size: 15px; color: #9db4c8; white-space: nowrap; }
+/* prominent progress bar for the binder view (like the collection app):
+   a tall green bar with the count and percent on it. */
+.bigbar { position: relative; height: 30px; background: #0a1826; border-radius: 15px; overflow: hidden; margin-top: 10px; }
+.bigbar > div { height: 100%; background: linear-gradient(90deg, #84cc16, #a3e635); border-radius: 15px; transition: width .4s ease; }
+.bigbar span { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 800; color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,.4); }
+@keyframes slideIn { 0% { transform: translateY(-110%) scale(.9); opacity: 0; filter: brightness(.35); } 60% { transform: translateY(4%) scale(1.02); opacity: 1; filter: brightness(.8); } 100% { transform: translateY(0) scale(1); filter: brightness(1); } }
 .pocket.slide-in .thumb img { animation: slideIn .7s ease-out; }
 .pocket.slide-in { border-color: #22c55e; box-shadow: 0 0 0 3px rgba(34,197,94,.5); }
 @keyframes flashRing { 0%, 100% { box-shadow: 0 0 0 0 rgba(34,197,94,0); } 50% { box-shadow: 0 0 0 4px rgba(34,197,94,.85); } }
@@ -154,6 +173,14 @@ a { color: #7cc4ff; }
 .modal .have { background: #22c55e; color: #fff; }
 .modal .need { background: #1d3a57; color: #fff; }
 .modal .close { background: #e3350d; color: #fff; }
+/* grading picker in the card modal: company then grade (scale differs
+   per company — PSA 1-10, CGC 1-10 + 10 Pristine, BGS adds Black Label). */
+.gradebox { margin-top: 16px; background: #132a44; border: 1px solid #1d3a57; border-radius: 12px; padding: 12px; width: 100%; max-width: 340px; }
+.gradebox label { font-size: 13px; font-weight: 700; color: #c9d8e6; display: block; margin-bottom: 8px; }
+.gradebox select { width: 100%; background: #0a1826; border: 1px solid #1d3a57; color: #fff; border-radius: 10px; padding: 10px 12px; font-size: 15px; margin-bottom: 8px; }
+.gradebox select:last-child { margin-bottom: 0; }
+.modal .slab { width: 100%; max-width: 340px; }
+.modal .slab img { width: 100%; max-height: 60vh; object-fit: contain; border-radius: 0 0 8px 8px; }
 .hidden { display: none !important; }
 </style>
 </head>
@@ -204,6 +231,78 @@ function setChecked(id, rowId, val) {
   const s = checkedSet(id);
   if (val) s.add(rowId); else s.delete(rowId);
   store.set('mst:checked:' + id, Array.from(s));
+}
+// Graded cards: per-card {co, gr}, stored apart from the checks. A graded
+// card is in the collection. The grade scale differs per company — PSA is
+// 1-10, CGC is 1-10 plus 10 Pristine, BGS adds 10 Black Label.
+const GRADE_SCALES = {
+  PSA: ['1','2','3','4','5','6','7','8','9','10'],
+  CGC: ['1','1.5','2','2.5','3','3.5','4','4.5','5','5.5','6','6.5','7','7.5','8','8.5','9','9.5','10','10 Pristine'],
+  BGS: ['1','1.5','2','2.5','3','3.5','4','4.5','5','5.5','6','6.5','7','7.5','8','8.5','9','9.5','10','10 Pristine','10 Black Label'],
+  SGC: ['1','1.5','2','2.5','3','3.5','4','4.5','5','5.5','6','6.5','7','7.5','8','8.5','9','9.5','10']
+};
+function gradedMap(id) { return store.get('mst:graded:' + id, {}); }
+function gradedOf(id, rowId) { return gradedMap(id)[rowId] || null; }
+function setGraded(id, rowId, g) {
+  const m = gradedMap(id);
+  if (g) m[rowId] = g; else delete m[rowId];
+  store.set('mst:graded:' + id, m);
+  if (g) setChecked(id, rowId, true); // a graded card is in the collection
+}
+// Slab label class for a grading (a BGS label's colour depends on the grade).
+function slabClass(g) {
+  if (!g) return '';
+  if (g.co === 'BGS') {
+    if (g.gr === '10 Black Label') return 'slab-bgs-black';
+    if (g.gr === '10 Pristine' || g.gr === '9.5') return 'slab-bgs-gold';
+    return 'slab-bgs-silver';
+  }
+  return 'slab-' + g.co.toLowerCase();
+}
+// Warm the image cache for the spreads either side of the one showing, so
+// turning the page finds the pictures already loaded instead of fetching them.
+const preloadedImgs = new Set();
+function preloadSpreadImages(b) {
+  const st = bstate(b.id);
+  const rows = visibleRows(b);
+  const totalPages = Math.max(1, Math.ceil(rows.length / st.pageSize));
+  const totalSpreads = Math.max(1, Math.ceil(totalPages / 2));
+  [st.spread - 1, st.spread + 1].forEach(s => {
+    if (s < 0 || s >= totalSpreads) return;
+    rows.slice(s * 2 * st.pageSize, (s * 2 + 2) * st.pageSize).forEach(r => {
+      const u = r.c.img;
+      if (u && !preloadedImgs.has(u)) { preloadedImgs.add(u); const im = new Image(); im.src = u; }
+    });
+  });
+}
+// One card-reader worker, reused across scans — creating it downloads the
+// reader core and language data, the slow part that makes a scan look stuck.
+let tessWorker = null;
+let tessWorkerPromise = null;
+let scanToken = 0; // bumped to cancel the scan in flight
+function getTessWorker(onStatus) {
+  if (tessWorker) return Promise.resolve(tessWorker);
+  if (tessWorkerPromise) return tessWorkerPromise;
+  tessWorkerPromise = loadTesseract().then(() => Tesseract.createWorker('eng', 1, {
+    workerPath: 'https://cdn.jsdelivr.net/npm/tesseract.js@6/dist/tesseract.min.js',
+    corePath: 'https://cdn.jsdelivr.net/npm/tesseract.js@6/dist/tesseract-core.wasm.js',
+    langPath: 'https://tessdata.projectnaptha.com/4.0.0',
+    logger: (m) => {
+      const pct = (m.progress != null) ? ' ' + Math.round(m.progress * 100) + '%' : '';
+      const label = {
+        'loading tesseract core': 'Loading the card reader…',
+        'initializing tesseract': 'Starting the card reader…',
+        'loading language traineddata': 'Loading the reader language…',
+        'initializing api': 'Starting the card reader…',
+        'recognizing text': 'Reading the card…'
+      }[m.status] || 'Reading the card…';
+      if (onStatus) onStatus(label + pct);
+    }
+  })).then(w => { tessWorker = w; return w; }).catch(err => {
+    tessWorkerPromise = null;
+    throw err;
+  });
+  return tessWorkerPromise;
 }
 function rowId(bid, idx) { return bid + '#' + idx; }
 function normNum(n) {
@@ -340,7 +439,7 @@ function renderBinder(app, b) {
     + '</div>'
     + '<div class="prog"><span class="nums">' + p.n + ' / ' + p.total + ' <span>&middot; ' + p.pct + '% collected &middot; ' + (st.mode === 'master' ? 'Master' : 'Grand Master') + '</span></span>'
     + '<button class="reset" id="resetBtn">Reset checks</button>'
-    + '<div class="pbar"><div style="width:' + p.pct + '%"></div></div></div>'
+    + '<div class="bigbar"><div style="width:' + p.pct + '%"></div><span>' + p.pct + '% complete</span></div></div>'
     + '<div class="pages" id="pages"></div>';
   app.innerHTML = h;
 
@@ -441,10 +540,17 @@ function pageHTML(b, pageIdx, rows, cols, got) {
     if (c.lang && c.lang !== 'English') extra.push(c.lang);
     const isSel = sel.binder === b.id && sel.ids.has(r.id);
     const animCls = (slideId === r.id) ? ' slide-in' : (st.highlight === r.id ? ' flash' : '');
+    // A graded card shows as its slab (label in the company's colours);
+    // otherwise the pocket is just the card image. Missing cards are
+    // darkened by CSS; there is no check dot.
+    const g = gradedOf(b.id, r.id);
+    const thumbHtml = '<div class="thumb" data-full="' + esc(largeImg(c.img) || '') + '" data-name="' + esc(c.name) + '" data-num="' + esc(c.n) + '" data-meta="' + esc(modalDesc) + '" data-extra="' + esc(extra.join(' · ')) + '" data-id2="' + r.id + '">' + img + '</div>';
+    const inner = g
+      ? '<div class="slab ' + slabClass(g) + '"><div class="slab-label"><span>' + esc(g.co) + '</span><span class="slab-gr">' + esc(g.gr) + '</span></div>' + thumbHtml + '</div>'
+      : thumbHtml;
     h += '<div class="pocket' + (isGot ? ' got' : '') + (isSel ? ' sel' : '') + animCls + '" data-id="' + r.id + '">'
-      + '<div class="check">' + (isGot ? '&#10003;' : '') + '</div>'
       + (sel.binder === b.id ? '<div class="selbox">' + (isSel ? '&#10003;' : '') + '</div>' : '')
-      + '<div class="thumb" data-full="' + esc(largeImg(c.img) || '') + '" data-name="' + esc(c.name) + '" data-num="' + esc(c.n) + '" data-meta="' + esc(modalDesc) + '" data-extra="' + esc(extra.join(' · ')) + '" data-id2="' + r.id + '">' + img + '</div>'
+      + inner
       + '</div>';
   });
   if (!chunk.length) {
@@ -563,6 +669,8 @@ function renderPages(b) {
     const tok = ++highlightToken;
     setTimeout(() => { if (tok === highlightToken) { slideId = null; } }, 3000);
   }
+  // Warm the cache for the spreads either side, so the next turn is instant.
+  preloadSpreadImages(b);
 }
 
 let turning = false;
@@ -575,17 +683,16 @@ function turnPage(b, dir) {
   const next = st.spread + dir;
   if (next < 0 || next >= totalSpreads) return;
   turning = true;
-  const cols = st.pageSize === 4 ? 2 : st.pageSize === 16 ? 4 : 3;
-  const got = checkedSet(b.id);
-  // The leaf is the page turning over the binding. Its front is the page
-  // being turned; its back is the next page on the other side. The next
-  // spread is rendered underneath first, so it is revealed as the leaf lifts.
-  const oldLeft = pageHTML(b, st.spread * 2, rows, cols, got);
-  const oldRight = pageHTML(b, st.spread * 2 + 1, rows, cols, got);
-  const newLeft = pageHTML(b, next * 2, rows, cols, got);
-  const newRight = pageHTML(b, next * 2 + 1, rows, cols, got);
+  // Clone the rendered turning page BEFORE re-rendering, so the leaf shows
+  // the page exactly as it was — its pictures are already loaded and cannot
+  // change mid-flip. Rebuilding it from HTML would make fresh <img> tags
+  // that re-fetch and pop in during the turn, and the leaf would land
+  // shifted. The next spread is rendered underneath and is revealed as
+  // the leaf lifts; it does not move itself.
   const oldSpread = document.getElementById('spreadEl');
   const oldH = oldSpread ? oldSpread.offsetHeight : 0;
+  const oldPageEl = oldSpread ? oldSpread.querySelector(dir > 0 ? '.binderpage.sp-right' : '.binderpage.sp-left') : null;
+  const oldPageClone = oldPageEl ? oldPageEl.cloneNode(true) : null;
   st.spread = next;
   renderPages(b);
   const spread = document.getElementById('spreadEl');
@@ -593,14 +700,30 @@ function turnPage(b, dir) {
   // Keep the spread at least as tall as the one being turned, so the leaf
   // (the old page) is never clipped by a shorter next spread.
   if (oldH > 0) spread.style.minHeight = oldH + 'px';
+  // The leaf's back is the next page on the other side — clone the freshly
+  // rendered page so it matches the static page underneath exactly.
+  const newPageEl = spread.querySelector(dir > 0 ? '.binderpage.sp-left' : '.binderpage.sp-right');
+  const newPageClone = newPageEl ? newPageEl.cloneNode(true) : null;
   const leaf = document.createElement('div');
   leaf.className = 'leaf ' + (dir > 0 ? 'fwd' : 'bwd');
-  leaf.innerHTML = '<div class="leaf-face front">' + (dir > 0 ? oldRight : oldLeft) + '</div>'
-    + '<div class="leaf-face back">' + (dir > 0 ? newLeft : newRight) + '</div>';
+  const front = document.createElement('div');
+  front.className = 'leaf-face front';
+  if (oldPageClone) front.appendChild(oldPageClone);
+  const back = document.createElement('div');
+  back.className = 'leaf-face back';
+  if (newPageClone) back.appendChild(newPageClone);
+  leaf.appendChild(front);
+  leaf.appendChild(back);
   spread.appendChild(leaf);
   void leaf.offsetWidth; // force reflow so the transition runs
   leaf.style.transform = dir > 0 ? 'rotateY(-180deg)' : 'rotateY(180deg)';
-  setTimeout(() => { leaf.remove(); turning = false; }, 620);
+  setTimeout(() => {
+    leaf.remove();
+    // Let the spread settle to its natural height (the min-height was only
+    // to keep the leaf from clipping); the CSS transition smooths the settle.
+    spread.style.minHeight = '';
+    turning = false;
+  }, 620);
 }
 
 function openModal(b, th) {
@@ -612,9 +735,21 @@ function openModal(b, th) {
   const extra = th.getAttribute('data-extra');
   const id = th.getAttribute('data-id2');
   const isGot = checkedSet(b.id).has(id);
-  m.innerHTML = (full ? '<img src="' + esc(full) + '" onerror="this.style.display=\'none\'">' : '<div class="mname">No image yet</div>')
+  const g = gradedOf(b.id, id);
+  // A graded card shows as its slab in the big view too.
+  const imgHtml = full
+    ? (g
+      ? '<div class="slab ' + slabClass(g) + '"><div class="slab-label"><span>' + esc(g.co) + '</span><span class="slab-gr">' + esc(g.gr) + '</span></div><img src="' + esc(full) + '" onerror="this.style.display=\'none\'"></div>'
+      : '<img src="' + esc(full) + '" onerror="this.style.display=\'none\'">')
+    : '<div class="mname">No image yet</div>';
+  const gradeDetail = g ? ' &middot; Graded ' + esc(g.co) + ' ' + esc(g.gr) : '';
+  const coOpts = ['Not graded', 'PSA', 'CGC', 'BGS', 'SGC'].map(co => '<option value="' + co + '"' + ((g ? g.co : 'Not graded') === co ? ' selected' : '') + '>' + co + '</option>').join('');
+  m.innerHTML = imgHtml
     + '<div class="mname">' + esc(name) + '</div>'
-    + '<div class="mdetail">#' + esc(num) + ' &middot; ' + esc(meta) + (extra ? '<br>' + esc(extra) : '') + '</div>'
+    + '<div class="mdetail">#' + esc(num) + ' &middot; ' + esc(meta) + gradeDetail + (extra ? '<br>' + esc(extra) : '') + '</div>'
+    + '<div class="gradebox"><label>Grading — company and grade</label>'
+    + '<select id="gradeCo">' + coOpts + '</select>'
+    + '<select id="gradeVal"></select></div>'
     + '<div class="mbtns"><button class="' + (isGot ? 'need' : 'have') + '" id="mToggle">' + (isGot ? 'Mark as needed' : 'Mark as have') + '</button>'
     + '<button class="close" id="mClose">Close</button></div>';
   m.classList.remove('hidden');
@@ -624,10 +759,41 @@ function openModal(b, th) {
   m.onclick = (e) => { if (e.target === m) { closeModal(); } };
   document.getElementById('mToggle').addEventListener('click', () => {
     const y = window.scrollY;
-    setChecked(b.id, id, !checkedSet(b.id).has(id));
+    const nowGot = !checkedSet(b.id).has(id);
+    setChecked(b.id, id, nowGot);
+    if (nowGot) slideId = id; // light the card up as it slides into place
     closeModal(true);
     render();
     window.scrollTo(0, y);
+  });
+  // Grading picker: pick a company, then a grade from that company's scale.
+  // Picking a grade saves it (and marks the card as have) and closes the
+  // modal so the slab slides into place in the binder.
+  const coSel = document.getElementById('gradeCo');
+  const grSel = document.getElementById('gradeVal');
+  const fillGrades = (co) => {
+    const grades = GRADE_SCALES[co] || [];
+    grSel.innerHTML = '<option value="">Pick a grade…</option>' + grades.map(gr => '<option value="' + gr + '"' + (g && g.co === co && g.gr === gr ? ' selected' : '') + '>' + gr + '</option>').join('');
+    grSel.disabled = !grades.length;
+  };
+  fillGrades(g ? g.co : 'Not graded');
+  coSel.addEventListener('change', () => {
+    const co = coSel.value;
+    if (co === 'Not graded') {
+      if (g) { setGraded(b.id, id, null); slideId = id; closeModal(true); render(); }
+      return;
+    }
+    fillGrades(co);
+    grSel.focus();
+  });
+  grSel.addEventListener('change', () => {
+    const co = coSel.value;
+    const gr = grSel.value;
+    if (!co || co === 'Not graded' || !gr) return;
+    setGraded(b.id, id, { co: co, gr: gr });
+    slideId = id;
+    closeModal(true);
+    render();
   });
 }
 function closeModal(silent) {
@@ -667,8 +833,9 @@ function loadTesseract() {
   tessLoading = new Promise((resolve, reject) => {
     const s = document.createElement('script');
     s.src = 'https://cdn.jsdelivr.net/npm/tesseract.js@6/dist/tesseract.min.js';
-    s.onload = resolve;
-    s.onerror = () => reject(new Error('Could not load the card reader — check your internet and try again.'));
+    const to = setTimeout(() => reject(new Error('Could not load the card reader — check your internet and try again.')), 15000);
+    s.onload = () => { clearTimeout(to); resolve(); };
+    s.onerror = () => { clearTimeout(to); reject(new Error('Could not load the card reader — check your internet and try again.')); };
     document.head.appendChild(s);
   });
   return tessLoading;
@@ -775,6 +942,7 @@ function renderScan(app) {
     + '<button class="scanbtn hidden" id="scanTakeSys">Use system camera</button>'
     + '<button class="scanbtn ghost" id="scanPick">Choose from gallery</button>'
     + '<div class="scanstatus" id="scanStatus"></div>'
+    + '<button class="scanbtn ghost hidden" id="scanCancel">Cancel</button>'
     + '<div class="scanpreview" id="scanPreview"></div>'
     + '<div id="scanResults"></div>'
     + '<div class="manual"><input id="scanManual" type="search" placeholder="Or type the card name&hellip;"></div>'
@@ -784,22 +952,27 @@ function renderScan(app) {
   const status = (t) => { const el = document.getElementById('scanStatus'); if (el) el.textContent = t; };
   const show = (id, on) => { const el = document.getElementById(id); if (el) el.classList.toggle('hidden', !on); };
   // Run the card reader on one image (a File from the gallery/system camera,
-  // or a data URL of the cropped frame from the in-app camera).
+  // or a data URL of the cropped frame from the in-app camera). Reuses one
+  // worker, shows every loading step with progress (a scan used to sit on
+  // "Reading the card…" with no sign of life), gives up after 45s with a
+  // clear message, and can be cancelled.
   const runOcr = (source) => {
+    const tok = ++scanToken;
+    show('scanCancel', true);
     status('Loading the card reader…');
-    loadTesseract().then(() => {
-      status('Reading the card…');
-      return Tesseract.recognize(source, 'eng', {
-        workerPath: 'https://cdn.jsdelivr.net/npm/tesseract.js@6/dist/tesseract.min.js',
-        corePath: 'https://cdn.jsdelivr.net/npm/tesseract.js@6/dist/tesseract-core.wasm.js',
-        langPath: 'https://tessdata.projectnaptha.com/4.0.0',
-        logger: (m) => { if (m.status === 'recognizing text') status('Reading the card… ' + Math.round(m.progress * 100) + '%'); }
-      });
-    }).then(res => {
+    const timeout = new Promise((_, reject) => setTimeout(() => reject(new Error('Reading is taking too long — check your connection and try again, or type the name below.')), 45000));
+    Promise.race([
+      getTessWorker(status).then(w => w.recognize(source)),
+      timeout
+    ]).then(res => {
+      if (tok !== scanToken) return; // cancelled
+      show('scanCancel', false);
       const read = parseScanText(res.data.text || '');
       status(read.name ? ('Read as "' + read.name + '"' + (read.num ? ' #' + read.num : '') + '.') : 'Finished reading.');
       renderScanResults(findMatches(read.name, read.num, false), read);
     }).catch(err => {
+      if (tok !== scanToken) return;
+      show('scanCancel', false);
       status(err && err.message ? err.message : 'Could not read that photo. Try again.');
     });
   };
@@ -846,8 +1019,9 @@ function renderScan(app) {
     if (!v || !v.videoWidth) { status('Camera isn\'t ready yet — try again in a second.'); return; }
     const crop = cropToFrame(v, fr);
     if (crop.w < 40 || crop.h < 40) { status('Couldn\'t line the card up — try again.'); return; }
-    // Upscale the crop so the name and number are big enough to read.
-    const up = Math.min(2, 1400 / crop.w);
+    // Upscale the crop so the name and number are big enough to read
+    // (capped at 1000px wide — bigger only slows the reader down).
+    const up = Math.min(2, 1000 / crop.w);
     const c = document.createElement('canvas');
     c.width = Math.round(crop.w * up);
     c.height = Math.round(crop.h * up);
@@ -862,6 +1036,11 @@ function renderScan(app) {
   document.getElementById('scanOpenCam').addEventListener('click', openCamera);
   document.getElementById('scanCapture').addEventListener('click', captureFrame);
   document.getElementById('scanCloseCam').addEventListener('click', closeCamera);
+  document.getElementById('scanCancel').addEventListener('click', () => {
+    scanToken++; // ignore whatever the in-flight read returns
+    show('scanCancel', false);
+    status('Cancelled — try again, or type the name below.');
+  });
   document.getElementById('scanTakeSys').addEventListener('click', () => document.getElementById('scanFile').click());
   document.getElementById('scanPick').addEventListener('click', () => document.getElementById('scanFile2').click());
   document.getElementById('scanFile').addEventListener('change', (e) => onFile(e.target.files && e.target.files[0]));

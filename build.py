@@ -41,8 +41,11 @@ def compact_card(c, is_ditto):
     setname = c.get('set') or ''
     if sec == 'Promos' or num.startswith('MEP') or 'Promo' in var or 'Promo' in setname:
         out['promo'] = 1
-    # divider label shown when the group changes in binder order
-    out['div'] = c.get('group') if is_ditto else (c.get('section') or None)
+    # divider label shown when the group changes in binder order. For Ditto
+    # the rows carry an explicit 'div' (the set name for main cards, the
+    # section name for Cameos / Topps / Other) so languages are never
+    # separated by a language label.
+    out['div'] = (c.get('div') or c.get('group')) if is_ditto else (c.get('section') or None)
     return out
 
 binders = []
