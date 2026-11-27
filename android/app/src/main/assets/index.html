@@ -836,6 +836,18 @@ function closeModal(silent) {
   const m = document.getElementById('modal');
   m.classList.add('hidden');
   m.innerHTML = '';
+  // Land the binder on the page of the card the user was last viewing in
+  // the modal (they may have swiped several pages away from where they
+  // opened it), instead of leaving it on the page they started on.
+  if (modalBinder && modalRowId) {
+    const rows = visibleRows(modalBinder);
+    const pos = rows.findIndex(r => r.id === modalRowId);
+    if (pos >= 0) {
+      const st = bstate(modalBinder.id);
+      st.page = pageIndexOf(rows, st.pageSize, modalRowId);
+      if (view.name === 'binder' && view.binder === modalBinder.id) renderPages(modalBinder);
+    }
+  }
   modalBinder = null;
   modalRowId = null;
   if (modalOpen) { modalOpen = false; if (!silent) reportView(); }

@@ -32,7 +32,8 @@ non-TCG Ditto items from the Elite Fourum Dittologist thread.
 - Master / Grand Master toggle per binder
 - Card thumbnail per row; tap for the card info, long-press to multi-select
 - In the card details, swipe left or right to move to the next or previous
-  card in the binder
+  card in the binder; closing the details lands the binder on the page of
+  the card you were last viewing, not the page you opened it from
 - Missing cards are darkened; a card you add slides in lit up
 - A card whose picture does not show its variation (stamp, code, holo
   pattern) is marked with an asterisk at the start of its description and
