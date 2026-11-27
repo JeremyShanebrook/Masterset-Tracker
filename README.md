@@ -52,7 +52,7 @@ load from the internet (scrydex / images.pokemontcg.io mirrors, plus the
 Elite Fourum Dittologist thread, dexli.st for Korean cards, Poplex for old
 Japanese, PK.TCG for Simplified Chinese, and Cardboard Tens for the 30th
 Celebration Classic Collection); pictures are cached on the phone after the
-first view, so turning pages is instant. 24 Ditto cards have no verified
+first view, so turning pages is instant. 26 Ditto cards have no verified
 image yet and show a placeholder.
 
 Source data lives in `data/*.json` (one file per binder). The web app is

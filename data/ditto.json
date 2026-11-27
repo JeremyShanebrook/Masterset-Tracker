@@ -3697,10 +3697,10 @@
       "variant": "Pokémon TCG Gym",
       "inMaster": true,
       "inGrandMaster": true,
-      "image": "https://images.scrydex.com/pokemon/svp-166/small",
+      "image": "https://images.poplextcg.com/c3/ja/pkm-ja-sv-p-166/front/medium/t1/da4a58826800bac9c3c33b7b147a29ae2807216d46ea33a905b4b54acf6772d9.webp",
       "group": "Japanese",
       "origin": "pokecottage",
-      "notes": "Image added from scrydex (svp-166), verified Nov 26, 2026.",
+      "notes": "Image corrected Nov 26, 2026: scrydex svp-166 is the ENGLISH SVP set where 166 is Teal Mask Ogerpon ex, not this card. Japanese SV-P 166 is Ditto (Gym Promo Pack 7, Jul 19 2024); image from Poplex, viewed and verified.",
       "div": "Scarlet & Violet Promos"
     },
     {
@@ -4103,10 +4103,11 @@
       "variant": "Holo",
       "inMaster": true,
       "inGrandMaster": true,
-      "image": "https://api.rip.fun/storage/v1/object/public/tcg/cards/cn-30th-celebration-093.artwork-20261104.webp",
+      "image": null,
       "group": "Simplified Chinese",
       "origin": "pokecottage",
-      "div": "30th Celebration"
+      "div": "30th Celebration",
+      "notes": "Image URL dead (CardOS api.rip.fun returns 404 as of Nov 26, 2026); no verified image anywhere. Needs a new source."
     },
     {
       "num": "121/103",
@@ -4117,10 +4118,11 @@
       "variant": "Holo",
       "inMaster": true,
       "inGrandMaster": true,
-      "image": "https://api.rip.fun/storage/v1/object/public/tcg/cards/cn-30th-celebration-121.artwork-20261104.webp",
+      "image": null,
       "group": "Simplified Chinese",
       "origin": "pokecottage",
-      "div": "30th Celebration"
+      "div": "30th Celebration",
+      "notes": "Image URL dead (CardOS api.rip.fun returns 404 as of Nov 26, 2026); no verified image anywhere. Needs a new source."
     },
     {
       "num": "115/128",
