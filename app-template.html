@@ -85,11 +85,16 @@ a { color: #7cc4ff; }
    being turned; its back is the next page on the other side. The next page
    is already rendered underneath and is revealed as the leaf lifts.
    The leaf is built by cloning the rendered pages (not rebuilt from HTML),
-   so the card images on it cannot change mid-flip. Leaf width/offset must
-   stay exactly half the spine width (7px) or it lands off-centre. */
+   so the card images on it cannot change mid-flip. The leaf's pivot MUST be
+   the spine centre (50% of the spread), not the page edge: the spine is 14px
+   wide, so a forward leaf (left edge at 50%+7px) pivots 7px left of its edge
+   and a backward leaf (right edge at 50%-7px) pivots 7px right of its edge.
+   Pivoting on the page edge lands the leaf a full spine width (14px)
+   off-centre, which reads as a visible shift when the leaf is removed and
+   the true page underneath is revealed. */
 .leaf { position: absolute; top: 0; bottom: 0; width: calc(50% - 7px); transform-style: preserve-3d; z-index: 5; transition: transform .55s ease-in-out; }
-.leaf.fwd { left: calc(50% + 7px); transform-origin: left center; }
-.leaf.bwd { left: 0; transform-origin: right center; }
+.leaf.fwd { left: calc(50% + 7px); transform-origin: -7px center; }
+.leaf.bwd { left: 0; transform-origin: calc(100% + 7px) center; }
 .leaf-face { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
 .leaf-face.back { transform: rotateY(180deg); }
 .leaf-face .binderpage { height: 100%; box-sizing: border-box; }

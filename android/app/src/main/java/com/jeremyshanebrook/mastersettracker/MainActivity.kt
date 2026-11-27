@@ -58,7 +58,8 @@ class MainActivity : ComponentActivity() {
     private val imageCacheHosts = setOf(
         "images.scrydex.com", "images.pokemontcg.io", "www.pokemon.com",
         "assets.tcgdex.net", "efour.b-cdn.net", "images.dexli.st",
-        "archives.bulbagarden.net", "images.poplextcg.com"
+        "archives.bulbagarden.net", "images.poplextcg.com",
+        "images.cardboardtens.com"
     )
     private val imageCacheMaxBytes = 250L * 1024 * 1024
 

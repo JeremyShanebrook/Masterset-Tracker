@@ -26,9 +26,11 @@ non-TCG Ditto items from the Elite Fourum Dittologist thread.
   secret rares, promos and variants last
 - Two-page spread: pages sit either side of the centre binding, and a page
   turns over the binding like a real binder — the next page is already
-  underneath and is revealed as the leaf lifts. No headers or divider rows:
-  every page is a clean grid of cards, and every spread is the same height,
-  so flipping never shifts the pages or leaves empty slots
+  underneath and is revealed as the leaf lifts. The leaf pivots on the spine
+  centre, so it lands exactly on the page underneath with no shift. No
+  headers or divider rows: every page is a clean grid of cards, and every
+  spread is the same height, so flipping never shifts the pages or leaves
+  empty slots
 - Per-binder page-size picker: 4, 9, 12 or 16 pockets per page
 - Master / Grand Master toggle per binder
 - Card thumbnail per row; tap for the card info, long-press to multi-select
