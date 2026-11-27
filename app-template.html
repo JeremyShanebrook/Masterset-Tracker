@@ -204,6 +204,9 @@ const store = {
 let view = { name: 'home' };
 let binderState = {}; // id -> {mode, pageSize, hide, query, spread, highlight}
 let modalOpen = false;
+let modalBinder = null; // binder the detail modal is showing (for swipe nav)
+let modalRowId = null; // row id the detail modal is showing
+let modalSwipeBound = false;
 let sel = { binder: null, ids: new Set() }; // long-press multi-select
 let slideId = null; // row id to animate sliding into its pocket (after a scan add)
 let highlightToken = 0;
@@ -735,13 +738,26 @@ function turnPage(b, dir) {
 }
 
 function openModal(b, th) {
-  const m = document.getElementById('modal');
-  const full = th.getAttribute('data-full');
-  const name = th.getAttribute('data-name');
-  const num = th.getAttribute('data-num');
-  const meta = th.getAttribute('data-meta');
-  const extra = th.getAttribute('data-extra');
   const id = th.getAttribute('data-id2');
+  const row = visibleRows(b).find(r => r.id === id);
+  if (!row) return;
+  renderModalCard(b, row);
+}
+
+// Render the detail modal for one row. Swipe left/right on the modal to
+// move to the next/previous card in the current binder view.
+function renderModalCard(b, row) {
+  const c = row.c;
+  const id = row.id;
+  const m = document.getElementById('modal');
+  const full = largeImg(c.img) || '';
+  const name = c.name;
+  const num = c.n;
+  const meta = descParts(c, b).join(' · ');
+  const extraParts = [];
+  if (c.v && c.v !== 'Regular' && c.v !== 'Standard') extraParts.push(c.v);
+  if (c.lang && c.lang !== 'English') extraParts.push(c.lang);
+  const extra = extraParts.join(' · ');
   const isGot = checkedSet(b.id).has(id);
   const g = gradedOf(b.id, id);
   // A graded card shows as its slab in the big view too.
@@ -762,7 +778,30 @@ function openModal(b, th) {
     + '<button class="close" id="mClose">Close</button></div>';
   m.classList.remove('hidden');
   modalOpen = true;
+  modalBinder = b;
+  modalRowId = id;
   reportView();
+  // Swipe left/right to move to the next/previous card in this binder view.
+  // Bound once to the modal shell (innerHTML is rebuilt per card, so the
+  // handlers live on the shell and read the current modal state).
+  if (!modalSwipeBound) {
+    modalSwipeBound = true;
+    let msX = 0, msY = 0, msT = 0, msOK = false;
+    m.addEventListener('touchstart', (e) => {
+      const t = e.changedTouches[0];
+      // Don't hijack a gesture that starts on a control (grade pickers, buttons).
+      msOK = !(t.target && t.target.closest && t.target.closest('select, button, input, option'));
+      msX = t.clientX; msY = t.clientY; msT = Date.now();
+    }, { passive: true });
+    m.addEventListener('touchend', (e) => {
+      if (!msOK || !modalOpen || !modalBinder) return;
+      const t = e.changedTouches[0];
+      const dx = t.clientX - msX, dy = t.clientY - msY;
+      if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5 && Date.now() - msT < 800) {
+        modalSwipe(dx < 0 ? 1 : -1);
+      }
+    }, { passive: true });
+  }
   document.getElementById('mClose').addEventListener('click', () => { closeModal(); });
   m.onclick = (e) => { if (e.target === m) { closeModal(); } };
   document.getElementById('mToggle').addEventListener('click', () => {
@@ -804,10 +843,23 @@ function openModal(b, th) {
     render();
   });
 }
+// Move the open modal to the next (+1) or previous (-1) card in the
+// current binder view. Stops at the ends (no wrap).
+function modalSwipe(dir) {
+  if (!modalBinder || !modalRowId) return;
+  const rows = visibleRows(modalBinder);
+  const i = rows.findIndex(r => r.id === modalRowId);
+  if (i < 0) return;
+  const j = i + dir;
+  if (j < 0 || j >= rows.length) return;
+  renderModalCard(modalBinder, rows[j]);
+}
 function closeModal(silent) {
   const m = document.getElementById('modal');
   m.classList.add('hidden');
   m.innerHTML = '';
+  modalBinder = null;
+  modalRowId = null;
   if (modalOpen) { modalOpen = false; if (!silent) reportView(); }
 }
 
