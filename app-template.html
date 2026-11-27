@@ -209,6 +209,26 @@ let modalRowId = null; // row id the detail modal is showing
 let modalSwipeBound = false;
 let sel = { binder: null, ids: new Set() }; // long-press multi-select
 let slideId = null; // row id to animate sliding into its pocket (after a scan add)
+let slideTimer = null; // the one timer that clears slideId (see setSlideId)
+// Set the row id to light up as it slides into its pocket, and clear it
+// once, 1.5s later, so the green border goes away and later taps don't
+// replay the animation. The timer is set HERE, when the id is assigned —
+// it must NOT live in renderPages, where every re-render would reset the
+// clock and the highlight would never clear (the bug: the green border
+// stuck around forever and the slide animation replayed on every click).
+function setSlideId(id) {
+  slideId = id;
+  if (slideTimer) { clearTimeout(slideTimer); slideTimer = null; }
+  if (!id) return;
+  slideTimer = setTimeout(() => {
+    slideTimer = null;
+    slideId = null;
+    // Drop the highlight class from the pocket directly — no full re-render,
+    // so no scroll jump and no animation replay.
+    const pk = document.querySelector('.pocket[data-id="' + id + '"]');
+    if (pk) pk.classList.remove('slide-in');
+  }, 1500);
+}
 let highlightToken = 0;
 let camStream = null; // live camera stream for the scan view, if open
 // Stop the in-app camera (called when leaving the scan view, so the camera
@@ -676,10 +696,6 @@ function renderPages(b) {
       openModal(b, pk.querySelector('.thumb'));
     });
   });
-  if (slideId) {
-    const tok = ++highlightToken;
-    setTimeout(() => { if (tok === highlightToken) { slideId = null; } }, 3000);
-  }
   // Warm the cache for the spreads either side, so the next turn is instant.
   preloadSpreadImages(b);
 }
@@ -808,7 +824,7 @@ function renderModalCard(b, row) {
     const y = window.scrollY;
     const nowGot = !checkedSet(b.id).has(id);
     setChecked(b.id, id, nowGot);
-    if (nowGot) slideId = id; // light the card up as it slides into place
+    if (nowGot) setSlideId(id); // light the card up as it slides into place
     closeModal(true);
     render();
     window.scrollTo(0, y);
@@ -827,7 +843,7 @@ function renderModalCard(b, row) {
   coSel.addEventListener('change', () => {
     const co = coSel.value;
     if (co === 'Not graded') {
-      if (g) { setGraded(b.id, id, null); slideId = id; closeModal(true); render(); }
+      if (g) { setGraded(b.id, id, null); setSlideId(id); closeModal(true); render(); }
       return;
     }
     fillGrades(co);
@@ -838,7 +854,7 @@ function renderModalCard(b, row) {
     const gr = grSel.value;
     if (!co || co === 'Not graded' || !gr) return;
     setGraded(b.id, id, { co: co, gr: gr });
-    slideId = id;
+    setSlideId(id);
     closeModal(true);
     render();
   });
@@ -878,7 +894,7 @@ function jumpToCard(b, rowId, animate) {
   const pos = rows.findIndex(r => r.id === rowId);
   if (pos >= 0) st.spread = Math.floor(Math.floor(pos / st.pageSize) / 2);
   st.highlight = rowId;
-  slideId = animate ? rowId : null;
+  setSlideId(animate ? rowId : null);
   exitSelMode();
   view = { name: 'binder', binder: b.id };
   render();
