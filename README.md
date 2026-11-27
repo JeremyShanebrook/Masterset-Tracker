@@ -12,12 +12,13 @@ checklists in binder placement order, with card pictures.
 | Pitch Black (ME05) | 120 | 222 |
 | 30th Celebration (30C) | 199 | 292 |
 | Delta Reign (ME06) | 141 | 250 |
-| Ditto — Every Card (#132) | 85 | 317 |
+| Ditto — Every Card (#132) | 85 | 333 |
 
 Master = one of each card number, including secret rares. Grand Master adds
 the holo and reverse-holo versions, promos and special variants. The Ditto binder covers the PokeCottage Ditto list
 (English / Japanese / Simplified Chinese / Korean) plus cameo cards, Topps cards,
-Japanese vending prints, and other-language printings.
+Japanese vending prints, and other-language printings, plus sticker and
+non-TCG Ditto items from the Elite Fourum Dittologist thread.
 
 ## Features
 
