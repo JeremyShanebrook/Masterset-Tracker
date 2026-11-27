@@ -5,7 +5,7 @@
   "releaseDate": "2026-11-06",
   "setCode": "ME06",
   "tcgApiSetId": "me6",
-  "masterTotal": 228,
+  "masterTotal": 141,
   "grandMasterTotal": 250,
   "source": "https://pokecottagecdn.com/mastersets/downloads/PokeCottage-DELTA-REIGN-Interactive-Checklist.pdf",
   "cards": [
@@ -25,7 +25,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-1/small"
     },
@@ -45,7 +45,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-2/small"
     },
@@ -65,7 +65,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-3/small"
     },
@@ -85,7 +85,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-4/small"
     },
@@ -105,7 +105,7 @@
       "rarity": "Rare",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-5/small"
     },
@@ -125,7 +125,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-6/small"
     },
@@ -145,7 +145,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-7/small"
     },
@@ -165,7 +165,7 @@
       "rarity": "Uncommon",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-8/small"
     },
@@ -185,7 +185,7 @@
       "rarity": "Uncommon",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-9/small"
     },
@@ -205,7 +205,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-10/small"
     },
@@ -235,7 +235,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-12/small"
     },
@@ -255,7 +255,7 @@
       "rarity": "Uncommon",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-13/small"
     },
@@ -285,7 +285,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-15/small"
     },
@@ -305,7 +305,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-16/small"
     },
@@ -325,7 +325,7 @@
       "rarity": "Uncommon",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-17/small"
     },
@@ -345,7 +345,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-18/small"
     },
@@ -365,7 +365,7 @@
       "rarity": "Rare",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-19/small"
     },
@@ -385,7 +385,7 @@
       "rarity": "Uncommon",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-20/small"
     },
@@ -405,7 +405,7 @@
       "rarity": "Rare",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-21/small"
     },
@@ -425,7 +425,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-22/small"
     },
@@ -455,7 +455,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-24/small"
     },
@@ -475,7 +475,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-25/small"
     },
@@ -495,7 +495,7 @@
       "rarity": "Rare",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-26/small"
     },
@@ -515,7 +515,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-27/small"
     },
@@ -535,7 +535,7 @@
       "rarity": "Uncommon",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-28/small"
     },
@@ -565,7 +565,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-30/small"
     },
@@ -585,7 +585,7 @@
       "rarity": "Uncommon",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-31/small"
     },
@@ -605,7 +605,7 @@
       "rarity": "Uncommon",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-32/small"
     },
@@ -635,7 +635,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-34/small"
     },
@@ -655,7 +655,7 @@
       "rarity": "Uncommon",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-35/small"
     },
@@ -675,7 +675,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-36/small"
     },
@@ -695,7 +695,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-37/small"
     },
@@ -715,7 +715,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-38/small"
     },
@@ -735,7 +735,7 @@
       "rarity": "Uncommon",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-39/small"
     },
@@ -755,7 +755,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-40/small"
     },
@@ -775,7 +775,7 @@
       "rarity": "Uncommon",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-41/small"
     },
@@ -795,7 +795,7 @@
       "rarity": "Uncommon",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-42/small"
     },
@@ -815,7 +815,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-43/small"
     },
@@ -835,7 +835,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-44/small"
     },
@@ -855,7 +855,7 @@
       "rarity": "Rare",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-45/small"
     },
@@ -875,7 +875,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-46/small"
     },
@@ -905,7 +905,7 @@
       "rarity": "Uncommon",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-48/small"
     },
@@ -925,7 +925,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-49/small"
     },
@@ -945,7 +945,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-50/small"
     },
@@ -965,7 +965,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-51/small"
     },
@@ -985,7 +985,7 @@
       "rarity": "Rare",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-52/small"
     },
@@ -1005,7 +1005,7 @@
       "rarity": "Rare",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-53/small"
     },
@@ -1025,7 +1025,7 @@
       "rarity": "Uncommon",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-54/small"
     },
@@ -1045,7 +1045,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-55/small"
     },
@@ -1065,7 +1065,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-56/small"
     },
@@ -1085,7 +1085,7 @@
       "rarity": "Rare",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-57/small"
     },
@@ -1105,7 +1105,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-58/small"
     },
@@ -1125,7 +1125,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-59/small"
     },
@@ -1145,7 +1145,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-60/small"
     },
@@ -1165,7 +1165,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-61/small"
     },
@@ -1185,7 +1185,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-62/small"
     },
@@ -1205,7 +1205,7 @@
       "rarity": "Uncommon",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-63/small"
     },
@@ -1225,7 +1225,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-64/small"
     },
@@ -1245,7 +1245,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-65/small"
     },
@@ -1265,7 +1265,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-66/small"
     },
@@ -1295,7 +1295,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-68/small"
     },
@@ -1325,7 +1325,7 @@
       "rarity": "Uncommon",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-70/small"
     },
@@ -1345,7 +1345,7 @@
       "rarity": "Uncommon",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-71/small"
     },
@@ -1365,7 +1365,7 @@
       "rarity": "Uncommon",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-72/small"
     },
@@ -1385,7 +1385,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-73/small"
     },
@@ -1405,7 +1405,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-74/small"
     },
@@ -1425,7 +1425,7 @@
       "rarity": "Rare",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-75/small"
     },
@@ -1445,7 +1445,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-76/small"
     },
@@ -1465,7 +1465,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-77/small"
     },
@@ -1485,7 +1485,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-78/small"
     },
@@ -1505,7 +1505,7 @@
       "rarity": "Uncommon",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-79/small"
     },
@@ -1525,7 +1525,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-80/small"
     },
@@ -1545,7 +1545,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-81/small"
     },
@@ -1565,7 +1565,7 @@
       "rarity": "Rare",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-82/small"
     },
@@ -1585,7 +1585,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-83/small"
     },
@@ -1615,7 +1615,7 @@
       "rarity": "Uncommon",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-85/small"
     },
@@ -1635,7 +1635,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-86/small"
     },
@@ -1655,7 +1655,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-87/small"
     },
@@ -1685,7 +1685,7 @@
       "rarity": "Uncommon",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-89/small"
     },
@@ -1705,7 +1705,7 @@
       "rarity": "Uncommon",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-90/small"
     },
@@ -1725,7 +1725,7 @@
       "rarity": "Uncommon",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-91/small"
     },
@@ -1745,7 +1745,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-92/small"
     },
@@ -1765,7 +1765,7 @@
       "rarity": "Uncommon",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-93/small"
     },
@@ -1845,7 +1845,7 @@
       "rarity": "Uncommon",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-100/small"
     },
@@ -1865,7 +1865,7 @@
       "rarity": "Common",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-101/small"
     },
@@ -1885,7 +1885,7 @@
       "rarity": "Uncommon",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-102/small"
     },
@@ -1905,7 +1905,7 @@
       "rarity": "Uncommon",
       "section": "Main Set",
       "variant": "Reverse Holo",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.scrydex.com/pokemon/me6-103/small"
     },
@@ -2510,5 +2510,6 @@
       "image": null
     }
   ],
-  "notes": "Master total 228 as printed in the PokeCottage PDF header ('228 cards (plus promos and variants)'). Grand master total 250 is derived, not printed: master 228 + 13 promos + 9 variants listed in the PDF's Grand Master Set section. Card names/rarities cross-checked against TCGdex (api.pokemontcg.io returned 502/500 on 2026-11-26, so TCGdex was the cross-check source). Card images use the Pokemon TCG API's own image host (images.scrydex.com, pattern /pokemon/<setid>-<number>/small). Promo/variant images are null (no verified URL). Promo rarity is recorded as 'Promo' (PokeCottage lists no rarity for promos). Variant entries use the printed number form 'NNN/PPP' and carry the base card's rarity. Reverse Holo entries: TCGdex's per-card reverse flag is unpopulated for Delta Reign (all false as of 2026-11-26), so the rarity rule was used — Common/Uncommon/Rare main-set cards except the six Legendary Stadium halves (094-099, single-version Uncommons): 50 + 27 + 10 = 87, matching the printed 228 master total (141 + 87)."
+  "notes": "Master total 228 as printed in the PokeCottage PDF header ('228 cards (plus promos and variants)'). Grand master total 250 is derived, not printed: master 228 + 13 promos + 9 variants listed in the PDF's Grand Master Set section. Card names/rarities cross-checked against TCGdex (api.pokemontcg.io returned 502/500 on 2026-11-26, so TCGdex was the cross-check source). Card images use the Pokemon TCG API's own image host (images.scrydex.com, pattern /pokemon/<setid>-<number>/small). Promo/variant images are null (no verified URL). Promo rarity is recorded as 'Promo' (PokeCottage lists no rarity for promos). Variant entries use the printed number form 'NNN/PPP' and carry the base card's rarity. Reverse Holo entries: TCGdex's per-card reverse flag is unpopulated for Delta Reign (all false as of 2026-11-26), so the rarity rule was used — Common/Uncommon/Rare main-set cards except the six Legendary Stadium halves (094-099, single-version Uncommons): 50 + 27 + 10 = 87, matching the printed 228 master total (141 + 87). v1.0.2 (Nov 26, 2026): Master Set redefined per Jeremy — one of each card number (incl. secret rares); holo / reverse-holo / stamp variations are Grand Master only. Master 228 -> 141; Grand unchanged at 250.",
+  "cover": "https://mcdn.pokemon.com/pokemon-prod/image/upload/c_limit,w_600/f_auto/v1/live/pcom-cms/static-assets/cms3/us/img/trading-card-game/tiles/me/me06/product-showcase/inline/elite-trainer-box-en.png"
 }

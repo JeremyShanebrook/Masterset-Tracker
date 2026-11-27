@@ -32,6 +32,15 @@ def compact_card(c, is_ditto):
         out['lang'] = c['language']
     if c.get('group'):
         out['grp'] = c['group']
+    if c.get('set'):
+        out['set'] = c['set']
+    # promo if it applies: Promos section, MEP numbers, or a promo set/variant
+    sec = c.get('section') or ''
+    num = c.get('num') or ''
+    var = c.get('variant') or ''
+    setname = c.get('set') or ''
+    if sec == 'Promos' or num.startswith('MEP') or 'Promo' in var or 'Promo' in setname:
+        out['promo'] = 1
     # divider label shown when the group changes in binder order
     out['div'] = c.get('group') if is_ditto else (c.get('section') or None)
     return out
@@ -52,6 +61,7 @@ for bid, fname in ORDER:
         'releaseDate': d.get('releaseDate'),
         'masterTotal': d['masterTotal'],
         'grandMasterTotal': d['grandMasterTotal'],
+        'cover': d.get('cover'),
         'cards': cards,
     })
     print(f"{bid}: {len(cards)} rows, master {m}, grand {g}, "

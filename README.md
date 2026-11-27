@@ -7,15 +7,15 @@ checklists in binder placement order, with card pictures.
 
 | Binder | Master | Grand Master |
 | --- | --- | --- |
-| Perfect Order (ME03) | 203 | 263 |
-| Chaos Rising (ME04) | 198 | 234 |
-| Pitch Black (ME05) | 194 | 222 |
+| Perfect Order (ME03) | 124 | 263 |
+| Chaos Rising (ME04) | 122 | 234 |
+| Pitch Black (ME05) | 120 | 222 |
 | 30th Celebration (30C) | 199 | 292 |
-| Delta Reign (ME06) | 228 | 250 |
-| Ditto — Every Card (#132) | 95 | 297 |
+| Delta Reign (ME06) | 141 | 250 |
+| Ditto — Every Card (#132) | 84 | 292 |
 
-Master = numbered set cards + reverse holos. Grand Master adds promos and
-special variants. The Ditto binder covers the PokeCottage Ditto list
+Master = one of each card number, including secret rares. Grand Master adds
+the holo and reverse-holo versions, promos and special variants. The Ditto binder covers the PokeCottage Ditto list
 (English / Japanese / Simplified Chinese) plus cameo cards, Topps cards,
 Japanese vending prints, and other-language printings.
 

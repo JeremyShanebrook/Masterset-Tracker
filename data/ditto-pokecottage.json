@@ -3,7 +3,7 @@
   "name": "Ditto — PokeCottage Master Set",
   "pokemon": "Ditto",
   "pokedex": 132,
-  "masterTotal": 125,
+  "masterTotal": 84,
   "source": "https://pokecottagecdn.com/mastersets/downloads/PokeCottage-132-DITTO-Interactive-Checklist.pdf",
   "cards": [
     {
@@ -244,7 +244,7 @@
       "language": "English",
       "rarity": "Common",
       "variant": "Standard (5BV-ND5-D4X)",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.pokemontcg.io/ex11/61.png"
     },
@@ -255,7 +255,7 @@
       "language": "English",
       "rarity": "Common",
       "variant": "Standard (5BV-ND5-ER2)",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.pokemontcg.io/ex11/61.png"
     },
@@ -299,7 +299,7 @@
       "language": "English",
       "rarity": "Common",
       "variant": "Standard (7CV-STE-ESR)",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.pokemontcg.io/ex11/62.png"
     },
@@ -310,7 +310,7 @@
       "language": "English",
       "rarity": "Common",
       "variant": "Standard (7CV-STE-FJF)",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.pokemontcg.io/ex11/62.png"
     },
@@ -365,7 +365,7 @@
       "language": "English",
       "rarity": "Common",
       "variant": "Standard (TWP-VQF-LJF)",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.pokemontcg.io/ex11/63.png"
     },
@@ -376,7 +376,7 @@
       "language": "English",
       "rarity": "Common",
       "variant": "Standard (TWP-VQF-S25)",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.pokemontcg.io/ex11/63.png"
     },
@@ -420,7 +420,7 @@
       "language": "English",
       "rarity": "Common",
       "variant": "Standard (M85-JUT-9LA)",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.pokemontcg.io/ex11/64.png"
     },
@@ -431,7 +431,7 @@
       "language": "English",
       "rarity": "Common",
       "variant": "Standard (M85-JUT-KJF)",
-      "inMaster": true,
+      "inMaster": false,
       "inGrandMaster": true,
       "image": "https://images.pokemontcg.io/ex11/64.png"
     },
@@ -790,43 +790,10 @@
     {
       "num": "003/015",
       "name": "Ditto",
-      "set": "Holon Research Tower: Fire Quarter Deck",
-      "language": "Japanese",
-      "rarity": null,
-      "variant": "Fire Quarter Deck",
-      "inMaster": true,
-      "inGrandMaster": true,
-      "image": null
-    },
-    {
-      "num": "003/015",
-      "name": "Ditto",
       "set": "Holon Research Tower: Lightning Quarter Deck",
       "language": "Japanese",
       "rarity": null,
       "variant": "Lightning Quar...",
-      "inMaster": true,
-      "inGrandMaster": true,
-      "image": null
-    },
-    {
-      "num": "003/015",
-      "name": "Ditto",
-      "set": "Holon Research Tower: Lightning Quarter Deck",
-      "language": "Japanese",
-      "rarity": null,
-      "variant": "Lightning Quar...",
-      "inMaster": true,
-      "inGrandMaster": true,
-      "image": null
-    },
-    {
-      "num": "002/015",
-      "name": "Ditto",
-      "set": "Holon Research Tower: Water Quarter Deck",
-      "language": "Japanese",
-      "rarity": null,
-      "variant": "Water Quarter Deck",
       "inMaster": true,
       "inGrandMaster": true,
       "image": null
@@ -1382,5 +1349,5 @@
       "image": null
     }
   ],
-  "notes": "Source PDF is PokeCottage's \"Ditto Master Set\" interactive checklist (created 2026-11-20), which the PokeCottage Ditto guide page (https://pokecottage.com/pokemon-master-sets/ditto) describes as the complete Ditto Grand Master Set List including all promos, reverse holos and special variants in English, Japanese and Simplified Chinese. PokeCottage publishes no numeric total on the guide page, so masterTotal = 125 parsed rows. Master/grand-master split is not labelled in the PDF, so the fallback rule was applied: inMaster=true for the base/standard printing of each card (variant \"Standard\", including coded \"Standard (CODE)\" print runs; if a card has no Standard row, its Holo printing, or its only printing); inGrandMaster=true for all 125 rows. That yields 95 master rows (41 English, 40 Japanese, 14 Simplified Chinese) and 125 grand-master rows. English card images and rarities come from the Pokémon TCG API (api.pokemontcg.io v2, matched by set + number); all 31 distinct image URLs used were verified HTTP 200. MEP106 Mega Evolution Promos (30th Anniversary) has no image: the card is not in the Pokémon TCG API yet. The 30th Celebration 115/128 image is the API-returned https://images.scrydex.com/pokemon/me55-115/small (verified 200); the images.pokemontcg.io/me55/115.png equivalent is 404. Japanese and Simplified Chinese rows have image=null and rarity=null (the TCG API has no images for them). Three set/variant strings are truncated in the PDF itself and are reproduced as printed: \"Legends Awakened | World Championships Deck 2009: Crowde...\", \"151 | World Championships Deck 2025: JP Raging Bolt by Yuya O...\", \"Holon Research Tower: Lightning Quarter Deck | Lightning Quar...\", and the Japanese card number \"108/PCG...\" is truncated in the PDF. The PDF lists the Holon Research Tower Ditto rows twice each (003/015 Fire Quarter Deck x2, 003/015 Lightning Quarter Deck x2, 002/015 Water Quarter Deck x2); both copies are kept as printed. Japanese 042/048 Mystery of the Fossils is the Japanese Fossil debut (1997); the English Fossil rows are 3/62 (Holo) and 18/62 (non-Holo). Rows are in PokeCottage checklist order (binder placement order as printed)."
+  "notes": "Source PDF is PokeCottage's \"Ditto Master Set\" interactive checklist (created 2026-11-20), which the PokeCottage Ditto guide page (https://pokecottage.com/pokemon-master-sets/ditto) describes as the complete Ditto Grand Master Set List including all promos, reverse holos and special variants in English, Japanese and Simplified Chinese. PokeCottage publishes no numeric total on the guide page, so masterTotal = 125 parsed rows. Master/grand-master split is not labelled in the PDF, so the fallback rule was applied: inMaster=true for the base/standard printing of each card (variant \"Standard\", including coded \"Standard (CODE)\" print runs; if a card has no Standard row, its Holo printing, or its only printing); inGrandMaster=true for all 125 rows. That yields 95 master rows (41 English, 40 Japanese, 14 Simplified Chinese) and 125 grand-master rows. English card images and rarities come from the Pokémon TCG API (api.pokemontcg.io v2, matched by set + number); all 31 distinct image URLs used were verified HTTP 200. MEP106 Mega Evolution Promos (30th Anniversary) has no image: the card is not in the Pokémon TCG API yet. The 30th Celebration 115/128 image is the API-returned https://images.scrydex.com/pokemon/me55-115/small (verified 200); the images.pokemontcg.io/me55/115.png equivalent is 404. Japanese and Simplified Chinese rows have image=null and rarity=null (the TCG API has no images for them). Three set/variant strings are truncated in the PDF itself and are reproduced as printed: \"Legends Awakened | World Championships Deck 2009: Crowde...\", \"151 | World Championships Deck 2025: JP Raging Bolt by Yuya O...\", \"Holon Research Tower: Lightning Quarter Deck | Lightning Quar...\", and the Japanese card number \"108/PCG...\" is truncated in the PDF. The PDF lists the Holon Research Tower Ditto rows twice each (003/015 Fire Quarter Deck x2, 003/015 Lightning Quarter Deck x2, 002/015 Water Quarter Deck x2); both copies are kept as printed. Japanese 042/048 Mystery of the Fossils is the Japanese Fossil debut (1997); the English Fossil rows are 3/62 (Holo) and 18/62 (non-Holo). Rows are in PokeCottage checklist order (binder placement order as printed). v1.0.2 (Nov 26, 2026): 3 exact-duplicate rows dropped (Holon Research Tower Quarter Decks); Master redefined to one per (set, number, language) — now 84."
 }

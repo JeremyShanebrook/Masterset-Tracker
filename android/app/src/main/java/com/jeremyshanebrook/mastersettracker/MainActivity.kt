@@ -1,23 +1,31 @@
 package com.jeremyshanebrook.mastersettracker
 
 import android.annotation.SuppressLint
+import android.app.Activity
 import android.app.AlertDialog
 import android.content.Intent
 import android.graphics.Color
 import android.net.Uri
 import android.os.Bundle
+import android.provider.MediaStore
 import android.webkit.JavascriptInterface
+import android.webkit.ValueCallback
+import android.webkit.WebChromeClient
 import android.webkit.WebResourceRequest
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.activity.ComponentActivity
 import androidx.activity.OnBackPressedCallback
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.FileProvider
 import androidx.core.view.WindowCompat
 import org.json.JSONObject
 import java.io.File
 import java.net.HttpURLConnection
 import java.net.URL
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 import kotlin.concurrent.thread
 
 class MainActivity : ComponentActivity() {
@@ -29,6 +37,32 @@ class MainActivity : ComponentActivity() {
     }
 
     private var updateCheckDone = false
+    // Current view inside the single-page app, reported by the JS (home /
+    // binder / scan / modal). The phone back button uses it instead of the
+    // WebView history, which never changes in a single-page app.
+    private var currentView: String = "home"
+
+    private var fileChooserCallback: ValueCallback<Array<Uri>>? = null
+    private var cameraPhotoUri: Uri? = null
+
+    private val fileChooserLauncher = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ) { result ->
+        val cb = fileChooserCallback
+        fileChooserCallback = null
+        if (result.resultCode == Activity.RESULT_OK) {
+            val dataUri = result.data?.data
+            val uris = when {
+                dataUri != null -> arrayOf(dataUri)
+                cameraPhotoUri != null -> arrayOf(cameraPhotoUri!!)
+                else -> emptyArray()
+            }
+            cb?.onReceiveValue(uris)
+        } else {
+            cb?.onReceiveValue(null)
+        }
+        cameraPhotoUri = null
+    }
 
     @SuppressLint("SetJavaScriptEnabled", "JavascriptInterface")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,6 +82,44 @@ class MainActivity : ComponentActivity() {
             settings.displayZoomControls = false
             settings.textZoom = 100
             addJavascriptInterface(AndroidBridge(), "AndroidApp")
+            webChromeClient = object : WebChromeClient() {
+                // Lets <input type="file"> (the Scan-a-card camera input) open a
+                // chooser with the camera and the gallery.
+                override fun onShowFileChooser(
+                    view: WebView,
+                    filePathCallback: ValueCallback<Array<Uri>>,
+                    fileChooserParams: FileChooserParams
+                ): Boolean {
+                    fileChooserCallback?.onReceiveValue(null)
+                    fileChooserCallback = filePathCallback
+                    val photoFile = try {
+                        val stamp = SimpleDateFormat("yyyyMMdd_HHmmss", Locale.US).format(Date())
+                        val dir = File(cacheDir, "camera").apply { mkdirs() }
+                        File.createTempFile("scan_$stamp", ".jpg", dir)
+                    } catch (_: Exception) { null }
+                    cameraPhotoUri = photoFile?.let {
+                        FileProvider.getUriForFile(this@MainActivity, "$packageName.fileprovider", it)
+                    }
+                    val captureIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE).apply {
+                        cameraPhotoUri?.let { putExtra(MediaStore.EXTRA_OUTPUT, it) }
+                        addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION or Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                    }
+                    val contentIntent = Intent(Intent.ACTION_GET_CONTENT).apply {
+                        addCategory(Intent.CATEGORY_OPENABLE)
+                        type = "image/*"
+                    }
+                    val chooser = Intent.createChooser(contentIntent, "Take or choose a photo").apply {
+                        putExtra(Intent.EXTRA_INITIAL_INTENTS, arrayOf(captureIntent))
+                    }
+                    return try {
+                        fileChooserLauncher.launch(chooser)
+                        true
+                    } catch (_: Exception) {
+                        fileChooserCallback = null
+                        false
+                    }
+                }
+            }
             webViewClient = object : WebViewClient() {
                 override fun shouldOverrideUrlLoading(view: WebView, request: WebResourceRequest): Boolean {
                     return request.url.scheme != "file" && request.url.scheme != "about"
@@ -66,7 +138,21 @@ class MainActivity : ComponentActivity() {
 
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
-                if (webView.canGoBack()) webView.goBack() else finish()
+                when (currentView) {
+                    // Card info open: close it, stay in the binder.
+                    "modal" -> webView.evaluateJavascript("closeModal()", null)
+                    // Inside a binder or the scanner: back to the binder list.
+                    "binder", "scan" -> webView.evaluateJavascript("goHome()", null)
+                    // Already home: ask before exiting.
+                    else -> {
+                        AlertDialog.Builder(this@MainActivity)
+                            .setTitle("Exit Masterset Tracker?")
+                            .setMessage("Would you like to exit the app?")
+                            .setNegativeButton("Stay", null)
+                            .setPositiveButton("Exit") { _, _ -> finish() }
+                            .show()
+                    }
+                }
             }
         })
     }
@@ -75,6 +161,9 @@ class MainActivity : ComponentActivity() {
         @JavascriptInterface fun versionName(): String = currentVersionName()
         @JavascriptInterface fun versionCode(): Int = currentVersionCode()
         @JavascriptInterface fun checkForUpdates() { checkForUpdatesInternal(silent = false) }
+        // Called by the page whenever the view changes, so the phone back
+        // button knows where the user is inside the single-page app.
+        @JavascriptInterface fun setView(state: String) { currentView = state }
     }
 
     private fun currentVersionName(): String = try {
