@@ -12,7 +12,7 @@ checklists in binder placement order, with card pictures.
 | Pitch Black (ME05) | 120 | 222 |
 | 30th Celebration (30C) | 199 | 292 |
 | Delta Reign (ME06) | 141 | 250 |
-| Ditto — Every Card (#132) | 85 | 333 |
+| Ditto — Every Card (#132) | 85 | 335 |
 
 Master = one of each card number, including secret rares. Grand Master adds
 the holo and reverse-holo versions, promos and special variants. The Ditto binder covers the PokeCottage Ditto list
@@ -26,7 +26,9 @@ non-TCG Ditto items from the Elite Fourum Dittologist thread.
   secret rares, promos and variants last
 - Two-page spread: pages sit either side of the centre binding, and a page
   turns over the binding like a real binder — the next page is already
-  underneath and is revealed as the leaf lifts
+  underneath and is revealed as the leaf lifts. No headers or divider rows:
+  every page is a clean grid of cards, and every spread is the same height,
+  so flipping never shifts the pages or leaves empty slots
 - Per-binder page-size picker: 4, 9, 12 or 16 pockets per page
 - Master / Grand Master toggle per binder
 - Card thumbnail per row; tap for the card info, long-press to multi-select

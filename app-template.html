@@ -75,7 +75,7 @@ a { color: #7cc4ff; }
 .pagewrap { perspective: 1200px; }
 .binderpage { background: #f6f2e9; border-radius: 10px; padding: 6px; position: relative; box-shadow: 0 4px 18px rgba(0,0,0,.45); }
 /* two-page spread: pages sit either side of the centre binding */
-.spread { display: flex; position: relative; perspective: 1600px; align-items: stretch; transition: min-height .3s ease; }
+.spread { display: flex; position: relative; perspective: 1600px; align-items: stretch; }
 .spread .binderpage { flex: 1 1 0; min-width: 0; }
 .spread .binderpage.sp-left { border-radius: 10px 3px 3px 10px; }
 .spread .binderpage.sp-right { border-radius: 3px 10px 10px 3px; }
@@ -101,6 +101,7 @@ a { color: #7cc4ff; }
 .grid.c3 { grid-template-columns: repeat(3, 1fr); }
 .grid.c4 { grid-template-columns: repeat(4, 1fr); }
 .pocket { background: #fff; border: 2px solid #d8d2c4; border-radius: 8px; overflow: hidden; position: relative; }
+.pocket.pad { visibility: hidden; }
 /* Missing cards are darkened; cards in the collection are lit up at full
    brightness. No check dot — the darkening is the indicator. */
 .pocket:not(.got) .thumb { filter: brightness(.42) saturate(.55); }
@@ -519,15 +520,9 @@ function pageHTML(b, pageIdx, rows, cols, got) {
   }
   const start = pageIdx * st.pageSize;
   const chunk = rows.slice(start, start + st.pageSize);
-  let lastDiv = null;
-  for (let i = 0; i < start; i++) { if (rows[i].c.div) lastDiv = rows[i].c.div; }
   let h = '<div class="binderpage ' + side + '"><div class="page-h">Page ' + (pageIdx + 1) + ' of ' + totalPages + '</div><div class="grid c' + cols + '">';
   chunk.forEach(r => {
     const c = r.c;
-    if (c.div && c.div !== lastDiv) {
-      h += '<div class="divider">' + esc(c.div) + '</div>';
-    }
-    lastDiv = c.div || lastDiv;
     const isGot = got.has(r.id);
     const img = c.img
       ? '<img src="' + esc(c.img) + '" loading="lazy" alt="' + esc(c.name) + '" data-full="' + esc(largeImg(c.img) || c.img) + '" onerror="this.parentNode.innerHTML=\'<div class=&quot;noimg&quot;>No image yet</div>\'">'
@@ -553,6 +548,14 @@ function pageHTML(b, pageIdx, rows, cols, got) {
       + inner
       + '</div>';
   });
+  // Pad a partial page with invisible pockets so every page has exactly
+  // pageSize cells and every spread is the same height — otherwise the
+  // spread shrinks after a flip and the pages visibly shift.
+  if (chunk.length > 0) {
+    for (let i = chunk.length; i < st.pageSize; i++) {
+      h += '<div class="pocket pad"><div class="thumb"></div></div>';
+    }
+  }
   if (!chunk.length) {
     h += '<div class="empty">Nothing here yet.<br>Try another page size, or switch Master / Grand Master.</div>';
   }

@@ -57,7 +57,8 @@ class MainActivity : ComponentActivity() {
     // comes off the disk, so turning pages is instant.
     private val imageCacheHosts = setOf(
         "images.scrydex.com", "images.pokemontcg.io", "www.pokemon.com",
-        "assets.tcgdex.net", "efour.b-cdn.net", "images.dexli.st"
+        "assets.tcgdex.net", "efour.b-cdn.net", "images.dexli.st",
+        "archives.bulbagarden.net", "images.poplextcg.com"
     )
     private val imageCacheMaxBytes = 250L * 1024 * 1024
 
