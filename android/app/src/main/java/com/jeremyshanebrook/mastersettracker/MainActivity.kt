@@ -1,14 +1,17 @@
 package com.jeremyshanebrook.mastersettracker
 
+import android.Manifest
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.AlertDialog
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.graphics.Color
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
 import android.webkit.JavascriptInterface
+import android.webkit.PermissionRequest
 import android.webkit.ValueCallback
 import android.webkit.WebChromeClient
 import android.webkit.WebResourceRequest
@@ -17,6 +20,7 @@ import android.webkit.WebViewClient
 import androidx.activity.ComponentActivity
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import androidx.core.view.WindowCompat
 import org.json.JSONObject
@@ -44,6 +48,18 @@ class MainActivity : ComponentActivity() {
 
     private var fileChooserCallback: ValueCallback<Array<Uri>>? = null
     private var cameraPhotoUri: Uri? = null
+
+    // The in-app scan camera (getUserMedia) asks the WebView for the camera.
+    // If the app doesn't hold the runtime permission yet, ask for it first
+    // and then grant or deny the WebView request from the answer.
+    private var pendingPermissionRequest: PermissionRequest? = null
+    private val cameraPermissionLauncher = registerForActivityResult(
+        ActivityResultContracts.RequestPermission()
+    ) { granted ->
+        val req = pendingPermissionRequest
+        pendingPermissionRequest = null
+        if (granted) req?.grant(req.resources) else req?.deny()
+    }
 
     private val fileChooserLauncher = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()
@@ -83,6 +99,23 @@ class MainActivity : ComponentActivity() {
             settings.textZoom = 100
             addJavascriptInterface(AndroidBridge(), "AndroidApp")
             webChromeClient = object : WebChromeClient() {
+                // Lets the in-app scan camera (getUserMedia) use the camera.
+                override fun onPermissionRequest(request: PermissionRequest) {
+                    if (!request.resources.contains(PermissionRequest.RESOURCE_VIDEO_CAPTURE)) {
+                        request.deny()
+                        return
+                    }
+                    if (ContextCompat.checkSelfPermission(
+                            this@MainActivity, Manifest.permission.CAMERA
+                        ) == PackageManager.PERMISSION_GRANTED
+                    ) {
+                        request.grant(request.resources)
+                    } else {
+                        pendingPermissionRequest?.deny()
+                        pendingPermissionRequest = request
+                        cameraPermissionLauncher.launch(Manifest.permission.CAMERA)
+                    }
+                }
                 // Lets <input type="file"> (the Scan-a-card camera input) open a
                 // chooser with the camera and the gallery.
                 override fun onShowFileChooser(

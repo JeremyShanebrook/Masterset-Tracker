@@ -71,19 +71,33 @@ a { color: #7cc4ff; }
 .selbar button.ghost { background: rgba(255,255,255,.2); color: #fff; }
 
 /* binder pages — one page at a time, looks like a real binder page */
-.pages { padding: 6px 14px 20px; }
+.pages { padding: 6px 10px 20px; }
 .pagewrap { perspective: 1200px; }
-.binderpage { background: #f6f2e9; border-radius: 10px; padding: 12px 12px 12px 30px; position: relative; box-shadow: 0 4px 18px rgba(0,0,0,.45); transform-style: preserve-3d; will-change: transform; }
-.binderpage .rings { position: absolute; left: 8px; top: 0; bottom: 0; width: 14px; display: flex; flex-direction: column; justify-content: space-evenly; align-items: center; }
-.binderpage .rings i { width: 11px; height: 11px; border-radius: 50%; background: #0b1f33; box-shadow: inset 0 1px 3px rgba(0,0,0,.7); }
-.page-h { font-size: 12px; color: #8a7f6a; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin: 2px 0 10px; }
-.page-foot { text-align: center; font-size: 11px; color: #9a8f7a; margin-top: 12px; }
+.binderpage { background: #f6f2e9; border-radius: 10px; padding: 8px; position: relative; box-shadow: 0 4px 18px rgba(0,0,0,.45); }
+/* two-page spread: pages sit either side of the centre binding */
+.spread { display: flex; position: relative; perspective: 1600px; align-items: stretch; }
+.spread .binderpage { flex: 1 1 0; min-width: 0; }
+.spread .binderpage.sp-left { border-radius: 10px 3px 3px 10px; }
+.spread .binderpage.sp-right { border-radius: 3px 10px 10px 3px; }
+.spine { flex: none; width: 18px; background: #0b1f33; border-radius: 2px; display: flex; flex-direction: column; justify-content: space-evenly; align-items: center; box-shadow: inset 0 0 8px rgba(0,0,0,.65); padding: 12px 0; }
+.spine i { width: 11px; height: 11px; border-radius: 50%; background: #d8d2c4; box-shadow: inset 0 1px 3px rgba(0,0,0,.7); }
+/* flipping leaf: the page turning over the binding. Its front is the page
+   being turned; its back is the next page on the other side. The next page
+   is already rendered underneath and is revealed as the leaf lifts. */
+.leaf { position: absolute; top: 0; bottom: 0; width: calc(50% - 9px); transform-style: preserve-3d; z-index: 5; transition: transform .55s ease-in-out; }
+.leaf.fwd { left: calc(50% + 9px); transform-origin: left center; }
+.leaf.bwd { left: 0; transform-origin: right center; }
+.leaf-face { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+.leaf-face.back { transform: rotateY(180deg); }
+.leaf-face .binderpage { height: 100%; box-sizing: border-box; }
+.page-h { font-size: 12px; color: #8a7f6a; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin: 2px 0 6px; }
+.page-foot { text-align: center; font-size: 11px; color: #9a8f7a; margin-top: 8px; }
 .divider { grid-column: 1 / -1; font-size: 12px; font-weight: 700; color: #1d4ed8; letter-spacing: .5px; padding: 10px 2px 2px; border-bottom: 1px solid #d8d2c4; margin-bottom: 2px; }
-.grid { display: grid; gap: 10px; }
+.grid { display: grid; gap: 6px; }
 .grid.c2 { grid-template-columns: repeat(2, 1fr); }
 .grid.c3 { grid-template-columns: repeat(3, 1fr); }
 .grid.c4 { grid-template-columns: repeat(4, 1fr); }
-.pocket { background: #fff; border: 2px solid #d8d2c4; border-radius: 10px; overflow: hidden; position: relative; }
+.pocket { background: #fff; border: 2px solid #d8d2c4; border-radius: 8px; overflow: hidden; position: relative; }
 .pocket.got { border-color: #22c55e; }
 .pocket.got .thumb { opacity: .55; }
 .pocket .check { position: absolute; top: 6px; right: 6px; width: 24px; height: 24px; border-radius: 50%; background: rgba(10,24,38,.85); border: 2px solid #5b7a96; color: transparent; font-size: 15px; line-height: 20px; text-align: center; z-index: 2; font-weight: 700; }
@@ -113,6 +127,11 @@ a { color: #7cc4ff; }
 /* scan view */
 .scan { padding: 16px 14px 24px; }
 .scan p { font-size: 14px; color: #c9d8e6; line-height: 1.55; margin-bottom: 12px; }
+/* in-app camera: live preview with a card outline; OCR only reads the outline */
+.camwrap { position: relative; width: 100%; aspect-ratio: 3 / 4; background: #000; border-radius: 12px; overflow: hidden; margin-bottom: 10px; }
+.camwrap video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.camframe { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); height: 88%; aspect-ratio: 63 / 88; border: 3px solid #fff; border-radius: 10px; box-shadow: 0 0 0 9999px rgba(0,0,0,.62); pointer-events: none; }
+.camhint { font-size: 13px; color: #c9d8e6; text-align: center; margin: 0 0 12px; }
 .scan .scanstatus { font-size: 14px; color: #7cc4ff; margin: 12px 0; min-height: 20px; }
 .scan .scanpreview img { width: 100%; max-width: 300px; border-radius: 12px; display: block; margin: 0 auto; }
 .scanresult { background: #132a44; border: 1px solid #1d3a57; border-radius: 12px; padding: 12px; margin-top: 12px; display: flex; gap: 12px; align-items: center; }
@@ -150,11 +169,19 @@ const store = {
 };
 
 let view = { name: 'home' };
-let binderState = {}; // id -> {mode, pageSize, hide, query, page, highlight}
+let binderState = {}; // id -> {mode, pageSize, hide, query, spread, highlight}
 let modalOpen = false;
 let sel = { binder: null, ids: new Set() }; // long-press multi-select
 let slideId = null; // row id to animate sliding into its pocket (after a scan add)
 let highlightToken = 0;
+let camStream = null; // live camera stream for the scan view, if open
+// Stop the in-app camera (called when leaving the scan view, so the camera
+// is never left running behind another screen).
+function stopCamera() {
+  if (camStream) { camStream.getTracks().forEach(t => t.stop()); camStream = null; }
+  const v = document.getElementById('camVideo');
+  if (v) v.srcObject = null;
+}
 
 function bstate(id) {
   if (!binderState[id]) {
@@ -163,7 +190,7 @@ function bstate(id) {
       pageSize: store.get('mst:psize:' + id, 9),
       hide: store.get('mst:hide:' + id, false),
       query: '',
-      page: 0,
+      spread: 0,
       highlight: null
     };
   }
@@ -254,6 +281,7 @@ function progress(b) {
 }
 
 function render() {
+  stopCamera();
   const app = document.getElementById('app');
   if (view.name === 'home') { renderHome(app); }
   else if (view.name === 'scan') { renderScan(app); }
@@ -322,13 +350,13 @@ function renderBinder(app, b) {
   app.querySelectorAll('[data-ps]').forEach(btn => btn.addEventListener('click', () => {
     st.pageSize = parseInt(btn.getAttribute('data-ps'), 10);
     store.set('mst:psize:' + b.id, st.pageSize);
-    st.page = 0;
+    st.spread = 0;
     render();
   }));
   document.getElementById('hideChk').addEventListener('change', (e) => {
     st.hide = e.target.checked;
     store.set('mst:hide:' + b.id, st.hide);
-    st.page = 0;
+    st.spread = 0;
     render();
   });
   document.getElementById('q').addEventListener('input', (e) => { onSearch(b, e.target.value); });
@@ -342,7 +370,7 @@ function setMode(b, mode) {
   const st = bstate(b.id);
   st.mode = mode;
   store.set('mst:mode:' + b.id, mode);
-  st.page = 0;
+  st.spread = 0;
   st.highlight = null;
   render();
 }
@@ -374,11 +402,56 @@ function onSearch(b, q) {
     return;
   }
   if (nm) { nm.classList.add('hidden'); nm.textContent = ''; }
-  st.page = Math.floor(found / st.pageSize);
+  st.spread = Math.floor(Math.floor(found / st.pageSize) / 2);
   st.highlight = rows[found].id;
   renderPages(b);
   const tok = ++highlightToken;
   setTimeout(() => { if (tok === highlightToken) { st.highlight = null; } }, 2600);
+}
+
+// One binder page (a chunk of rows) as a .binderpage div. pageIdx is
+// 0-based; past the last page it returns a blank paper page.
+function pageHTML(b, pageIdx, rows, cols, got) {
+  const st = bstate(b.id);
+  const totalPages = Math.max(1, Math.ceil(rows.length / st.pageSize));
+  const side = (pageIdx % 2 === 0) ? 'sp-left' : 'sp-right';
+  if (pageIdx >= totalPages) {
+    return '<div class="binderpage ' + side + ' blank"><div class="page-h">Page ' + (pageIdx + 1) + ' of ' + totalPages + '</div><div class="grid c' + cols + '"></div></div>';
+  }
+  const start = pageIdx * st.pageSize;
+  const chunk = rows.slice(start, start + st.pageSize);
+  let lastDiv = null;
+  for (let i = 0; i < start; i++) { if (rows[i].c.div) lastDiv = rows[i].c.div; }
+  let h = '<div class="binderpage ' + side + '"><div class="page-h">Page ' + (pageIdx + 1) + ' of ' + totalPages + '</div><div class="grid c' + cols + '">';
+  chunk.forEach(r => {
+    const c = r.c;
+    if (c.div && c.div !== lastDiv) {
+      h += '<div class="divider">' + esc(c.div) + '</div>';
+    }
+    lastDiv = c.div || lastDiv;
+    const isGot = got.has(r.id);
+    const img = c.img
+      ? '<img src="' + esc(c.img) + '" loading="lazy" alt="' + esc(c.name) + '" data-full="' + esc(largeImg(c.img) || c.img) + '" onerror="this.parentNode.innerHTML=\'<div class=&quot;noimg&quot;>No image yet</div>\'">'
+      : '<div class="noimg">No image yet</div>';
+    // Pocket shows the card itself only — the description lives in the tap
+    // modal (data-meta / data-extra on the thumb).
+    const modalDesc = descParts(c, b).join(' · ');
+    const extra = [];
+    if (c.v && c.v !== 'Regular' && c.v !== 'Standard') extra.push(c.v);
+    if (c.lang && c.lang !== 'English') extra.push(c.lang);
+    const isSel = sel.binder === b.id && sel.ids.has(r.id);
+    const animCls = (slideId === r.id) ? ' slide-in' : (st.highlight === r.id ? ' flash' : '');
+    h += '<div class="pocket' + (isGot ? ' got' : '') + (isSel ? ' sel' : '') + animCls + '" data-id="' + r.id + '">'
+      + '<div class="check">' + (isGot ? '&#10003;' : '') + '</div>'
+      + (sel.binder === b.id ? '<div class="selbox">' + (isSel ? '&#10003;' : '') + '</div>' : '')
+      + '<div class="thumb" data-full="' + esc(largeImg(c.img) || '') + '" data-name="' + esc(c.name) + '" data-num="' + esc(c.n) + '" data-meta="' + esc(modalDesc) + '" data-extra="' + esc(extra.join(' · ')) + '" data-id2="' + r.id + '">' + img + '</div>'
+      + '</div>';
+  });
+  if (!chunk.length) {
+    h += '<div class="empty">Nothing here yet.<br>Try another page size, or switch Master / Grand Master.</div>';
+  }
+  h += '</div></div>';
+  return h;
 }
 
 function renderPages(b) {
@@ -386,10 +459,9 @@ function renderPages(b) {
   const got = checkedSet(b.id);
   const rows = visibleRows(b);
   const totalPages = Math.max(1, Math.ceil(rows.length / st.pageSize));
-  if (st.page >= totalPages) st.page = totalPages - 1;
-  if (st.page < 0) st.page = 0;
-  const start = st.page * st.pageSize;
-  const chunk = rows.slice(start, start + st.pageSize);
+  const totalSpreads = Math.max(1, Math.ceil(totalPages / 2));
+  if (st.spread >= totalSpreads) st.spread = totalSpreads - 1;
+  if (st.spread < 0) st.spread = 0;
   const cols = st.pageSize === 4 ? 2 : st.pageSize === 16 ? 4 : 3;
   const pagesEl = document.getElementById('pages');
   if (!pagesEl) return;
@@ -403,56 +475,19 @@ function renderPages(b) {
       + '<button id="selRemove"' + (n ? '' : ' disabled') + '>Remove from collection</button>'
       + '<button id="selDone" class="ghost">Done</button></div>';
   }
-  // one binder page at a time
-  let lastDiv = null;
-  for (let i = 0; i < start; i++) { if (rows[i].c.div) lastDiv = rows[i].c.div; }
-  h += '<div class="pagewrap"><div class="binderpage" id="binderPage">'
-    + '<div class="rings"><i></i><i></i><i></i></div>'
-    + '<div class="page-h">Page ' + (st.page + 1) + ' of ' + totalPages + '</div>'
-    + '<div class="grid c' + cols + '">';
-  chunk.forEach(r => {
-    const c = r.c;
-    if (c.div && c.div !== lastDiv) {
-      h += '<div class="divider">' + esc(c.div) + '</div>';
-    }
-    lastDiv = c.div || lastDiv;
-    const isGot = got.has(r.id);
-    const img = c.img
-      ? '<img src="' + esc(c.img) + '" loading="lazy" alt="' + esc(c.name) + '" data-full="' + esc(largeImg(c.img) || c.img) + '" onerror="this.parentNode.innerHTML=\'<div class=&quot;noimg&quot;>No image yet</div>\'">'
-      : '<div class="noimg">No image yet</div>';
-    // Pocket description: set name (Ditto only — an ME binder is one set),
-    // variant when it adds info, rarity, finish, promo, language when not English.
-    const meta = [];
-    if (b.id === 'ditto' && c.set) meta.push(c.set);
-    if (c.v && c.v !== 'Regular' && c.v !== 'Standard') meta.push(c.v);
-    if (c.r) meta.push(c.r);
-    meta.push(finishOf(c.v));
-    if (c.promo) meta.push('Promo');
-    if (c.lang && c.lang !== 'English') meta.push(c.lang);
-    const modalDesc = descParts(c, b).join(' · ');
-    const extra = [];
-    if (c.v && c.v !== 'Regular' && c.v !== 'Standard') extra.push(c.v);
-    if (c.lang && c.lang !== 'English') extra.push(c.lang);
-    const isSel = sel.binder === b.id && sel.ids.has(r.id);
-    const animCls = (slideId === r.id) ? ' slide-in' : (st.highlight === r.id ? ' flash' : '');
-    h += '<div class="pocket' + (isGot ? ' got' : '') + (isSel ? ' sel' : '') + animCls + '" data-id="' + r.id + '">'
-      + '<div class="check">' + (isGot ? '&#10003;' : '') + '</div>'
-      + (sel.binder === b.id ? '<div class="selbox">' + (isSel ? '&#10003;' : '') + '</div>' : '')
-      + '<div class="thumb" data-full="' + esc(largeImg(c.img) || '') + '" data-name="' + esc(c.name) + '" data-num="' + esc(c.n) + '" data-meta="' + esc(modalDesc) + '" data-extra="' + esc(extra.join(' · ')) + '" data-id2="' + r.id + '">' + img + '</div>'
-      + '<div class="pinfo"><div class="num">' + esc(c.n) + '</div><div class="nm">' + esc(c.name) + '</div>'
-      + '<div class="meta">' + esc(meta.join(' &middot; ')) + '</div>'
-      + (c.grp && b.id === 'ditto' ? '<span class="grp">' + esc(c.grp) + '</span>' : '')
-      + '</div></div>';
-  });
-  if (!chunk.length) {
-    h += '<div class="empty">Nothing here yet.<br>Try another page size, or switch Master / Grand Master.</div>';
-  }
-  h += '</div>'
-    + '<div class="page-foot">Page ' + (st.page + 1) + ' of ' + totalPages + '</div>'
-    + '</div></div>';
-  h += '<div class="pagenav"><button id="prevPg"' + (st.page === 0 ? ' disabled' : '') + '>&larr; Prev</button>'
-    + '<span>Page ' + (st.page + 1) + ' of ' + totalPages + '</span>'
-    + '<button id="nextPg"' + (st.page >= totalPages - 1 ? ' disabled' : '') + '>Next &rarr;</button></div>';
+  // two-page spread, open at the binding
+  const leftIdx = st.spread * 2, rightIdx = leftIdx + 1;
+  const lo = leftIdx + 1, hi = Math.min(rightIdx + 1, totalPages);
+  const range = lo === hi ? ('Page ' + lo) : ('Pages ' + lo + '–' + hi);
+  h += '<div class="pagewrap"><div class="spread" id="spreadEl">'
+    + pageHTML(b, leftIdx, rows, cols, got)
+    + '<div class="spine"><i></i><i></i><i></i></div>'
+    + pageHTML(b, rightIdx, rows, cols, got)
+    + '</div>'
+    + '<div class="page-foot">' + range + ' of ' + totalPages + '</div></div>';
+  h += '<div class="pagenav"><button id="prevPg"' + (st.spread === 0 ? ' disabled' : '') + '>&larr; Prev</button>'
+    + '<span>' + range + ' of ' + totalPages + '</span>'
+    + '<button id="nextPg"' + (st.spread >= totalSpreads - 1 ? ' disabled' : '') + '>Next &rarr;</button></div>';
   pagesEl.innerHTML = h;
 
   // selection bar actions
@@ -536,30 +571,36 @@ function turnPage(b, dir) {
   const st = bstate(b.id);
   const rows = visibleRows(b);
   const totalPages = Math.max(1, Math.ceil(rows.length / st.pageSize));
-  const next = st.page + dir;
-  if (next < 0 || next >= totalPages) return;
+  const totalSpreads = Math.max(1, Math.ceil(totalPages / 2));
+  const next = st.spread + dir;
+  if (next < 0 || next >= totalSpreads) return;
   turning = true;
-  const page = document.getElementById('binderPage');
-  const origin = dir > 0 ? 'left center' : 'right center';
-  if (page) {
-    page.style.transformOrigin = origin;
-    page.style.transition = 'transform .22s ease-in';
-    page.style.transform = dir > 0 ? 'rotateY(-90deg)' : 'rotateY(90deg)';
-  }
-  setTimeout(() => {
-    st.page = next;
-    renderPages(b);
-    const page2 = document.getElementById('binderPage');
-    if (page2) {
-      page2.style.transition = 'none';
-      page2.style.transformOrigin = origin;
-      page2.style.transform = dir > 0 ? 'rotateY(90deg)' : 'rotateY(-90deg)';
-      void page2.offsetWidth;
-      page2.style.transition = 'transform .22s ease-out';
-      page2.style.transform = 'rotateY(0deg)';
-    }
-    setTimeout(() => { turning = false; }, 240);
-  }, 230);
+  const cols = st.pageSize === 4 ? 2 : st.pageSize === 16 ? 4 : 3;
+  const got = checkedSet(b.id);
+  // The leaf is the page turning over the binding. Its front is the page
+  // being turned; its back is the next page on the other side. The next
+  // spread is rendered underneath first, so it is revealed as the leaf lifts.
+  const oldLeft = pageHTML(b, st.spread * 2, rows, cols, got);
+  const oldRight = pageHTML(b, st.spread * 2 + 1, rows, cols, got);
+  const newLeft = pageHTML(b, next * 2, rows, cols, got);
+  const newRight = pageHTML(b, next * 2 + 1, rows, cols, got);
+  const oldSpread = document.getElementById('spreadEl');
+  const oldH = oldSpread ? oldSpread.offsetHeight : 0;
+  st.spread = next;
+  renderPages(b);
+  const spread = document.getElementById('spreadEl');
+  if (!spread) { turning = false; return; }
+  // Keep the spread at least as tall as the one being turned, so the leaf
+  // (the old page) is never clipped by a shorter next spread.
+  if (oldH > 0) spread.style.minHeight = oldH + 'px';
+  const leaf = document.createElement('div');
+  leaf.className = 'leaf ' + (dir > 0 ? 'fwd' : 'bwd');
+  leaf.innerHTML = '<div class="leaf-face front">' + (dir > 0 ? oldRight : oldLeft) + '</div>'
+    + '<div class="leaf-face back">' + (dir > 0 ? newLeft : newRight) + '</div>';
+  spread.appendChild(leaf);
+  void leaf.offsetWidth; // force reflow so the transition runs
+  leaf.style.transform = dir > 0 ? 'rotateY(-180deg)' : 'rotateY(180deg)';
+  setTimeout(() => { leaf.remove(); turning = false; }, 620);
 }
 
 function openModal(b, th) {
@@ -609,7 +650,7 @@ function jumpToCard(b, rowId, animate) {
   store.set('mst:hide:' + b.id, false);
   const rows = visibleRows(b);
   const pos = rows.findIndex(r => r.id === rowId);
-  if (pos >= 0) st.page = Math.floor(pos / st.pageSize);
+  if (pos >= 0) st.spread = Math.floor(Math.floor(pos / st.pageSize) / 2);
   st.highlight = rowId;
   slideId = animate ? rowId : null;
   exitSelMode();
@@ -703,14 +744,35 @@ function renderScanResults(matches, read) {
     });
   });
 }
+// Map the on-screen card outline to the camera frame's pixels. The video
+// is shown with object-fit: cover, so the frame is scaled to cover the
+// element and centre-cropped — this undoes that mapping.
+function cropToFrame(video, frameEl) {
+  const vr = video.getBoundingClientRect();
+  const fr = frameEl.getBoundingClientRect();
+  const iw = video.videoWidth, ih = video.videoHeight;
+  const scale = Math.max(vr.width / iw, vr.height / ih);
+  const dispW = iw * scale, dispH = ih * scale;
+  const offX = (vr.width - dispW) / 2, offY = (vr.height - dispH) / 2;
+  const sx = (fr.left - vr.left - offX) / scale;
+  const sy = (fr.top - vr.top - offY) / scale;
+  const sw = fr.width / scale, sh = fr.height / scale;
+  const x = Math.max(0, sx), y = Math.max(0, sy);
+  return { x: x, y: y, w: Math.min(iw - x, sw), h: Math.min(ih - y, sh) };
+}
 function renderScan(app) {
   let h = '<div class="topbar"><button class="backbtn" id="backBtn">&larr; Binders</button>'
-    + '<h1>Scan a card</h1><div class="sub">Take a photo of a card — the app reads its name and number and finds it in your binders.</div></div>'
+    + '<h1>Scan a card</h1><div class="sub">Line the card up in the frame — the reader only looks at what\'s inside it.</div></div>'
     + '<div class="scan">'
-    + '<p>Hold the card straight and fill the frame, with the name at the top and the number at the bottom-left in view. Good light helps — avoid glare on the card.</p>'
+    + '<p>Hold the card straight, name at the top, number at the bottom-left. The scan only reads what\'s inside the frame, so the background can\'t confuse it. Good light helps — avoid glare on the card.</p>'
+    + '<div class="camwrap hidden" id="camWrap"><video id="camVideo" autoplay playsinline muted></video><div class="camframe" id="camFrame"></div></div>'
+    + '<div class="camhint hidden" id="camHint">Line the card up inside the frame, then tap Capture.</div>'
     + '<input type="file" id="scanFile" accept="image/*" capture="environment" class="hidden">'
     + '<input type="file" id="scanFile2" accept="image/*" class="hidden">'
-    + '<button class="scanbtn" id="scanTake">Take a photo</button>'
+    + '<button class="scanbtn" id="scanOpenCam">Open camera</button>'
+    + '<button class="scanbtn hidden" id="scanCapture">Capture</button>'
+    + '<button class="scanbtn ghost hidden" id="scanCloseCam">Close camera</button>'
+    + '<button class="scanbtn hidden" id="scanTakeSys">Use system camera</button>'
     + '<button class="scanbtn ghost" id="scanPick">Choose from gallery</button>'
     + '<div class="scanstatus" id="scanStatus"></div>'
     + '<div class="scanpreview" id="scanPreview"></div>'
@@ -718,18 +780,17 @@ function renderScan(app) {
     + '<div class="manual"><input id="scanManual" type="search" placeholder="Or type the card name&hellip;"></div>'
     + '</div>';
   app.innerHTML = h;
-  document.getElementById('backBtn').addEventListener('click', () => { goHome(); });
+  document.getElementById('backBtn').addEventListener('click', () => { stopCamera(); goHome(); });
   const status = (t) => { const el = document.getElementById('scanStatus'); if (el) el.textContent = t; };
-  const onFile = (file) => {
-    if (!file) return;
-    const pv = document.getElementById('scanPreview');
-    if (pv) pv.innerHTML = '<img src="' + URL.createObjectURL(file) + '" alt="Scanned card">';
-    document.getElementById('scanResults').innerHTML = '';
+  const show = (id, on) => { const el = document.getElementById(id); if (el) el.classList.toggle('hidden', !on); };
+  // Run the card reader on one image (a File from the gallery/system camera,
+  // or a data URL of the cropped frame from the in-app camera).
+  const runOcr = (source) => {
     status('Loading the card reader…');
     loadTesseract().then(() => {
       status('Reading the card…');
-      return Tesseract.recognize(file, 'eng', {
-        workerPath: 'https://cdn.jsdelivr.net/npm/tesseract.js@6/dist/worker.min.js',
+      return Tesseract.recognize(source, 'eng', {
+        workerPath: 'https://cdn.jsdelivr.net/npm/tesseract.js@6/dist/tesseract.min.js',
         corePath: 'https://cdn.jsdelivr.net/npm/tesseract.js@6/dist/tesseract-core.wasm.js',
         langPath: 'https://tessdata.projectnaptha.com/4.0.0',
         logger: (m) => { if (m.status === 'recognizing text') status('Reading the card… ' + Math.round(m.progress * 100) + '%'); }
@@ -742,7 +803,66 @@ function renderScan(app) {
       status(err && err.message ? err.message : 'Could not read that photo. Try again.');
     });
   };
-  document.getElementById('scanTake').addEventListener('click', () => document.getElementById('scanFile').click());
+  const onFile = (file) => {
+    if (!file) return;
+    const pv = document.getElementById('scanPreview');
+    if (pv) pv.innerHTML = '<img src="' + URL.createObjectURL(file) + '" alt="Scanned card">';
+    document.getElementById('scanResults').innerHTML = '';
+    runOcr(file);
+  };
+  const openCamera = () => {
+    show('scanOpenCam', false); show('scanPick', false); show('scanTakeSys', false);
+    status('Opening the camera…');
+    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+      status('This phone can\'t open the in-app camera. Use the system camera or gallery instead.');
+      show('scanTakeSys', true); show('scanOpenCam', true); show('scanPick', true);
+      return;
+    }
+    navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment', width: { ideal: 1920 }, height: { ideal: 1080 } }, audio: false }).then(stream => {
+      camStream = stream;
+      const v = document.getElementById('camVideo');
+      v.srcObject = stream;
+      return v.play();
+    }).then(() => {
+      show('camWrap', true); show('camHint', true);
+      show('scanCapture', true); show('scanCloseCam', true);
+      status('');
+    }).catch(() => {
+      stopCamera();
+      status('Couldn\'t open the camera — check the camera permission, or use the system camera or gallery instead.');
+      show('scanTakeSys', true); show('scanOpenCam', true); show('scanPick', true);
+    });
+  };
+  const closeCamera = () => {
+    stopCamera();
+    show('camWrap', false); show('camHint', false);
+    show('scanCapture', false); show('scanCloseCam', false);
+    show('scanOpenCam', true); show('scanPick', true);
+    status('');
+  };
+  const captureFrame = () => {
+    const v = document.getElementById('camVideo');
+    const fr = document.getElementById('camFrame');
+    if (!v || !v.videoWidth) { status('Camera isn\'t ready yet — try again in a second.'); return; }
+    const crop = cropToFrame(v, fr);
+    if (crop.w < 40 || crop.h < 40) { status('Couldn\'t line the card up — try again.'); return; }
+    // Upscale the crop so the name and number are big enough to read.
+    const up = Math.min(2, 1400 / crop.w);
+    const c = document.createElement('canvas');
+    c.width = Math.round(crop.w * up);
+    c.height = Math.round(crop.h * up);
+    c.getContext('2d').drawImage(v, crop.x, crop.y, crop.w, crop.h, 0, 0, c.width, c.height);
+    const dataUrl = c.toDataURL('image/jpeg', 0.92);
+    const pv = document.getElementById('scanPreview');
+    if (pv) pv.innerHTML = '<img src="' + dataUrl + '" alt="Scanned card">';
+    document.getElementById('scanResults').innerHTML = '';
+    closeCamera();
+    runOcr(dataUrl);
+  };
+  document.getElementById('scanOpenCam').addEventListener('click', openCamera);
+  document.getElementById('scanCapture').addEventListener('click', captureFrame);
+  document.getElementById('scanCloseCam').addEventListener('click', closeCamera);
+  document.getElementById('scanTakeSys').addEventListener('click', () => document.getElementById('scanFile').click());
   document.getElementById('scanPick').addEventListener('click', () => document.getElementById('scanFile2').click());
   document.getElementById('scanFile').addEventListener('change', (e) => onFile(e.target.files && e.target.files[0]));
   document.getElementById('scanFile2').addEventListener('change', (e) => onFile(e.target.files && e.target.files[0]));

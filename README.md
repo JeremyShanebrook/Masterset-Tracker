@@ -12,7 +12,7 @@ checklists in binder placement order, with card pictures.
 | Pitch Black (ME05) | 120 | 222 |
 | 30th Celebration (30C) | 199 | 292 |
 | Delta Reign (ME06) | 141 | 250 |
-| Ditto — Every Card (#132) | 84 | 292 |
+| Ditto — Every Card (#132) | 84 | 302 |
 
 Master = one of each card number, including secret rares. Grand Master adds
 the holo and reverse-holo versions, promos and special variants. The Ditto binder covers the PokeCottage Ditto list
@@ -23,9 +23,14 @@ Japanese vending prints, and other-language printings.
 
 - Binder-order checklists — regular card, then its reverse holo, then
   secret rares, promos and variants last
+- Two-page spread: pages sit either side of the centre binding, and a page
+  turns over the binding like a real binder — the next page is already
+  underneath and is revealed as the leaf lifts
 - Per-binder page-size picker: 4, 9, 12 or 16 pockets per page
 - Master / Grand Master toggle per binder
-- Card thumbnail per row; tap to enlarge, tap to check off
+- Card thumbnail per row; tap for the card info, long-press to multi-select
+- Scan a card: in-app camera with a card outline — the reader only looks
+  at what's inside the frame
 - Progress saved on the phone (localStorage); search + "missing only" filter
 - In-app updates: checks GitHub releases on launch and offers to download
   and install a newer version

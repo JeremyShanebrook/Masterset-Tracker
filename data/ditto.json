@@ -6,7 +6,7 @@
   "setCode": null,
   "tcgApiSetId": null,
   "masterTotal": 84,
-  "grandMasterTotal": 292,
+  "grandMasterTotal": 302,
   "source": "PokeCottage Ditto master set + extended research (Bulbapedia / TCGplayer / PriceCharting)",
   "cards": [
     {
@@ -140,6 +140,19 @@
       "origin": "pokecottage"
     },
     {
+      "num": "35/113",
+      "name": "Ditto",
+      "set": "EX Delta Species",
+      "language": "English",
+      "rarity": "Uncommon",
+      "variant": "Reverse Holo",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": "https://images.pokemontcg.io/ex11/35.png",
+      "group": "English",
+      "origin": "research"
+    },
+    {
       "num": "36/113",
       "name": "Ditto",
       "set": "EX Delta Species",
@@ -164,6 +177,19 @@
       "image": "https://images.pokemontcg.io/ex11/36.png",
       "group": "English",
       "origin": "pokecottage"
+    },
+    {
+      "num": "36/113",
+      "name": "Ditto",
+      "set": "EX Delta Species",
+      "language": "English",
+      "rarity": "Uncommon",
+      "variant": "Reverse Holo",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": "https://images.pokemontcg.io/ex11/36.png",
+      "group": "English",
+      "origin": "research"
     },
     {
       "num": "37/113",
@@ -192,6 +218,19 @@
       "origin": "pokecottage"
     },
     {
+      "num": "37/113",
+      "name": "Ditto",
+      "set": "EX Delta Species",
+      "language": "English",
+      "rarity": "Uncommon",
+      "variant": "Reverse Holo",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": "https://images.pokemontcg.io/ex11/37.png",
+      "group": "English",
+      "origin": "research"
+    },
+    {
       "num": "38/113",
       "name": "Ditto",
       "set": "EX Delta Species",
@@ -216,6 +255,19 @@
       "image": "https://images.pokemontcg.io/ex11/38.png",
       "group": "English",
       "origin": "pokecottage"
+    },
+    {
+      "num": "38/113",
+      "name": "Ditto",
+      "set": "EX Delta Species",
+      "language": "English",
+      "rarity": "Uncommon",
+      "variant": "Reverse Holo",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": "https://images.pokemontcg.io/ex11/38.png",
+      "group": "English",
+      "origin": "research"
     },
     {
       "num": "39/113",
@@ -244,6 +296,19 @@
       "origin": "pokecottage"
     },
     {
+      "num": "39/113",
+      "name": "Ditto",
+      "set": "EX Delta Species",
+      "language": "English",
+      "rarity": "Uncommon",
+      "variant": "Reverse Holo",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": "https://images.pokemontcg.io/ex11/39.png",
+      "group": "English",
+      "origin": "research"
+    },
+    {
       "num": "40/113",
       "name": "Ditto",
       "set": "EX Delta Species",
@@ -268,6 +333,19 @@
       "image": "https://images.pokemontcg.io/ex11/40.png",
       "group": "English",
       "origin": "pokecottage"
+    },
+    {
+      "num": "40/113",
+      "name": "Ditto",
+      "set": "EX Delta Species",
+      "language": "English",
+      "rarity": "Uncommon",
+      "variant": "Reverse Holo",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": "https://images.pokemontcg.io/ex11/40.png",
+      "group": "English",
+      "origin": "research"
     },
     {
       "num": "61/113",
@@ -307,6 +385,19 @@
       "image": "https://images.pokemontcg.io/ex11/61.png",
       "group": "English",
       "origin": "pokecottage"
+    },
+    {
+      "num": "61/113",
+      "name": "Ditto",
+      "set": "EX Delta Species",
+      "language": "English",
+      "rarity": "Common",
+      "variant": "Reverse Holo",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": "https://images.pokemontcg.io/ex11/61.png",
+      "group": "English",
+      "origin": "research"
     },
     {
       "num": "61/113",
@@ -372,6 +463,19 @@
       "image": "https://images.pokemontcg.io/ex11/62.png",
       "group": "English",
       "origin": "pokecottage"
+    },
+    {
+      "num": "62/113",
+      "name": "Ditto",
+      "set": "EX Delta Species",
+      "language": "English",
+      "rarity": "Common",
+      "variant": "Reverse Holo",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": "https://images.pokemontcg.io/ex11/62.png",
+      "group": "English",
+      "origin": "research"
     },
     {
       "num": "62/113",
@@ -452,6 +556,19 @@
       "origin": "pokecottage"
     },
     {
+      "num": "63/113",
+      "name": "Ditto",
+      "set": "EX Delta Species",
+      "language": "English",
+      "rarity": "Common",
+      "variant": "Reverse Holo",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": "https://images.pokemontcg.io/ex11/63.png",
+      "group": "English",
+      "origin": "research"
+    },
+    {
       "num": "64/113",
       "name": "Ditto",
       "set": "EX Delta Species",
@@ -515,6 +632,19 @@
       "image": "https://images.pokemontcg.io/ex11/64.png",
       "group": "English",
       "origin": "pokecottage"
+    },
+    {
+      "num": "64/113",
+      "name": "Ditto",
+      "set": "EX Delta Species",
+      "language": "English",
+      "rarity": "Common",
+      "variant": "Reverse Holo",
+      "inMaster": false,
+      "inGrandMaster": true,
+      "image": "https://images.pokemontcg.io/ex11/64.png",
+      "group": "English",
+      "origin": "research"
     },
     {
       "num": "12/17",
@@ -4157,7 +4287,7 @@
       "section": "Other"
     }
   ],
-  "notes": "Master (v1.0.2) = one of each card number per set/language (84 standard printings); holo / reverse-holo / stamp / code variations are Grand Master only. Grand = all rows. Deduplicated on name/set/num/language/variant; v1.0.2 dropped 5 duplicate rows (3 Holon Research Tower Quarter Decks listed twice; 2 extended cameo rows that duplicated the visually-verified addendum rows for Pikachu 028 and Thought Wave Machine 096 — their num format differed, '28' vs '028', so the earlier dedup missed them). Vending Series 2 Ditto #32 kept once (PokeCottage Glossy row); extended duplicate row dropped. Addendum merged Nov 26, 2026: +2 visually-verified cameos (Pikachu 028 30th Celebration, Thought Wave Machine Neo Destiny 096) and the Pikachu ex 149 image. Deliberately NOT merged: Shelmet Fusion Strike 013 (Ditto shape at top-left of art is ambiguous; addendum image URL pointed at Nincada swsh4-13 — correct art is swsh8-13), Influencer's Introduction (no image to verify the blanket claim), Machoke Expansion Sheet 3 (duplicate of the num-67 row), and all 8 Topps rows (same 8 cards as the extended list under different set names).",
+  "notes": "Master (v1.0.2) = one of each card number per set/language (84 standard printings); holo / reverse-holo / stamp / code variations are Grand Master only. Grand = all rows. Deduplicated on name/set/num/language/variant; v1.0.2 dropped 5 duplicate rows (3 Holon Research Tower Quarter Decks listed twice; 2 extended cameo rows that duplicated the visually-verified addendum rows for Pikachu 028 and Thought Wave Machine 096 — their num format differed, '28' vs '028', so the earlier dedup missed them). Vending Series 2 Ditto #32 kept once (PokeCottage Glossy row); extended duplicate row dropped. Addendum merged Nov 26, 2026: +2 visually-verified cameos (Pikachu 028 30th Celebration, Thought Wave Machine Neo Destiny 096) and the Pikachu ex 149 image. Deliberately NOT merged: Shelmet Fusion Strike 013 (Ditto shape at top-left of art is ambiguous; addendum image URL pointed at Nincada swsh4-13 — correct art is swsh8-13), Influencer's Introduction (no image to verify the blanket claim), Machoke Expansion Sheet 3 (duplicate of the num-67 row), and all 8 Topps rows (same 8 cards as the extended list under different set names). Reverse holos added Nov 26, 2026 (v1.0.3): one Reverse Holo row for each of the ten Yuka Morii EX Delta Species Dittos (35-40, 61-64), English, Grand Master only — verified via PennySleeve finishes, TCGplayer printings, and the PSA registry (all ten have a Reverse Foil). Same art as the regular printing, so the image URL is shared.",
   "merge_notes": [
     {
       "num": "32",
